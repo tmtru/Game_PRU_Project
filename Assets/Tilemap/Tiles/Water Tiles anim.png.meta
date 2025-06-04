@@ -1,109 +1,16 @@
 fileFormatVersion: 2
-guid: e1306a076b58ae340aa25a51f962b53a
+guid: 578776a66b088e943868425ef1e8dd7d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2671460228953875570
-    second: Overworld_0
+      213: -1964772606241228658
+    second: Water Tiles anim_0
   - first:
-      213: -2689026045669087484
-    second: Overworld_1
+      213: 2685382558437261824
+    second: Water Tiles anim_1
   - first:
-      213: -7179496123588461096
-    second: Overworld_2
-  - first:
-      213: 5358339777047750641
-    second: Overworld_3
-  - first:
-      213: 136357672767500387
-    second: Overworld_4
-  - first:
-      213: 8004674553903682165
-    second: Overworld_5
-  - first:
-      213: -4047186976618406303
-    second: Overworld_6
-  - first:
-      213: -5552291726514319404
-    second: Overworld_7
-  - first:
-      213: 6677391079157347707
-    second: Overworld_8
-  - first:
-      213: 3745290752181560014
-    second: Overworld_9
-  - first:
-      213: 1829778442542560619
-    second: Overworld_10
-  - first:
-      213: 1042250435856239393
-    second: Overworld_11
-  - first:
-      213: 8276858336128014628
-    second: Overworld_12
-  - first:
-      213: 22681670905886300
-    second: Overworld_13
-  - first:
-      213: 1620404892285306412
-    second: Overworld_14
-  - first:
-      213: 1242996465418633367
-    second: Overworld_15
-  - first:
-      213: -2999399142424580601
-    second: Overworld_16
-  - first:
-      213: 1195820583082778069
-    second: Overworld_17
-  - first:
-      213: -4496587874173803107
-    second: Overworld_18
-  - first:
-      213: -910953043492846142
-    second: Overworld_19
-  - first:
-      213: 3471338428925595606
-    second: Overworld_20
-  - first:
-      213: 6307966979952246190
-    second: Overworld_21
-  - first:
-      213: -1133759038122202709
-    second: Overworld_22
-  - first:
-      213: -191729290340861241
-    second: Overworld_23
-  - first:
-      213: -5666481261984047100
-    second: Overworld_24
-  - first:
-      213: -67688370196173548
-    second: Overworld_25
-  - first:
-      213: 8503925898108693791
-    second: Overworld_26
-  - first:
-      213: -158234911645668671
-    second: Overworld_27
-  - first:
-      213: 1057873545096308223
-    second: Overworld_28
-  - first:
-      213: -4390251584830932216
-    second: Overworld_29
-  - first:
-      213: 9127930197081173706
-    second: Overworld_30
-  - first:
-      213: 4304790786426730767
-    second: Overworld_31
-  - first:
-      213: -3594059735059639123
-    second: Overworld_32
-  - first:
-      213: 4003859095993293133
-    second: Overworld_33
+      213: -6564740636104210470
+    second: Water Tiles anim_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -136,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -150,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -174,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -199,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Overworld_0
+      name: Water Tiles anim_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 22
-        width: 433
-        height: 554
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8bde9563111dead0800000000000000
-      internalID: -2671460228953875570
+      spriteID: e88b29479b9bbb4e0800000000000000
+      internalID: -1964772606241228658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_1
+      name: Water Tiles anim_1
       rect:
         serializedVersion: 2
-        x: 431
-        y: 481
-        width: 97
-        height: 95
+        x: 16
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 407ee1cfe09aeaad0800000000000000
-      internalID: -2689026045669087484
+      spriteID: 002cea98535644520800000000000000
+      internalID: 2685382558437261824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_2
+      name: Water Tiles anim_2
       rect:
         serializedVersion: 2
-        x: 527
-        y: 547
-        width: 34
-        height: 29
+        x: 32
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,690 +165,668 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8dd373f605e4d5c90800000000000000
-      internalID: -7179496123588461096
+      spriteID: ad7cf664c2b55e4a0800000000000000
+      internalID: -6564740636104210470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_3
+      name: Water Tiles anim_3
       rect:
         serializedVersion: 2
-        x: 543
-        y: 527
-        width: 50
-        height: 45
+        x: 48
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1f7e6c433a5ac5a40800000000000000
-      internalID: 5358339777047750641
+      spriteID: 94835b52ba023db46a9c8b2b83638d6b
+      internalID: 1013950744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_4
+      name: Water Tiles anim_4
       rect:
         serializedVersion: 2
-        x: 563
-        y: 561
-        width: 11
-        height: 15
+        x: 64
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 360b4b7b49074e100800000000000000
-      internalID: 136357672767500387
+      spriteID: ea4e0957f7e1a3243b157a62c17a06b1
+      internalID: 947973746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_5
-      rect:
-        serializedVersion: 2
-        x: 593
-        y: 559
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5729900a811561f60800000000000000
-      internalID: 8004674553903682165
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_6
-      rect:
-        serializedVersion: 2
-        x: 531
-        y: 529
-        width: 11
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 16e921f33e085d7c0800000000000000
-      internalID: -4047186976618406303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_7
-      rect:
-        serializedVersion: 2
-        x: 601
-        y: 543
-        width: 13
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4df06cf871c42f2b0800000000000000
-      internalID: -5552291726514319404
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_8
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 453
-        width: 17
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b753983eecbdaac50800000000000000
-      internalID: 6677391079157347707
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_9
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 463
-        width: 33
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ec266508812f9f330800000000000000
-      internalID: 3745290752181560014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_10
-      rect:
-        serializedVersion: 2
-        x: 527
-        y: 463
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b65ba658ccda46910800000000000000
-      internalID: 1829778442542560619
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_11
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 496
-        width: 30
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 12b0534df31d67e00800000000000000
-      internalID: 1042250435856239393
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_12
-      rect:
-        serializedVersion: 2
-        x: 561
-        y: 496
-        width: 30
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4291425ddce4dd270800000000000000
-      internalID: 8276858336128014628
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_13
-      rect:
-        serializedVersion: 2
-        x: 591
-        y: 495
-        width: 34
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c56f1490cd4905000800000000000000
-      internalID: 22681670905886300
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_14
-      rect:
-        serializedVersion: 2
-        x: 450
-        y: 449
-        width: 46
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c2688fc0aa5dc7610800000000000000
-      internalID: 1620404892285306412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_15
-      rect:
-        serializedVersion: 2
-        x: 566
-        y: 468
-        width: 22
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 790085a13b2004110800000000000000
-      internalID: 1242996465418633367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_16
-      rect:
-        serializedVersion: 2
-        x: 598
-        y: 469
-        width: 21
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 70eeb281f5eff56d0800000000000000
-      internalID: -2999399142424580601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_17
-      rect:
-        serializedVersion: 2
-        x: 623
-        y: 468
-        width: 17
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5dddfbd0c78689010800000000000000
-      internalID: 1195820583082778069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_18
-      rect:
-        serializedVersion: 2
-        x: 351
-        y: 384
-        width: 146
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d95aa820729e891c0800000000000000
-      internalID: -4496587874173803107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_19
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 432
-        width: 49
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c54c8b8805ab53f0800000000000000
-      internalID: -910953043492846142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_20
-      rect:
-        serializedVersion: 2
-        x: 563
-        y: 415
-        width: 28
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6dfc54fb8ebac2030800000000000000
-      internalID: 3471338428925595606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_21
-      rect:
-        serializedVersion: 2
-        x: 566
-        y: 447
-        width: 22
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ead72f61c866a8750800000000000000
-      internalID: 6307966979952246190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_22
-      rect:
-        serializedVersion: 2
-        x: 591
-        y: 419
-        width: 49
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba966d769241440f0800000000000000
-      internalID: -1133759038122202709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_23
-      rect:
-        serializedVersion: 2
-        x: 370
-        y: 307
-        width: 108
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7caf13ce937d65df0800000000000000
-      internalID: -191729290340861241
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_24
-      rect:
-        serializedVersion: 2
-        x: 479
-        y: 335
-        width: 18
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 400a805805d9c51b0800000000000000
-      internalID: -5666481261984047100
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_25
-      rect:
-        serializedVersion: 2
-        x: 511
-        y: 335
-        width: 50
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 41d280339c58f0ff0800000000000000
-      internalID: -67688370196173548
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_26
-      rect:
-        serializedVersion: 2
-        x: 564
-        y: 335
-        width: 37
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1d63017c83040670800000000000000
-      internalID: 8503925898108693791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_27
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 232
-        width: 17
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1ca6b4caf26ddcdf0800000000000000
-      internalID: -158234911645668671
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_28
-      rect:
-        serializedVersion: 2
-        x: 434
-        y: 256
-        width: 28
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ff5afb862625eae00800000000000000
-      internalID: 1057873545096308223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_29
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 232
-        width: 17
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 80b7e83b171b213c0800000000000000
-      internalID: -4390251584830932216
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_30
-      rect:
-        serializedVersion: 2
-        x: 463
-        y: 232
-        width: 177
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: acea593072cecae70800000000000000
-      internalID: 9127930197081173706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_31
+      name: Water Tiles anim_5
       rect:
         serializedVersion: 2
         x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6ae0d9f22528948a83fe5bedf3772a
+      internalID: -1834480942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fae49fb3a833c42ab5949f9cb25052
+      internalID: 54972617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1044e4ebaaded974a8c4823fa5c4c7ad
+      internalID: 349929959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_8
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1408f3a91dec21c43b503a34a48ee102
+      internalID: 494332313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af8b4d608517c443a580bab99e32c66
+      internalID: -1406879612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbc43ccf05b01e44b905cec0c753ee1
+      internalID: -348080885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_11
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d50003e84f68fb4aabb4046923223ee
+      internalID: -1154572541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71f2e56258fe3e4fa80f3668744a80a
+      internalID: 1917060246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5ec09d1606e5f48af6fb46cb26826e
+      internalID: -1189261732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574b8678909ba2043807bb5656f71a49
+      internalID: 1545973050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d153da8da0f6e424b9396077949e8872
+      internalID: 1120385941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa49f43fb121b3a45bc97b9724124444
+      internalID: -1513420277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bddfbc2d598d0484eb4768819a9ead75
+      internalID: -419409499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_18
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab090cfa43fa5044cad09a90019c418c
+      internalID: -576489558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a9dd9fadc164447a2d9345209c8f9b
+      internalID: 1498651151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12be15950a74b4499e871b2811421b9
+      internalID: -124633399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_21
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa6931068a87484a8c127cfcab9f818
+      internalID: -1416490279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e96d7b1d63ad96419fb01587a18319f
+      internalID: -1806712577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_23
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53b143914cc80e40960dcbfe5032bd9
+      internalID: 1099116699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_24
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365d4dc96c4ea9c4f8f98d045e394aba
+      internalID: -108251969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_25
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b39b56fc9bcf447be5a66f9cedcdd1
+      internalID: 708037738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_26
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa5b9bc74c92c146bb6fad3880baccd
+      internalID: -1084223904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_27
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71bec6c4b4e713349bbe0f1f3fef5977
+      internalID: 2009932406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db546229510b658408b9a829663c4944
+      internalID: -1888741110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_29
+      rect:
+        serializedVersion: 2
+        x: 16
         y: 0
-        width: 59
-        height: 129
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f09f6599960bdbb30800000000000000
-      internalID: 4304790786426730767
+      spriteID: 26f1be70e02d3d24fbf8e66873ed3e45
+      internalID: -1414491480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_32
+      name: Water Tiles anim_30
       rect:
         serializedVersion: 2
-        x: 408
-        y: 120
-        width: 64
-        height: 96
+        x: 32
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: da45c3e86b55f1ec0800000000000000
-      internalID: -3594059735059639123
+      spriteID: d00f758b341b82e49892ae4301b0f05d
+      internalID: 295891839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_33
+      name: Water Tiles anim_31
       rect:
         serializedVersion: 2
-        x: 391
-        y: 31
-        width: 50
-        height: 42
+        x: 48
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d49956b62a0909730800000000000000
-      internalID: 4003859095993293133
+      spriteID: 3fc4f0d4bf237cd439a436a35971e796
+      internalID: -1792675594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Tiles anim_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c9fb16d6eb8ab41aee213cc209c494
+      internalID: -927613217
       vertices: []
       indices: 
       edges: []
@@ -950,7 +835,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a8544462a2f5cff4caa8522c03aa7605
     internalID: 0
     vertices: []
     indices: 
@@ -958,8 +843,43 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Water Tiles anim_0: -1964772606241228658
+      Water Tiles anim_1: 2685382558437261824
+      Water Tiles anim_10: -348080885
+      Water Tiles anim_11: -1154572541
+      Water Tiles anim_12: 1917060246
+      Water Tiles anim_13: -1189261732
+      Water Tiles anim_14: 1545973050
+      Water Tiles anim_15: 1120385941
+      Water Tiles anim_16: -1513420277
+      Water Tiles anim_17: -419409499
+      Water Tiles anim_18: -576489558
+      Water Tiles anim_19: 1498651151
+      Water Tiles anim_2: -6564740636104210470
+      Water Tiles anim_20: -124633399
+      Water Tiles anim_21: -1416490279
+      Water Tiles anim_22: -1806712577
+      Water Tiles anim_23: 1099116699
+      Water Tiles anim_24: -108251969
+      Water Tiles anim_25: 708037738
+      Water Tiles anim_26: -1084223904
+      Water Tiles anim_27: 2009932406
+      Water Tiles anim_28: -1888741110
+      Water Tiles anim_29: -1414491480
+      Water Tiles anim_3: 1013950744
+      Water Tiles anim_30: 295891839
+      Water Tiles anim_31: -1792675594
+      Water Tiles anim_32: -927613217
+      Water Tiles anim_4: 947973746
+      Water Tiles anim_5: -1834480942
+      Water Tiles anim_6: 54972617
+      Water Tiles anim_7: 349929959
+      Water Tiles anim_8: 494332313
+      Water Tiles anim_9: -1406879612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
