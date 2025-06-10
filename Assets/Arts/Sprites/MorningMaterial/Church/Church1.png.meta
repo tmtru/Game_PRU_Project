@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 14dd4f71656b4db43b894eea9cdc86e5
+guid: fd586c9697d2bb24685f5170bb6952ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4008689199787175143
-    second: Gravestone_01_0
+      213: -8057203423841197661
+    second: Church1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gravestone_01_0
+      name: Church1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 56
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 88
+        y: 3
+        width: 230
+        height: 395
+      alignment: 9
+      pivot: {x: 0.49604824, y: 0.22043169}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9139db769664e58c0800000000000000
-      internalID: -4008689199787175143
+      spriteID: 3a162e6cc201f2090800000000000000
+      internalID: -8057203423841197661
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ac2eacb1d6fd97842a4899a0d8a815c9
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gravestone_01_0: -4008689199787175143
+      Church1_0: -8057203423841197661
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
