@@ -5,39 +5,41 @@ using UnityEngine.UI;
 public class PuzzleChestController : MonoBehaviour
 {
 	public GameObject keypadPanel;
-	//public Animator chestAnimator;
+	public Animator chestAnimator;
 	public GameObject closeButton;
+	public BoxCollider2D boxCollider;
 
-	[SerializeField] private PuzzleManager puzzleManager; // <- thêm SerializeField để kéo thả script này
+	[SerializeField] private PuzzleManager puzzleManager;
 
 	public bool isChestOpen = false;
-
+	private void Start()
+	{
+		if (boxCollider == null)
+		{
+			Transform chestTransform = transform.parent.Find("Chest_2");
+			if (chestTransform != null)
+			{
+				boxCollider = chestTransform.GetComponent<BoxCollider2D>();
+			}
+		}
+	}
 	private void Update()
 	{
 		if (!isChestOpen && puzzleManager.CheckPuzzleSolved())
 		{
-			//chestAnimator.SetTrigger("ChestOpen");
+			chestAnimator.SetTrigger("ChestOpen");
 			isChestOpen = true;
 			keypadPanel.SetActive(false);
 			closeButton.SetActive(false);
 			Time.timeScale = 1f;
+			if (boxCollider != null)
+				boxCollider.isTrigger = false;
 		}
-		//else
-		//{
-		//	Debug.LogError($"Wrong order");
-		//}
 
 	}
 
 	public void OnClosePanel()
 	{
-		if (isChestOpen)
-		{
-			closeButton.SetActive(false);
-			keypadPanel.SetActive(false);
-			Time.timeScale = 1f;
-			return;
-		}
 		closeButton.SetActive(false);
 		keypadPanel.SetActive(false);
 		Time.timeScale = 1f;

@@ -31,18 +31,12 @@ public class PuzzleManager : MonoBehaviour
 				Debug.LogError($"Không thể parse name '{pieces[i].name}' thành số nguyên.");
 				return false;
 			}
-
-			//if (pieceNumber == correctOrder[i])
-			//{
-			//	Debug.LogError($"piece {pieceNumber} - correctOrder: {correctOrder[i]}");
-			//}
 			if (pieceNumber != correctOrder[i])
 			{
 				//Debug.LogError($"piece {pieceNumber} - wrongOrder: {correctOrder[i]}");
 				return false;
 			}
 		}
-		Debug.LogError($"Correct Order");
 		return true;
 	}
 
