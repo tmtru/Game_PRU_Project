@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a607a13359b5fc848898230852ae7b0a
+guid: 4d6b6c3d3af0e9c4bb9b3369379f7ce1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7381065753739078277
-    second: Sculpture_01_0
+      213: -4595834858911350169
+    second: MiniHouse_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sculpture_01_0
+      name: MiniHouse_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 62
-        height: 108
+        width: 32
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b75d494bdcf219990800000000000000
-      internalID: -7381065753739078277
+      spriteID: 7624b3cab805830c0800000000000000
+      internalID: -4595834858911350169
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sculpture_01_0: -7381065753739078277
+      MiniHouse_0: -4595834858911350169
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
