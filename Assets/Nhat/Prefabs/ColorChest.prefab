@@ -1374,7 +1374,7 @@ SpriteRenderer:
   m_SortingLayerID: 1895319205
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -685530156, guid: f7117c719ce7e8b4cb40cae3916800fa, type: 3}
+  m_Sprite: {fileID: -797176530, guid: f7117c719ce7e8b4cb40cae3916800fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1441,7 +1441,7 @@ Animator:
   m_GameObject: {fileID: 6263920849536490695}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f241d2e2d4a64f64e8458c9d2712359e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 49c0ad6b9e831854e83bde36090bcea9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1478,7 +1478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3155852724373797868}
   m_Layer: 0
-  m_Name: Chest3
+  m_Name: ColorChest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

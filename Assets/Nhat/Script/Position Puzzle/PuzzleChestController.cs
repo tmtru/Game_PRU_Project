@@ -27,7 +27,7 @@ public class PuzzleChestController : MonoBehaviour
 	{
 		if (!isChestOpen && puzzleManager.CheckPuzzleSolved())
 		{
-			chestAnimator.SetTrigger("ChestOpen");
+			chestAnimator.SetTrigger("PlayAnim");
 			isChestOpen = true;
 			keypadPanel.SetActive(false);
 			closeButton.SetActive(false);

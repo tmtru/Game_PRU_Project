@@ -27,7 +27,7 @@ public class ColorChestController : MonoBehaviour
 	{
 		if (!isChestOpen && manager.isChestOpen ==true)
 		{
-			chestAnimator.SetTrigger("ChestOpen");
+			chestAnimator.SetTrigger("PlayAnim");
 			isChestOpen = true;
 			keypadPanel.SetActive(false);
 			closeButton.SetActive(false);
