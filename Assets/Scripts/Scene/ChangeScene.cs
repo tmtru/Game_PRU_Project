@@ -1,35 +1,66 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ChangeScene : MonoBehaviour
 {
-    [SerializeReference]
+    public Image fadeImage;
+    [SerializeField]
+    public float fadeDuration;
+    [SerializeField]
     public string scene1;
-    [SerializeReference]
+    [SerializeField]
     public string scene2;
-    [SerializeReference]
-    public float changeTime;
+    [SerializeField]
+    public float countdown;
+    private float timer;
+    public float TimeLeft => timer;
 
-    private float timer = 0f;
+    void Start()
+    {
+        timer = countdown;
+        StartCoroutine(FadeIn());
+    }
 
     void Update()
     {
-        timer += Time.deltaTime;
+        timer -= Time.deltaTime;
 
-        if (timer >= changeTime)
+        if (timer <= 0)
         {
-            string currentScene = SceneManager.GetActiveScene().name;
-
-            if (currentScene == scene1)
-            {
-                SceneManager.LoadScene(scene2);
-            }
-            else if (currentScene == scene2)
-            {
-                SceneManager.LoadScene(scene1);
-            }
-
-            timer = 0f;
+            StartCoroutine(FadeAndLoadScene());
+            timer = countdown;
         }
+    }
+
+    IEnumerator FadeIn()
+    {
+        float t = fadeDuration;
+        Color c = fadeImage.color;
+        while (t > 0)
+        {
+            t -= Time.deltaTime;
+            c.a = Mathf.Clamp01(t / fadeDuration);
+            fadeImage.color = c;
+            yield return null;
+        }
+    }
+
+    IEnumerator FadeAndLoadScene()
+    {
+        float t = 0;
+        Color c = fadeImage.color;
+        while (t < fadeDuration)
+        {
+            t += Time.deltaTime;
+            c.a = Mathf.Clamp01(t / fadeDuration);
+            fadeImage.color = c;
+            yield return null;
+        }
+
+        string current = SceneManager.GetActiveScene().name;
+        string next = current == scene1 ? scene2 : scene1;
+        SceneManager.LoadScene(next);
     }
 }
