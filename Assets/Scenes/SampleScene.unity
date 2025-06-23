@@ -1660,6 +1660,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801da149f734b9744a0e800d398e3049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeImage: {fileID: 0}
+  fadeDuration: 0
+  scene1: 
+  scene2: 
+  countdown: 0
 --- !u!114 &407609842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1672,6 +1677,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55dea469663b57c4d87acda62f6cf6ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changeScene: {fileID: 0}
+  countdownText: {fileID: 0}
+  warningText: {fileID: 0}
 --- !u!1 &434499078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,7 +2204,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.82872, y: 16.86713, z: -10}
+  m_LocalPosition: {x: 29.68231, y: 16.87097, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -65703,6 +65711,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa5180e37f3df34fa0765be8942018e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputField: {fileID: 0}
+  correctCode: 3715
+  requiredLength: 4
+  keypadPanel: {fileID: 0}
+  chestAnimator: {fileID: 0}
+  closeButton: {fileID: 0}
 --- !u!1 &1491928332
 GameObject:
   m_ObjectHideFlags: 0
@@ -88981,6 +88995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51ef6446e62507e4caceb865390b9396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzleCanvas: {fileID: 0}
 --- !u!61 &1812306139
 BoxCollider2D:
   m_ObjectHideFlags: 0
