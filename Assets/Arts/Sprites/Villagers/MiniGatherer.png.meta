@@ -1,115 +1,106 @@
 fileFormatVersion: 2
-guid: a2250960ff0961643a7c4edb3c8fe6f1
+guid: ae6354c1085c89845997d76711cffcc2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5038951506153503170
-    second: details_0
+      213: -8189958837095307518
+    second: MiniGatherer_0
   - first:
-      213: -3956403424265050589
-    second: details_1
+      213: 2961170306987730539
+    second: MiniGatherer_1
   - first:
-      213: -1853376364916220049
-    second: details_2
+      213: 4289584290741713991
+    second: MiniGatherer_2
   - first:
-      213: -979469967312736027
-    second: details_3
+      213: 1099692362123132462
+    second: MiniGatherer_3
   - first:
-      213: 5004845202217804123
-    second: details_4
+      213: -6443029134308527393
+    second: MiniGatherer_4
   - first:
-      213: -8421137230177170762
-    second: details_5
+      213: -8632253317863371201
+    second: MiniGatherer_5
   - first:
-      213: -8181388065476472649
-    second: details_6
+      213: -1388505141714677614
+    second: MiniGatherer_6
   - first:
-      213: -40285812246312896
-    second: details_7
+      213: -2572630277955513096
+    second: MiniGatherer_7
   - first:
-      213: 4264040532120010889
-    second: details_8
+      213: 7942108306752171393
+    second: MiniGatherer_8
   - first:
-      213: -8581570325288175063
-    second: details_9
+      213: -6135671352321001282
+    second: MiniGatherer_9
   - first:
-      213: 6921221083621538853
-    second: details_10
+      213: -6380953633436102215
+    second: MiniGatherer_10
   - first:
-      213: 5838514410241047823
-    second: details_11
+      213: 2035655724975718440
+    second: MiniGatherer_11
   - first:
-      213: -2062060434115420297
-    second: details_12
+      213: -5652500151033354433
+    second: MiniGatherer_12
   - first:
-      213: -6715765666167863947
-    second: details_13
+      213: 1923263845236661065
+    second: MiniGatherer_13
   - first:
-      213: -3187710752700213817
-    second: details_14
+      213: 3079767893847567351
+    second: MiniGatherer_14
   - first:
-      213: -3881738945346563361
-    second: details_15
+      213: 6382158614427503206
+    second: MiniGatherer_15
   - first:
-      213: -478479799325603553
-    second: details_16
+      213: -4309084076999148992
+    second: MiniGatherer_16
   - first:
-      213: -1128643930972988218
-    second: details_17
+      213: -3328882707275887014
+    second: MiniGatherer_17
   - first:
-      213: -3191204816758253830
-    second: details_18
+      213: 5238909510169475364
+    second: MiniGatherer_18
   - first:
-      213: -6150518983002668466
-    second: details_19
+      213: -6029636316678262526
+    second: MiniGatherer_19
   - first:
-      213: -7785576502127414536
-    second: details_20
+      213: 2428107489138854171
+    second: MiniGatherer_20
   - first:
-      213: 5035202814881073899
-    second: details_21
+      213: -6024832284861596209
+    second: MiniGatherer_21
   - first:
-      213: -469226104294898508
-    second: details_22
+      213: 6873236051018782677
+    second: MiniGatherer_22
   - first:
-      213: -2879753979990575422
-    second: details_23
+      213: 3471571410873600561
+    second: MiniGatherer_23
   - first:
-      213: -7956252828816127959
-    second: details_24
+      213: 7440374742775518675
+    second: MiniGatherer_24
   - first:
-      213: -4401064498735333733
-    second: details_25
+      213: -384959586430131810
+    second: MiniGatherer_25
   - first:
-      213: -2927697740335768356
-    second: details_26
+      213: 7713579060683896250
+    second: MiniGatherer_26
   - first:
-      213: 2543764042586794446
-    second: details_27
+      213: 8684135420328072086
+    second: MiniGatherer_27
   - first:
-      213: 1610129427235545275
-    second: details_28
+      213: 288553919514183842
+    second: MiniGatherer_28
   - first:
-      213: -4810061785995382448
-    second: details_29
+      213: -2949886225248383296
+    second: MiniGatherer_29
   - first:
-      213: -473010483000414731
-    second: details_30
+      213: 3248846405775239160
+    second: MiniGatherer_30
   - first:
-      213: -594456605343019016
-    second: details_31
+      213: 8344463749169160407
+    second: MiniGatherer_31
   - first:
-      213: -5576049915706428415
-    second: details_32
-  - first:
-      213: 1045450427111208444
-    second: details_33
-  - first:
-      213: -8754467693707745935
-    second: details_34
-  - first:
-      213: -6375945800806186300
-    second: details_35
+      213: -6589770299127112285
+    second: MiniGatherer_32
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -205,13 +196,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: details_0
+      name: MiniGatherer_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 119
-        width: 20
-        height: 18
+        x: 11
+        y: 192
+        width: 10
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,19 +211,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e360d4b7d4c021ab0800000000000000
-      internalID: -5038951506153503170
+      spriteID: 207ecd574db675e80800000000000000
+      internalID: -8189958837095307518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: details_1
+      name: MiniGatherer_1
       rect:
         serializedVersion: 2
-        x: 41
-        y: 124
-        width: 14
+        x: 43
+        y: 192
+        width: 10
         height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -242,129 +233,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 326ea8c2c080819c0800000000000000
-      internalID: -3956403424265050589
+      spriteID: b66207b84b0381920800000000000000
+      internalID: 2961170306987730539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: details_2
+      name: MiniGatherer_2
       rect:
         serializedVersion: 2
-        x: 74
-        y: 123
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f6f5016040c7746e0800000000000000
-      internalID: -1853376364916220049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_3
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 111
-        width: 26
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e0392211493862f0800000000000000
-      internalID: -979469967312736027
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_4
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 127
-        width: 20
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b51a202d138c47540800000000000000
-      internalID: 5004845202217804123
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_5
-      rect:
-        serializedVersion: 2
-        x: 159
-        y: 119
-        width: 17
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6ba09766e4c122b80800000000000000
-      internalID: -8421137230177170762
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_6
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 98
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b097abb6eed57e80800000000000000
-      internalID: -8181388065476472649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_7
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 98
-        width: 14
+        x: 75
+        y: 192
+        width: 10
         height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -374,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 04802976440e07ff0800000000000000
-      internalID: -40285812246312896
+      spriteID: 74c71cb6f2aa78b30800000000000000
+      internalID: 4289584290741713991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: details_8
+      name: MiniGatherer_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 98
-        width: 14
-        height: 13
+        x: 107
+        y: 192
+        width: 10
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,20 +277,64 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98081e8a54aec2b30800000000000000
-      internalID: 4264040532120010889
+      spriteID: e2e3f8e7064e24f00800000000000000
+      internalID: 1099692362123132462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: details_9
+      name: MiniGatherer_4
       rect:
         serializedVersion: 2
-        x: 74
-        y: 98
+        x: 11
+        y: 160
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd23c049323c596a0800000000000000
+      internalID: -6443029134308527393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_5
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 160
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e0191d753143880800000000000000
+      internalID: -8632253317863371201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_6
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 160
         width: 12
-        height: 12
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,64 +343,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92a3a2a914328e880800000000000000
-      internalID: -8581570325288175063
+      spriteID: 2901b432ee90bbce0800000000000000
+      internalID: -1388505141714677614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: details_10
+      name: MiniGatherer_7
       rect:
         serializedVersion: 2
-        x: 104
-        y: 96
-        width: 17
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 52cb435c7ed1d0060800000000000000
-      internalID: 6921221083621538853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_11
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 106
-        width: 14
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f0dba6e1ce1960150800000000000000
-      internalID: 5838514410241047823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_12
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 106
+        x: 105
+        y: 160
         width: 12
-        height: 12
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,392 +365,348 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 77f992fd5f61263e0800000000000000
-      internalID: -2062060434115420297
+      spriteID: 8f41c00846e2c4cd0800000000000000
+      internalID: -2572630277955513096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: details_13
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 52
-        width: 44
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 575cc4155beccc2a0800000000000000
-      internalID: -6715765666167863947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_14
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 67
-        width: 34
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7c55c9aa5f9f2c3d0800000000000000
-      internalID: -3187710752700213817
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_15
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 70
-        width: 23
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fd291dbdefa412ac0800000000000000
-      internalID: -3881738945346563361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_16
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 79
-        width: 23
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f194ff858291c59f0800000000000000
-      internalID: -478479799325603553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_17
-      rect:
-        serializedVersion: 2
-        x: 159
-        y: 87
-        width: 17
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6cc547813504650f0800000000000000
-      internalID: -1128643930972988218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_18
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 47
-        width: 18
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: af6db9b702096b3d0800000000000000
-      internalID: -3191204816758253830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_19
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 40
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e4244d16297f4aaa0800000000000000
-      internalID: -6150518983002668466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_20
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 49
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8f2311bcb6314f390800000000000000
-      internalID: -7785576502127414536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_21
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 53
-        width: 13
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bea88015842a0e540800000000000000
-      internalID: 5035202814881073899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_22
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 55
-        width: 13
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b4892e1859fc79f0800000000000000
-      internalID: -469226104294898508
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_23
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 31
-        width: 13
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c6f426430f0908d0800000000000000
-      internalID: -2879753979990575422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_24
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 31
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 928c73bc436b59190800000000000000
-      internalID: -7956252828816127959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_25
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 42
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b9e3c4ff7274ce2c0800000000000000
-      internalID: -4401064498735333733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_26
-      rect:
-        serializedVersion: 2
-        x: 122
-        y: 34
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cdc9291ba6abe57d0800000000000000
-      internalID: -2927697740335768356
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_27
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 33
-        width: 12
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ec92cc65be34d4320800000000000000
-      internalID: 2543764042586794446
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_28
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 8
-        width: 19
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bb027c8ee24585610800000000000000
-      internalID: 1610129427235545275
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_29
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 15
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 051701a5a4a3f3db0800000000000000
-      internalID: -4810061785995382448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: details_30
+      name: MiniGatherer_8
       rect:
         serializedVersion: 2
         x: 138
-        y: 18
+        y: 160
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d64a70d69083e60800000000000000
+      internalID: 7942108306752171393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_9
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 128
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8bd5ac967b9daa0800000000000000
+      internalID: -6135671352321001282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_10
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 128
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b19dc66a7c4277a0800000000000000
+      internalID: -6380953633436102215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_11
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 128
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8200b24b81a104c10800000000000000
+      internalID: 2035655724975718440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_12
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 128
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f37a0d49f094e81b0800000000000000
+      internalID: -5652500151033354433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_13
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 128
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94bdea0074ec0ba10800000000000000
+      internalID: 1923263845236661065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_14
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 128
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fbef6705988dba20800000000000000
+      internalID: 3079767893847567351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_15
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 128
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66a8629127bf19850800000000000000
+      internalID: 6382158614427503206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_16
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 128
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a7c2bccde0334c0800000000000000
+      internalID: -4309084076999148992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_17
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 128
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5e41ed90de6dc1d0800000000000000
+      internalID: -3328882707275887014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_18
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 128
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 429311c417854b840800000000000000
+      internalID: 5238909510169475364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_19
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 97
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 201f89367bd625ca0800000000000000
+      internalID: -6029636316678262526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_20
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 96
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19469e85ee52b120800000000000000
+      internalID: 2428107489138854171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_21
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 96
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcdf48535fe736ca0800000000000000
+      internalID: -6024832284861596209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_22
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 97
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d7126eb5c3a26f50800000000000000
+      internalID: 6873236051018782677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_23
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 96
         width: 12
         height: 13
       alignment: 0
@@ -880,20 +717,42 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5fd69b9c8778f69f0800000000000000
-      internalID: -473010483000414731
+      spriteID: 13ac5851ecf7d2030800000000000000
+      internalID: 3471571410873600561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: details_31
+      name: MiniGatherer_24
       rect:
         serializedVersion: 2
-        x: 163
-        y: 25
+        x: 171
+        y: 96
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d55ce26865814760800000000000000
+      internalID: 7440374742775518675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_25
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 65
         width: 12
-        height: 13
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -902,20 +761,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ff0524fdd010c7f0800000000000000
-      internalID: -594456605343019016
+      spriteID: e9163f5bb4958aaf0800000000000000
+      internalID: -384959586430131810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: details_32
+      name: MiniGatherer_26
       rect:
         serializedVersion: 2
-        x: 40
-        y: 9
-        width: 17
-        height: 15
+        x: 42
+        y: 65
+        width: 12
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -924,18 +783,84 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 104b8741524ed92b0800000000000000
-      internalID: -5576049915706428415
+      spriteID: ab574f299432c0b60800000000000000
+      internalID: 7713579060683896250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: details_33
+      name: MiniGatherer_27
       rect:
         serializedVersion: 2
         x: 74
-        y: 11
+        y: 64
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 693da0e772f348870800000000000000
+      internalID: 8684135420328072086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_28
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 32
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a8803fc246210400800000000000000
+      internalID: 288553919514183842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_29
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 32
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce80487b16ef07d0800000000000000
+      internalID: -2949886225248383296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniGatherer_30
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
         width: 12
         height: 13
       alignment: 0
@@ -946,20 +871,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf57e3adf9f228e00800000000000000
-      internalID: 1045450427111208444
+      spriteID: 8f7a90ac798361d20800000000000000
+      internalID: 3248846405775239160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: details_34
+      name: MiniGatherer_31
       rect:
         serializedVersion: 2
-        x: 96
+        x: 42
         y: 1
-        width: 17
-        height: 15
+        width: 11
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -968,20 +893,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 175aae60402e18680800000000000000
-      internalID: -8754467693707745935
+      spriteID: 7d02a5aa19d7dc370800000000000000
+      internalID: 8344463749169160407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: details_35
+      name: MiniGatherer_32
       rect:
         serializedVersion: 2
-        x: 112
-        y: 8
-        width: 17
-        height: 15
+        x: 72
+        y: 0
+        width: 44
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -990,8 +915,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c2cdcb43171487a0800000000000000
-      internalID: -6375945800806186300
+      spriteID: 3addb19b3de6c84a0800000000000000
+      internalID: -6589770299127112285
       vertices: []
       indices: 
       edges: []
@@ -1009,43 +934,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      details_0: -5038951506153503170
-      details_1: -3956403424265050589
-      details_10: 6921221083621538853
-      details_11: 5838514410241047823
-      details_12: -2062060434115420297
-      details_13: -6715765666167863947
-      details_14: -3187710752700213817
-      details_15: -3881738945346563361
-      details_16: -478479799325603553
-      details_17: -1128643930972988218
-      details_18: -3191204816758253830
-      details_19: -6150518983002668466
-      details_2: -1853376364916220049
-      details_20: -7785576502127414536
-      details_21: 5035202814881073899
-      details_22: -469226104294898508
-      details_23: -2879753979990575422
-      details_24: -7956252828816127959
-      details_25: -4401064498735333733
-      details_26: -2927697740335768356
-      details_27: 2543764042586794446
-      details_28: 1610129427235545275
-      details_29: -4810061785995382448
-      details_3: -979469967312736027
-      details_30: -473010483000414731
-      details_31: -594456605343019016
-      details_32: -5576049915706428415
-      details_33: 1045450427111208444
-      details_34: -8754467693707745935
-      details_35: -6375945800806186300
-      details_4: 5004845202217804123
-      details_5: -8421137230177170762
-      details_6: -8181388065476472649
-      details_7: -40285812246312896
-      details_8: 4264040532120010889
-      details_9: -8581570325288175063
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

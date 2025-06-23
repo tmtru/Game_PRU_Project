@@ -684,7 +684,30 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Water_coasts 1_0: 4610558070392236823
+      Water_coasts 1_1: 5627261742063960281
+      Water_coasts 1_10: 5395056080915229853
+      Water_coasts 1_11: -5598096171048162463
+      Water_coasts 1_12: 8537124015861204222
+      Water_coasts 1_13: -2019609373842427974
+      Water_coasts 1_14: 6487642782580189303
+      Water_coasts 1_15: -5525206983474864821
+      Water_coasts 1_16: -8023378444661721974
+      Water_coasts 1_17: -8805847019569844538
+      Water_coasts 1_18: 7649749574725396849
+      Water_coasts 1_19: -7908440555774349452
+      Water_coasts 1_2: -7270020823297570421
+      Water_coasts 1_20: -3955548752511997455
+      Water_coasts 1_21: 1503089913955471059
+      Water_coasts 1_22: 6918692537152606732
+      Water_coasts 1_3: 7368800687781836525
+      Water_coasts 1_4: 2953146534358896062
+      Water_coasts 1_5: 3442544865169223099
+      Water_coasts 1_6: -5076192709514139588
+      Water_coasts 1_7: -4155317774481491138
+      Water_coasts 1_8: -4773692567349051641
+      Water_coasts 1_9: -3915955290183611088
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
