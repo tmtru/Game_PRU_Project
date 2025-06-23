@@ -5,8 +5,7 @@ using UnityEngine;
 public class PuzzleManager : MonoBehaviour
 {
 	public RectTransform[] pieces;  // puzzles
-	public int[] correctOrder = { 1, 2, 3, 4 };  // Win order
-
+	public int[] correctOrder = { 1, 4,2,3,9,8,5,7,6};  // Win order
 	public bool CheckPuzzleSolved()
 	{
 		if (pieces.Length != correctOrder.Length)
@@ -33,10 +32,11 @@ public class PuzzleManager : MonoBehaviour
 			}
 			if (pieceNumber != correctOrder[i])
 			{
-				//Debug.LogError($"piece {pieceNumber} - wrongOrder: {correctOrder[i]}");
+				Debug.LogError($"piece {pieceNumber} - correctOrder: {correctOrder[i]}");
 				return false;
 			}
 		}
+		Debug.LogError($"Win");
 		return true;
 	}
 

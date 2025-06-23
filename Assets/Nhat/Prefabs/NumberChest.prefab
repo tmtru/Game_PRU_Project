@@ -2247,7 +2247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 1647277023499929179}
-  correctCode: 391
+  correctCode: 666
   requiredLength: 3
   keypadPanel: {fileID: 4855991920591327634}
   chestAnimator: {fileID: 4574989380987822828}
