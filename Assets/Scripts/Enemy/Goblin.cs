@@ -28,6 +28,10 @@ public class Goblin : Enemy
     public float hurtAnimationDuration = 0.6f; // Thời gian animation hurt
     private bool isHurt = false;
 
+    [Header("Death Settings")]
+    public float deathAnimationDuration = 2f; // Thời gian animation death
+    public float despawnDelay = 3f; // Thời gian chờ trước khi xóa object
+
     private Vector3 targetPosition;
     private Vector3 lastPosition;
     private Vector2 currentDirection;
@@ -83,21 +87,21 @@ public class Goblin : Enemy
 
         CheckDistance();
         UpdateAnimator();
+        EnemyHealth enemyHealth = GetComponent<EnemyHealth>();
 
         // Test hurt animation với phím T
-        if (Input.GetKeyDown(KeyCode.T))
+        if (enemyHealth != null && Input.GetKeyDown(KeyCode.T))
         {
             // Test trực tiếp hurt animation
             TriggerHurt();
+            enemyHealth.TakeDamage(10f);
             Debug.Log("Testing hurt animation with T key");
         }
 
-        // Test damage qua EnemyHealth với phím Y  
-        EnemyHealth enemyHealth = GetComponent<EnemyHealth>();
-        if (enemyHealth != null && Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKeyDown(KeyCode.U))
         {
-            enemyHealth.TakeDamage(10f);
-            Debug.Log("Testing damage with Y key");
+            TriggerDeath();
+            Debug.Log("Testing death animation with U key");
         }
     }
 
@@ -168,16 +172,109 @@ public class Goblin : Enemy
 
     void OnDeath()
     {
-        isDead = true;
-        isAttacking = false;
-        isChasing = false;
-        isHurt = false;
+        TriggerDeath();
+    }
 
-        // Dừng tất cả Invoke và Coroutine
-        CancelInvoke();
-        StopAllCoroutines();
+    // Trigger death animation
+    public void TriggerDeath()
+    {
+        if (!isDead) // Tránh spam death animation
+        {
+            isDead = true;
+            isAttacking = false;
+            isChasing = false;
+            isHurt = false;
 
-        Debug.Log($"{gameObject.name} died!");
+            // Dừng tất cả Invoke và Coroutine
+            CancelInvoke();
+            StopAllCoroutines();
+
+            // Bắt đầu death animation
+            StartCoroutine(DeathSequence());
+
+            Debug.Log($"{gameObject.name} is dying!");
+        }
+    }
+
+    private IEnumerator DeathSequence()
+    {
+        // Xác định hướng death dựa trên hướng di chuyển cuối cùng
+        DetermineDeathDirection();
+
+        // Play death animation dựa trên hướng
+        PlayDeathAnimation();
+
+        Debug.Log($"{gameObject.name} playing death animation in direction: {GetDirectionName()}");
+
+        // Đợi animation death hoàn thành
+        yield return new WaitForSeconds(deathAnimationDuration);
+
+        Debug.Log($"{gameObject.name} death animation completed!");
+
+        // Đợi thêm một chút trước khi despawn
+        yield return new WaitForSeconds(despawnDelay);
+
+        // Despawn object
+        DespawnGoblin();
+    }
+
+    private void DetermineDeathDirection()
+    {
+        // Nếu không có direction hiện tại, mặc định là xuống
+        if (currentDirection == Vector2.zero)
+        {
+            currentDirection = new Vector2(0, -1); // Mặc định death hướng xuống
+        }
+
+        // Đảm bảo direction được normalize và chỉ có 4 hướng chính
+        if (Mathf.Abs(currentDirection.x) > Mathf.Abs(currentDirection.y))
+        {
+            // Ưu tiên hướng ngang
+            currentDirection = new Vector2(currentDirection.x > 0 ? 1 : -1, 0);
+        }
+        else
+        {
+            // Ưu tiên hướng dọc
+            currentDirection = new Vector2(0, currentDirection.y > 0 ? 1 : -1);
+        }
+    }
+
+    private void PlayDeathAnimation()
+    {
+        // Cập nhật animator với direction cuối cùng
+        animator.SetFloat("MoveX", currentDirection.x);
+        animator.SetFloat("MoveY", currentDirection.y);
+
+        // Set death state
+        animator.SetBool("IsDead", true);
+
+        // Reset tất cả states khác
+        animator.SetBool("IsMoving", false);
+        animator.SetBool("IsChasing", false);
+        animator.SetBool("IsAttacking", false);
+        animator.SetBool("IsHurt", false);
+        animator.SetBool("IsRunning", false);
+
+        // Force play death animation
+        animator.Play("DeathTree", 0, 0f);
+    }
+
+    private string GetDirectionName()
+    {
+        if (currentDirection.x > 0) return "Right";
+        if (currentDirection.x < 0) return "Left";
+        if (currentDirection.y > 0) return "Up";
+        if (currentDirection.y < 0) return "Down";
+        return "Down"; // Default
+    }
+
+    private void DespawnGoblin()
+    {
+        // Có thể thêm effect khi despawn
+        Debug.Log($"{gameObject.name} despawned!");
+
+        // Xóa object
+        Destroy(gameObject);
     }
 
     // Event handler khi bị thương
@@ -304,7 +401,7 @@ public class Goblin : Enemy
 
     void UpdateAnimator()
     {
-        if (animator == null) return;
+        if (animator == null || isDead) return; // Không cập nhật animator khi chết
 
         // Tính toán hướng di chuyển dựa trên sự thay đổi vị trí
         Vector3 deltaPosition = transform.position - lastPosition;
@@ -340,6 +437,7 @@ public class Goblin : Enemy
         animator.SetBool("IsChasing", isChasing);
         animator.SetBool("IsAttacking", isAttacking);
         animator.SetBool("IsHurt", isHurt); // Thêm parameter cho hurt state
+        animator.SetBool("IsDead", isDead); // Thêm parameter cho death state
 
         // FORCE TRANSITION - Ưu tiên tuyệt đối cho hurt
         if (isHurt)
@@ -385,6 +483,7 @@ public class Goblin : Enemy
         if (stateInfo.IsName("RunTree")) return "RunTree";
         if (stateInfo.IsName("AttackTree")) return "AttackTree";
         if (stateInfo.IsName("HurtTree")) return "HurtTree";
+        if (stateInfo.IsName("DeathTree")) return "DeathTree";
 
         return "Unknown State";
     }
