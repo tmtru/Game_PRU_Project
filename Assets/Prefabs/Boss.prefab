@@ -539,6 +539,11 @@ MonoBehaviour:
   rangeWalk: 5
   speedWalk: 1
   speedRun: 2.5
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  wallCheckDistance: 1
+  pathfindingCheckInterval: 0.5
   animator: {fileID: 0}
   attackCooldown: 1
   attackDuration: 0.5
