@@ -13,6 +13,13 @@ public class Goblin : Enemy
     public float speedWalk = 1f;
     public float speedRun = 3f;
 
+    [Header("Wall Detection")]
+    public LayerMask wallLayer = 1 << 9; // Wall layer
+    public float wallCheckDistance = 1f;
+    public float pathfindingCheckInterval = 0.5f;
+    private float lastPathfindingCheck = 0f;
+    private bool isPathBlocked = false;
+
     [Header("Animation")]
     public Animator animator;
 
@@ -124,32 +131,65 @@ public class Goblin : Enemy
         }
         else if (distanceToPlayer <= chaseRadius)
         {
-            // Đuổi theo player với tốc độ cao hơn
-            isChasing = true;
-
-            // QUAN TRỌNG: Không di chuyển khi đang attack
-            if (!isAttacking)
+            // Kiểm tra xem có thể tiếp cận player không
+            if (Time.time >= lastPathfindingCheck + pathfindingCheckInterval)
             {
-                transform.position = Vector3.MoveTowards(
-                    transform.position,
-                    target.position,
-                    speedRun * Time.deltaTime
-                );
+                CheckPathToPlayer();
+                lastPathfindingCheck = Time.time;
+            }
+
+            // Chỉ đuổi theo nếu không bị chắn bởi tường
+            if (!isPathBlocked)
+            {
+                isChasing = true;
+
+                // Kiểm tra có tường phía trước không
+                Vector3 directionToPlayer = (target.position - transform.position).normalized;
+                if (!IsWallInDirection(directionToPlayer))
+                {
+                    // QUAN TRỌNG: Không di chuyển khi đang attack
+                    if (!isAttacking)
+                    {
+                        transform.position = Vector3.MoveTowards(
+                            transform.position,
+                            target.position,
+                            speedRun * Time.deltaTime
+                        );
+                    }
+                }
+                else
+                {
+                    // Có tường chắn -> chuyển sang idle
+                    isChasing = false;
+                    Debug.Log("Wall blocking path to player - switching to idle");
+                }
+            }
+            else
+            {
+                // Đường bị chắn -> idle
+                isChasing = false;
+                Debug.Log("Path to player is blocked - idling");
             }
         }
         else
         {
             // Di chuyển ngẫu nhiên với tốc độ bình thường
             isChasing = false;
+            isPathBlocked = false;
 
             // QUAN TRỌNG: Không di chuyển khi đang attack
             if (!isAttacking)
             {
-                transform.position = Vector3.MoveTowards(
-                    transform.position,
-                    targetPosition,
-                    speedWalk * Time.deltaTime
-                );
+                // Kiểm tra tường trước khi di chuyển
+                Vector3 directionToTarget = (targetPosition - transform.position).normalized;
+                if (!IsWallInDirection(directionToTarget))
+                {
+                    transform.position = Vector3.MoveTowards(
+                        transform.position,
+                        targetPosition,
+                        speedWalk * Time.deltaTime
+                    );
+                }
 
                 // Kiểm tra xem đã đến đích chưa
                 if (Vector3.Distance(transform.position, targetPosition) < 0.5f)
@@ -157,6 +197,52 @@ public class Goblin : Enemy
                     ChooseNewTarget();
                 }
             }
+        }
+    }
+
+    // Kiểm tra xem có tường chắn đường đến player không
+    private void CheckPathToPlayer()
+    {
+        if (target == null) return;
+
+        Vector3 directionToPlayer = target.position - transform.position;
+        float distanceToPlayer = directionToPlayer.magnitude;
+        directionToPlayer.Normalize();
+
+        // Raycast từ goblin đến player
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, directionToPlayer, out hit, distanceToPlayer, wallLayer))
+        {
+            isPathBlocked = true;
+            Debug.Log("Path to player blocked by: " + hit.collider.name);
+        }
+        else
+        {
+            isPathBlocked = false;
+        }
+    }
+
+    // Kiểm tra có tường ở phía trước theo hướng di chuyển không
+    private bool IsWallInDirection(Vector3 direction)
+    {
+        RaycastHit hit;
+        Vector3 rayOrigin = transform.position + Vector3.up * 0.5f; // Raise ray a bit
+
+        if (Physics.Raycast(rayOrigin, direction, out hit, wallCheckDistance, wallLayer))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    // Collision detection cho 2D nếu sử dụng 2D physics
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (((1 << collision.gameObject.layer) & wallLayer) != 0)
+        {
+            // Va chạm với tường -> dừng chuyển động
+            GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+            Debug.Log("Goblin hit wall: " + collision.gameObject.name);
         }
     }
 
@@ -500,38 +586,69 @@ public class Goblin : Enemy
 
     void ChooseNewTarget()
     {
-        int direction = Random.Range(0, 4);
-        float newX = spawnCenter.position.x;
-        float newZ = spawnCenter.position.z;
-        float newY = transform.position.y;
+        // Thử nhiều lần để tìm vị trí không bị chắn bởi tường
+        int attempts = 0;
+        int maxAttempts = 10;
 
-        switch (direction)
+        do
         {
-            case 0: newZ += rangeWalk; break;
-            case 1: newZ -= rangeWalk; break;
-            case 2: newX -= rangeWalk; break;
-            case 3: newX += rangeWalk; break;
-        }
+            int direction = Random.Range(0, 4);
+            float newX = spawnCenter.position.x;
+            float newZ = spawnCenter.position.z;
+            float newY = transform.position.y;
 
-        targetPosition = new Vector3(newX, newY, newZ);
+            switch (direction)
+            {
+                case 0: newZ += rangeWalk; break;
+                case 1: newZ -= rangeWalk; break;
+                case 2: newX -= rangeWalk; break;
+                case 3: newX += rangeWalk; break;
+            }
+
+            targetPosition = new Vector3(newX, newY, newZ);
+            attempts++;
+
+        } while (IsWallInDirection((targetPosition - transform.position).normalized) && attempts < maxAttempts);
+
+        // Nếu không tìm được vị trí phù hợp, giữ nguyên vị trí hiện tại
+        if (attempts >= maxAttempts)
+        {
+            targetPosition = transform.position;
+        }
     }
 
     void OnDrawGizmosSelected()
     {
+        // Chase radius
         Gizmos.color = Color.yellow;
         DrawWireCircle(transform.position, chaseRadius);
 
+        // Attack radius
         Gizmos.color = Color.red;
         DrawWireCircle(transform.position, attackRadius);
 
+        // Spawn range
         if (spawnCenter != null)
         {
             Gizmos.color = Color.green;
             DrawWireCircle(spawnCenter.position, rangeWalk);
         }
 
+        // Target position
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(targetPosition, 0.5f);
+
+        // Wall detection rays
+        if (target != null)
+        {
+            Gizmos.color = isPathBlocked ? Color.red : Color.green;
+            Gizmos.DrawLine(transform.position, target.position);
+        }
+
+        // Wall check distance
+        Gizmos.color = Color.magenta;
+        Vector3 forward = transform.forward;
+        Gizmos.DrawRay(transform.position, forward * wallCheckDistance);
     }
 
     void DrawWireCircle(Vector3 center, float radius, int segments = 32)
