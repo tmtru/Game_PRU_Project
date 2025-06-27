@@ -17,20 +17,24 @@ public class Goblin : Enemy
     public Animator animator;
 
     [Header("Attack Settings")]
-    public float attackCooldown = 1.5f; // Thời gian chờ giữa các đòn tấn công
+    public float attackCooldown = 1.5f;
     public float attackDuration = 0.8f;
     private bool isAttacking = false;
     private float lastAttackTime = 0f;
-    public int attackDamage = 10; // Sát thương gây ra
-    public float knockbackForce = 5f; // Lực đẩy lùi player
+    public int attackDamage = 10;
+    public float knockbackForce = 5f;
+
+    // Thêm biến để theo dõi trạng thái animation
+    private bool attackAnimationCompleted = false;
+    private Coroutine attackCoroutine;
 
     [Header("Hurt Settings")]
-    public float hurtAnimationDuration = 0.6f; // Thời gian animation hurt
+    public float hurtAnimationDuration = 0.6f;
     private bool isHurt = false;
 
     [Header("Death Settings")]
-    public float deathAnimationDuration = 2f; // Thời gian animation death
-    public float despawnDelay = 3f; // Thời gian chờ trước khi xóa object
+    public float deathAnimationDuration = 2f;
+    public float despawnDelay = 3f;
 
     private Vector3 targetPosition;
     private Vector3 lastPosition;
@@ -70,13 +74,10 @@ public class Goblin : Enemy
         if (enemyHealth != null)
         {
             enemyHealth.OnDeath += OnDeath;
-            enemyHealth.OnTakeDamage += OnTakeDamage; // Thêm event khi bị thương
+            enemyHealth.OnTakeDamage += OnTakeDamage;
         }
 
-        // Lưu vị trí ban đầu để tính toán hướng di chuyển
         lastPosition = transform.position;
-
-        // Chọn mục tiêu di chuyển ban đầu
         ChooseNewTarget();
     }
 
@@ -92,7 +93,6 @@ public class Goblin : Enemy
         // Test hurt animation với phím T
         if (enemyHealth != null && Input.GetKeyDown(KeyCode.T))
         {
-            // Test trực tiếp hurt animation
             TriggerHurt();
             enemyHealth.TakeDamage(10f);
             Debug.Log("Testing hurt animation with T key");
@@ -126,48 +126,83 @@ public class Goblin : Enemy
         {
             // Đuổi theo player với tốc độ cao hơn
             isChasing = true;
-            isAttacking = false;
 
-            transform.position = Vector3.MoveTowards(
-                transform.position,
-                target.position,
-                speedRun * Time.deltaTime // Dùng speedRun khi chase
-            );
+            // QUAN TRỌNG: Không di chuyển khi đang attack
+            if (!isAttacking)
+            {
+                transform.position = Vector3.MoveTowards(
+                    transform.position,
+                    target.position,
+                    speedRun * Time.deltaTime
+                );
+            }
         }
         else
         {
             // Di chuyển ngẫu nhiên với tốc độ bình thường
             isChasing = false;
-            isAttacking = false;
 
-            transform.position = Vector3.MoveTowards(
-                transform.position,
-                targetPosition,
-                speedWalk * Time.deltaTime // Dùng speedWalk khi walk
-            );
-
-            // Kiểm tra xem đã đến đích chưa
-            if (Vector3.Distance(transform.position, targetPosition) < 0.5f)
+            // QUAN TRỌNG: Không di chuyển khi đang attack
+            if (!isAttacking)
             {
-                ChooseNewTarget();
+                transform.position = Vector3.MoveTowards(
+                    transform.position,
+                    targetPosition,
+                    speedWalk * Time.deltaTime
+                );
+
+                // Kiểm tra xem đã đến đích chưa
+                if (Vector3.Distance(transform.position, targetPosition) < 0.5f)
+                {
+                    ChooseNewTarget();
+                }
             }
         }
     }
 
     void StartAttack()
     {
-        if (isHurt || isDead) return; // Không tấn công khi đang hurt
+        if (isHurt || isDead || isAttacking) return;
 
         isAttacking = true;
+        attackAnimationCompleted = false;
         lastAttackTime = Time.time;
 
-        // Tự động kết thúc attack sau attackDuration
-        Invoke(nameof(EndAttack), attackDuration);
-
-        // Delay một chút để sync với animation trước khi gây damage
-        Invoke(nameof(DealDamage), attackDuration * 0.4f); // Gây damage ở 40% animation
-
         Debug.Log("Goblin starts attack!");
+
+        // Bắt đầu coroutine để quản lý attack sequence
+        if (attackCoroutine != null)
+        {
+            StopCoroutine(attackCoroutine);
+        }
+        attackCoroutine = StartCoroutine(AttackSequence());
+    }
+
+    private IEnumerator AttackSequence()
+    {
+        // Chờ một khoảng thời gian để animation bắt đầu
+        yield return new WaitForSeconds(0.1f);
+
+        // Chờ đến điểm gây damage (ví dụ: 60% animation)
+        float damagePoint = attackDuration * 0.6f;
+        yield return new WaitForSeconds(damagePoint - 0.1f);
+
+        // Kiểm tra xem vẫn còn trong điều kiện attack không
+        if (isAttacking && !isHurt && !isDead && target != null)
+        {
+            float distanceToPlayer = Vector3.Distance(target.position, transform.position);
+            if (distanceToPlayer <= attackRadius)
+            {
+                DealDamage();
+            }
+        }
+
+        // Chờ animation hoàn thành
+        float remainingTime = attackDuration - damagePoint;
+        yield return new WaitForSeconds(remainingTime);
+
+        // Kết thúc attack
+        EndAttack();
     }
 
     void OnDeath()
@@ -175,10 +210,9 @@ public class Goblin : Enemy
         TriggerDeath();
     }
 
-    // Trigger death animation
     public void TriggerDeath()
     {
-        if (!isDead) // Tránh spam death animation
+        if (!isDead)
         {
             isDead = true;
             isAttacking = false;
@@ -198,64 +232,47 @@ public class Goblin : Enemy
 
     private IEnumerator DeathSequence()
     {
-        // Xác định hướng death dựa trên hướng di chuyển cuối cùng
         DetermineDeathDirection();
-
-        // Play death animation dựa trên hướng
         PlayDeathAnimation();
 
         Debug.Log($"{gameObject.name} playing death animation in direction: {GetDirectionName()}");
 
-        // Đợi animation death hoàn thành
         yield return new WaitForSeconds(deathAnimationDuration);
 
         Debug.Log($"{gameObject.name} death animation completed!");
 
-        // Đợi thêm một chút trước khi despawn
         yield return new WaitForSeconds(despawnDelay);
 
-        // Despawn object
         DespawnGoblin();
     }
 
     private void DetermineDeathDirection()
     {
-        // Nếu không có direction hiện tại, mặc định là xuống
         if (currentDirection == Vector2.zero)
         {
-            currentDirection = new Vector2(0, -1); // Mặc định death hướng xuống
+            currentDirection = new Vector2(0, -1);
         }
 
-        // Đảm bảo direction được normalize và chỉ có 4 hướng chính
         if (Mathf.Abs(currentDirection.x) > Mathf.Abs(currentDirection.y))
         {
-            // Ưu tiên hướng ngang
             currentDirection = new Vector2(currentDirection.x > 0 ? 1 : -1, 0);
         }
         else
         {
-            // Ưu tiên hướng dọc
             currentDirection = new Vector2(0, currentDirection.y > 0 ? 1 : -1);
         }
     }
 
     private void PlayDeathAnimation()
     {
-        // Cập nhật animator với direction cuối cùng
         animator.SetFloat("MoveX", currentDirection.x);
         animator.SetFloat("MoveY", currentDirection.y);
-
-        // Set death state
         animator.SetBool("IsDead", true);
-
-        // Reset tất cả states khác
         animator.SetBool("IsMoving", false);
         animator.SetBool("IsChasing", false);
         animator.SetBool("IsAttacking", false);
         animator.SetBool("IsHurt", false);
         animator.SetBool("IsRunning", false);
-
-        // Force play death animation
         animator.Play("DeathTree", 0, 0f);
     }
 
@@ -265,33 +282,54 @@ public class Goblin : Enemy
         if (currentDirection.x < 0) return "Left";
         if (currentDirection.y > 0) return "Up";
         if (currentDirection.y < 0) return "Down";
-        return "Down"; // Default
+        return "Down";
     }
 
     private void DespawnGoblin()
     {
-        // Có thể thêm effect khi despawn
         Debug.Log($"{gameObject.name} despawned!");
-
-        // Xóa object
         Destroy(gameObject);
     }
 
-    // Event handler khi bị thương
     void OnTakeDamage(float damage, Vector3 damagePosition)
     {
         if (!isDead)
         {
+            // Hủy attack đang thực hiện
+            if (isAttacking)
+            {
+                CancelAttack();
+            }
             TriggerHurt();
         }
     }
 
-    // Trigger hurt animation
+    private void CancelAttack()
+    {
+        if (attackCoroutine != null)
+        {
+            StopCoroutine(attackCoroutine);
+            attackCoroutine = null;
+        }
+
+        isAttacking = false;
+        attackAnimationCompleted = false;
+
+        Debug.Log("Attack cancelled due to damage!");
+    }
+
     public void TriggerHurt()
     {
-        if (!isHurt && !isDead) // Tránh spam hurt animation
+        if (!isHurt && !isDead)
         {
             isHurt = true;
+
+            // Hủy attack nếu đang thực hiện
+            if (isAttacking)
+            {
+                CancelAttack();
+            }
+
             animator.Play("HurtTree", 0, 0f);
             StartCoroutine(HurtDuration());
         }
@@ -299,26 +337,15 @@ public class Goblin : Enemy
 
     private IEnumerator HurtDuration()
     {
-        // Tạm dừng các hành động khác khi bị thương
         bool wasChasing = isChasing;
-        bool wasAttacking = isAttacking;
-
         isChasing = false;
-        isAttacking = false;
-
-        // Hủy các invoke đang chờ
-        CancelInvoke();
 
         Debug.Log($"{gameObject.name} is hurt!");
 
-        // Đợi animation hurt hoàn thành
         yield return new WaitForSeconds(hurtAnimationDuration);
 
-        // Reset hurt state
         isHurt = false;
 
-        // Không khôi phục trạng thái attack vì nó đã bị gián đoạn
-        // Chỉ khôi phục chase nếu player vẫn trong tầm
         if (wasChasing && target != null)
         {
             float distanceToPlayer = Vector3.Distance(target.position, transform.position);
@@ -341,7 +368,6 @@ public class Goblin : Enemy
 
     void OnDestroy()
     {
-        // Hủy đăng ký event
         if (enemyHealth != null)
         {
             enemyHealth.OnDeath -= OnDeath;
@@ -355,33 +381,24 @@ public class Goblin : Enemy
 
         // Kiểm tra xem player còn trong tầm tấn công không
         float distanceToPlayer = Vector3.Distance(target.position, transform.position);
-        if (distanceToPlayer > attackRadius) return;
-
-        // Tìm PlayerHealth component
-        //PlayerHealth playerHealth = target.GetComponent<PlayerHealth>();
-        //if (playerHealth != null)
-        //{
-        // Gây damage
-        //playerHealth.TakeDamage(attackDamage);
+        if (distanceToPlayer > attackRadius)
+        {
+            Debug.Log("Player moved out of attack range!");
+            return;
+        }
 
         Debug.Log($"Goblin deals {attackDamage} damage to player!");
 
         // Tính toán hướng knockback
         Vector3 knockbackDirection = (target.position - transform.position).normalized;
-        knockbackDirection.y = 0; // Chỉ knockback theo mặt phẳng ngang
+        knockbackDirection.y = 0;
 
         // Áp dụng knockback
         ApplyKnockback(target, knockbackDirection);
-        //}
-        //else
-        //{
-        //    Debug.LogWarning("Player không có PlayerHealth component!");
-        //}
     }
 
     void ApplyKnockback(Transform targetTransform, Vector3 direction)
     {
-        // Thử tìm Rigidbody để áp dụng knockback
         Rigidbody targetRb = targetTransform.GetComponent<Rigidbody>();
         if (targetRb != null)
         {
@@ -389,7 +406,6 @@ public class Goblin : Enemy
         }
         else
         {
-            // Nếu không có Rigidbody, di chuyển trực tiếp
             targetTransform.position += direction * (knockbackForce * 0.1f);
         }
     }
@@ -397,70 +413,62 @@ public class Goblin : Enemy
     void EndAttack()
     {
         isAttacking = false;
+        attackAnimationCompleted = true;
+        attackCoroutine = null;
+
+        Debug.Log("Attack sequence completed!");
     }
 
     void UpdateAnimator()
     {
-        if (animator == null || isDead) return; // Không cập nhật animator khi chết
+        if (animator == null || isDead) return;
 
-        // Tính toán hướng di chuyển dựa trên sự thay đổi vị trí
         Vector3 deltaPosition = transform.position - lastPosition;
 
-        // Chỉ cập nhật nếu có di chuyển đáng kể
-        if (deltaPosition.magnitude > 0.01f)
+        // Chỉ cập nhật direction khi không đang attack để tránh làm gián đoạn animation
+        if (!isAttacking && deltaPosition.magnitude > 0.01f)
         {
-            // Xác định hướng chính (ưu tiên hướng có giá trị tuyệt đối lớn hơn)
             if (Mathf.Abs(deltaPosition.x) > Mathf.Abs(deltaPosition.y))
             {
-                // Di chuyển theo trục X (trái/phải)
                 currentDirection = new Vector2(deltaPosition.x > 0 ? 1 : -1, 0);
             }
             else
             {
-                // Di chuyển theo trục Z (lên/xuống)
                 currentDirection = new Vector2(0, deltaPosition.y > 0 ? 1 : -1);
             }
-        }
-
-        // Debug thông tin animator
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Debug.Log($"Current Animator State: {animator.GetCurrentAnimatorStateInfo(0).IsName("HurtTree")}");
-            Debug.Log($"IsHurt parameter: {animator.GetBool("IsHurt")}");
-            Debug.Log($"Current state name: {GetCurrentStateName()}");
         }
 
         // Cập nhật animator parameters
         animator.SetFloat("MoveX", currentDirection.x);
         animator.SetFloat("MoveY", currentDirection.y);
-        animator.SetBool("IsMoving", deltaPosition.magnitude > 0.01f);
-        animator.SetBool("IsChasing", isChasing);
-        animator.SetBool("IsAttacking", isAttacking);
-        animator.SetBool("IsHurt", isHurt); // Thêm parameter cho hurt state
-        animator.SetBool("IsDead", isDead); // Thêm parameter cho death state
 
-        // FORCE TRANSITION - Ưu tiên tuyệt đối cho hurt
+        // Khi đang attack, không cập nhật IsMoving
+        if (!isAttacking)
+        {
+            animator.SetBool("IsMoving", deltaPosition.magnitude > 0.01f);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", false); // Đứng yên khi attack
+        }
+
+        animator.SetBool("IsChasing", isChasing && !isAttacking);
+        animator.SetBool("IsAttacking", isAttacking);
+        animator.SetBool("IsHurt", isHurt);
+        animator.SetBool("IsDead", isDead);
+
+        // FORCE TRANSITION cho hurt
         if (isHurt)
         {
-            // Reset tất cả states khác khi hurt
             animator.SetBool("IsRunning", false);
             animator.SetBool("IsAttacking", false);
             animator.SetBool("IsChasing", false);
             animator.SetBool("IsMoving", false);
-
-            // Force set hurt state
             animator.SetBool("IsHurt", true);
-
-            Debug.Log("FORCING HURT STATE!");
         }
-        else
+        else if (!isAttacking) // Chỉ cập nhật running khi không attack
         {
-            // Logic bình thường khi không hurt
-            if (isAttacking)
-            {
-                animator.SetBool("IsRunning", false);
-            }
-            else if (isChasing && deltaPosition.magnitude > 0.01f)
+            if (isChasing && deltaPosition.magnitude > 0.01f)
             {
                 animator.SetBool("IsRunning", true);
             }
@@ -469,12 +477,14 @@ public class Goblin : Enemy
                 animator.SetBool("IsRunning", false);
             }
         }
+        else
+        {
+            animator.SetBool("IsRunning", false); // Không chạy khi attack
+        }
 
-        // Lưu vị trí hiện tại cho frame tiếp theo
         lastPosition = transform.position;
     }
 
-    // Helper method để debug animator state
     private string GetCurrentStateName()
     {
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
@@ -490,50 +500,36 @@ public class Goblin : Enemy
 
     void ChooseNewTarget()
     {
-        // Di chuyển theo 4 hướng cơ bản
         int direction = Random.Range(0, 4);
         float newX = spawnCenter.position.x;
         float newZ = spawnCenter.position.z;
-        float newY = transform.position.y; // Giữ nguyên độ cao
+        float newY = transform.position.y;
 
         switch (direction)
         {
-            case 0: // Lên (Z+)
-                newZ += rangeWalk;
-                break;
-            case 1: // Xuống (Z-)
-                newZ -= rangeWalk;
-                break;
-            case 2: // Trái (X-)
-                newX -= rangeWalk;
-                break;
-            case 3: // Phải (X+)
-                newX += rangeWalk;
-                break;
+            case 0: newZ += rangeWalk; break;
+            case 1: newZ -= rangeWalk; break;
+            case 2: newX -= rangeWalk; break;
+            case 3: newX += rangeWalk; break;
         }
 
         targetPosition = new Vector3(newX, newY, newZ);
     }
 
-    // Gizmos để debug trong Scene view
     void OnDrawGizmosSelected()
     {
-        // Vẽ bán kính chase
         Gizmos.color = Color.yellow;
         DrawWireCircle(transform.position, chaseRadius);
 
-        // Vẽ bán kính attack
         Gizmos.color = Color.red;
         DrawWireCircle(transform.position, attackRadius);
 
-        // Vẽ khu vực di chuyển
         if (spawnCenter != null)
         {
             Gizmos.color = Color.green;
             DrawWireCircle(spawnCenter.position, rangeWalk);
         }
 
-        // Vẽ đích đến hiện tại
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(targetPosition, 0.5f);
     }

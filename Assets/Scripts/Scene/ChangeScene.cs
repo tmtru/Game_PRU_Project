@@ -29,7 +29,7 @@ public class ChangeScene : MonoBehaviour
 
         if (timer <= 0)
         {
-            StartCoroutine(FadeAndLoadScene());
+            //StartCoroutine(FadeAndLoadScene());
             timer = countdown;
         }
     }
