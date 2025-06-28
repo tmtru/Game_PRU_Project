@@ -5,38 +5,51 @@ using UnityEngine.UI;
 
 public class StoryUIManager : MonoBehaviour
 {
-    public static StoryUIManager Instance;
+	public GameObject fullScreenPanel;
+	public GameObject closeButton;
 
-    public GameObject fullScreenPanel;
-    public GameObject closeButton;
+	private void Start()
+	{
+		if (closeButton != null)
+			closeButton.SetActive(false);
+	}
 
-    private void Awake()
-    {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
-    }
+	/// <summary>
+	/// Hiển thị message và tự tắt sau vài giây.
+	/// </summary>
+	public void ShowTimedStory( float duration)
+	{
+		if (closeButton != null) closeButton.SetActive(false);
 
-    public void ShowStory(float duration)
-    {
-        StartCoroutine(ShowAndHide(duration));
-    }
+		StartCoroutine(ShowAndHide(duration));
+	}
 
-    private IEnumerator ShowAndHide(float duration)
-    {
-        fullScreenPanel.SetActive(true);
-        Time.timeScale = 0f;
+	/// <summary>
+	/// Hiển thị message và chờ người dùng bấm nút Close.
+	/// </summary>
+	public void ShowManualStory()
+	{
+		if (closeButton != null) closeButton.SetActive(true);
 
-        if (duration > 0)
-        {
-            yield return new WaitForSecondsRealtime(duration);
-            CloseStory();
-        }
-    }
+		fullScreenPanel.SetActive(true);
+		Time.timeScale = 0f;
+	}
 
+	/// <summary>
+	/// Đóng story (gọi từ nút X).
+	/// </summary>
+	public void CloseStory()
+	{
+		fullScreenPanel.SetActive(false);
+		Time.timeScale = 1f;
+		if (closeButton != null) closeButton.SetActive(false);
+	}
 
-    public void CloseStory()
-    {
-        fullScreenPanel.SetActive(false);
-        Time.timeScale = 1f;
-    }
+	private IEnumerator ShowAndHide(float duration)
+	{
+		fullScreenPanel.SetActive(true);
+
+		yield return new WaitForSecondsRealtime(duration);
+		CloseStory();
+	}
 }
