@@ -29,13 +29,14 @@ public class SoundPuzzleController : MonoBehaviour
 
 	[Header("Beat‑map (thiết lập trong Inspector)")]
 	[Tooltip("Thời điểm (giây) mỗi nốt cần bấm kể từ khi track bắt đầu")]
-	public List<int> noteIDs = new List<int> { 0, 4, 0, 4, 0, 0, 4, 0, 6, 6, 0, 4, 0, 4, 0, 0, 4, 0, 6 }; //19
+	public List<int> noteIDs = new List<int>();
 
 	private List<int> inputBuffer = new();
 	//private double trackStartDsp;
 	private bool isSolved = false;
 	private Coroutine shakeCo;
-
+	public GameObject itemPrefab;         // Prefab vật phẩm
+	public Transform spawnPoint;
 	void Awake()
 	{
 	}
@@ -64,46 +65,6 @@ public class SoundPuzzleController : MonoBehaviour
 		trackSource.Play();
 	}
 
-	//═════════════════════════════════════════════
-	//              BUTTON INPUT
-	//═════════════════════════════════════════════
-	//public void OnNoteButtonPressed(int id)
-	//{
-	//	if (!trackPlaying || isSolved) return;
-
-	//	// Phát sound click
-	//	if (id < noteSources.Length && noteSources[id])
-	//		noteSources[id].Play();
-
-	//	// Kiểm tra nút đúng?
-	//	if (id != noteIDs[currentIndex])
-	//	{
-	//		TriggerFail();
-	//		return;
-	//	}
-
-	//	// Kiểm tra nhịp đúng?
-	//	float expectedTime = noteTimings[currentIndex];
-	//	float actualTime = (float)(AudioSettings.dspTime - trackStartDsp);
-	//	bool inBeat = Mathf.Abs(actualTime - expectedTime) <= allowedOffset;
-
-	//	if (!inBeat)
-	//	{
-	//		TriggerFail();
-	//		return;
-	//	}
-
-	//	// Pass nốt này
-	//	currentIndex++;
-
-	//	// Nếu hết nốt → Solve
-	//	if (currentIndex >= noteTimings.Count)
-	//		Solve();
-	////}
-
-	//═════════════════════════════════════════════
-	//              RESULT
-	//═════════════════════════════════════════════
 
 	public void OnNoteButtonPressed(int id)
 	{
@@ -159,6 +120,7 @@ public class SoundPuzzleController : MonoBehaviour
 		if (boxCollider) boxCollider.isTrigger = false;
 		chestAnimator.SetTrigger("PlayAnim"); // animation mở rương
 		chestOpening.Play();
+		Instantiate(itemPrefab, spawnPoint.position, Quaternion.identity);
 	}
 
 	void TriggerFail()
@@ -201,6 +163,7 @@ public class SoundPuzzleController : MonoBehaviour
 		puzzlePanel.SetActive(false);
 		closeButton.SetActive(false);
 		trackSource.Stop();
+		inputBuffer.Clear();
 		Time.timeScale = 1f;
 
 		if (shakeCo != null)

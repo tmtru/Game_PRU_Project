@@ -30,30 +30,16 @@ public class PuzzleManager : MonoBehaviour
 				Debug.LogError($"Không thể parse name '{pieces[i].name}' thành số nguyên.");
 				return false;
 			}
+
 			if (pieceNumber != correctOrder[i])
 			{
-				Debug.LogError($"piece {pieceNumber} - correctOrder: {correctOrder[i]}");
+				Debug.LogError($"❌ Sai tại vị trí {i}: hiện là Image{pieceNumber}, đúng phải là Image{correctOrder[i]}");
+				// 1 3 4
 				return false;
 			}
 		}
 		Debug.LogError($"Win");
 		return true;
 	}
-
-	public void ShufflePieces()
-	{
-		for (int i = 0; i < pieces.Length; i++)
-		{
-			int randomIndex = Random.Range(i, pieces.Length);
-			var temp = pieces[i];
-			pieces[i] = pieces[randomIndex];
-			pieces[randomIndex] = temp;
-		}
-
-		// Cập nhật vị trí con (nếu dùng Grid Layout Group)
-		for (int i = 0; i < pieces.Length; i++)
-		{
-			pieces[i].SetSiblingIndex(i);
-		}
-	}
+	
 }

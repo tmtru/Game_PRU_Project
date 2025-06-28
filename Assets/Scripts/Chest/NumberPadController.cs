@@ -11,12 +11,14 @@ public class NumberPadController : MonoBehaviour
     public GameObject keypadPanel;
     public Animator chestAnimator;
     public GameObject closeButton;
-
-    private string currentInput = "";
+	public BoxCollider2D boxCollider;
+	private string currentInput = "";
     private Coroutine shakeCoroutine;
     private bool isChestOpen = false;
-
-    public void OnNumberButtonClick(string number)
+	public GameObject itemPrefab;         // Prefab vật phẩm
+	public Transform spawnPoint;
+	public AudioSource chestOpening;
+	public void OnNumberButtonClick(string number)
     {
         if (isChestOpen)
         {
@@ -46,12 +48,15 @@ public class NumberPadController : MonoBehaviour
 
         if (currentInput == correctCode)
         {
+
             Debug.Log("✅ Mã đúng! Mở rương!");
             chestAnimator.SetTrigger("ChestOpen");
             isChestOpen = true;
-
-            // Ẩn bàn phím và đảm bảo game tiếp tục
-            keypadPanel.SetActive(false);
+			chestOpening.Play();
+			Instantiate(itemPrefab, spawnPoint.position, Quaternion.identity);
+			if (boxCollider) boxCollider.isTrigger = false;
+			// Ẩn bàn phím và đảm bảo game tiếp tục
+			keypadPanel.SetActive(false);
             Time.timeScale = 1f;
 
             // Nếu muốn đảm bảo không bao giờ mở lại bàn phím, có thể disable script này

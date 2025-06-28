@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +14,10 @@ public class ColorManager : MonoBehaviour
 	[SerializeField]
 	private List<int> targetColorIndexes = new List<int> { 1, 0, 1, 1, 2, 0, 0, 1, 2 }; // green 1, yellow 2, red 0
 	public bool isChestOpen = false;
+
+	public GameObject itemPrefab;         // Prefab vật phẩm
+	public Transform spawnPoint;
+	public AudioSource chestOpening;
 	private void Awake()
 	{
 		if (Instance == null) Instance = this;
@@ -39,6 +44,9 @@ public class ColorManager : MonoBehaviour
 		}
 		isChestOpen = true;
 		Debug.Log("🎉 Bạn đã thắng!");
+		chestOpening.Play();
+		Instantiate(itemPrefab, spawnPoint.position, Quaternion.identity);
+
 	}
 	public void OnClosePanel()
 	{

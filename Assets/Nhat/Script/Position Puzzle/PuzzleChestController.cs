@@ -11,6 +11,10 @@ public class PuzzleChestController : MonoBehaviour
 
 	[SerializeField] private PuzzleManager puzzleManager;
 
+	public GameObject itemPrefab;
+	public Transform spawnPoint;
+	public AudioSource chestOpening;
+	private bool solving = false;
 	public bool isChestOpen = false;
 	private void Start()
 	{
@@ -25,17 +29,23 @@ public class PuzzleChestController : MonoBehaviour
 	}
 	private void Update()
 	{
-		if (!isChestOpen && puzzleManager.CheckPuzzleSolved())
+		if (!isChestOpen && !solving && puzzleManager.CheckPuzzleSolved())
 		{
-			chestAnimator.SetTrigger("PlayAnim");
-			isChestOpen = true;
-			keypadPanel.SetActive(false);
-			closeButton.SetActive(false);
-			Time.timeScale = 1f;
-			if (boxCollider != null)
-				boxCollider.isTrigger = false;
+			StartCoroutine(DelaySolve());
+			solving = true;
 		}
-
+	}
+	public void Solve()
+	{
+		chestAnimator.SetTrigger("PlayAnim");
+		isChestOpen = true;
+		keypadPanel.SetActive(false);
+		closeButton.SetActive(false);
+		chestOpening.Play();
+		Instantiate(itemPrefab, spawnPoint.position, Quaternion.identity);
+		Time.timeScale = 1f;
+		if (boxCollider != null)
+			boxCollider.isTrigger = false;
 	}
 
 	public void OnClosePanel()
@@ -43,5 +53,10 @@ public class PuzzleChestController : MonoBehaviour
 		closeButton.SetActive(false);
 		keypadPanel.SetActive(false);
 		Time.timeScale = 1f;
+	}
+	IEnumerator DelaySolve()
+	{                 
+		yield return new WaitForSecondsRealtime(1f);
+		Solve();
 	}
 }
