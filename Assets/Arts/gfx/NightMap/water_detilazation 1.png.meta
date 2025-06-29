@@ -1,0 +1,3601 @@
+fileFormatVersion: 2
+guid: 6ed5584871e4b774a9936e4d2b5a48d8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9003204122631769496
+    second: water_detilazation 1_0
+  - first:
+      213: -462556481363721981
+    second: water_detilazation 1_1
+  - first:
+      213: -7714683948546722493
+    second: water_detilazation 1_2
+  - first:
+      213: -2357825940007298423
+    second: water_detilazation 1_3
+  - first:
+      213: -8089840980576126340
+    second: water_detilazation 1_4
+  - first:
+      213: -8406312755697989261
+    second: water_detilazation 1_5
+  - first:
+      213: 4690631666224832943
+    second: water_detilazation 1_6
+  - first:
+      213: 6253725383160229163
+    second: water_detilazation 1_7
+  - first:
+      213: 480830734937120299
+    second: water_detilazation 1_8
+  - first:
+      213: -1381269596273759875
+    second: water_detilazation 1_9
+  - first:
+      213: -9062186140959289597
+    second: water_detilazation 1_10
+  - first:
+      213: 2683802808511951323
+    second: water_detilazation 1_11
+  - first:
+      213: 1837653894083419070
+    second: water_detilazation 1_12
+  - first:
+      213: 6789371852718499988
+    second: water_detilazation 1_13
+  - first:
+      213: -7159886692329460894
+    second: water_detilazation 1_14
+  - first:
+      213: 1669154560508301672
+    second: water_detilazation 1_15
+  - first:
+      213: -5964878617734538088
+    second: water_detilazation 1_16
+  - first:
+      213: 6015300871675107273
+    second: water_detilazation 1_17
+  - first:
+      213: 2558811944212808548
+    second: water_detilazation 1_18
+  - first:
+      213: -3504132673435105533
+    second: water_detilazation 1_19
+  - first:
+      213: 5226576992382432518
+    second: water_detilazation 1_20
+  - first:
+      213: 6857047280436583200
+    second: water_detilazation 1_21
+  - first:
+      213: -204258230382000905
+    second: water_detilazation 1_22
+  - first:
+      213: 2761409542626896103
+    second: water_detilazation 1_23
+  - first:
+      213: -2225278133256014436
+    second: water_detilazation 1_24
+  - first:
+      213: 6154289043838761895
+    second: water_detilazation 1_25
+  - first:
+      213: 7680909531084025757
+    second: water_detilazation 1_26
+  - first:
+      213: 8014814052868352924
+    second: water_detilazation 1_27
+  - first:
+      213: -7850628421929042330
+    second: water_detilazation 1_28
+  - first:
+      213: 3819218080074730548
+    second: water_detilazation 1_29
+  - first:
+      213: 3821257103827941943
+    second: water_detilazation 1_30
+  - first:
+      213: -7929711384150683980
+    second: water_detilazation 1_31
+  - first:
+      213: 4351422028684741893
+    second: water_detilazation 1_32
+  - first:
+      213: 7023488413704297598
+    second: water_detilazation 1_33
+  - first:
+      213: 6912638857709982018
+    second: water_detilazation 1_34
+  - first:
+      213: -3513819617291721810
+    second: water_detilazation 1_35
+  - first:
+      213: 2468732320197500555
+    second: water_detilazation 1_36
+  - first:
+      213: -4961640432361772210
+    second: water_detilazation 1_37
+  - first:
+      213: -6019872623831026934
+    second: water_detilazation 1_38
+  - first:
+      213: -2481123808012016673
+    second: water_detilazation 1_39
+  - first:
+      213: -1911486404244965459
+    second: water_detilazation 1_40
+  - first:
+      213: 2435270501314341035
+    second: water_detilazation 1_41
+  - first:
+      213: -8888052153739718944
+    second: water_detilazation 1_42
+  - first:
+      213: 4330779489825135486
+    second: water_detilazation 1_43
+  - first:
+      213: -8333574667845399254
+    second: water_detilazation 1_44
+  - first:
+      213: 1442753705880540677
+    second: water_detilazation 1_45
+  - first:
+      213: -8226194782065960102
+    second: water_detilazation 1_46
+  - first:
+      213: 6888049697317725379
+    second: water_detilazation 1_47
+  - first:
+      213: -5848820189967976623
+    second: water_detilazation 1_48
+  - first:
+      213: 7331429362401149018
+    second: water_detilazation 1_49
+  - first:
+      213: -6243278467054504331
+    second: water_detilazation 1_50
+  - first:
+      213: -8755848926634224593
+    second: water_detilazation 1_51
+  - first:
+      213: -6968023437303008262
+    second: water_detilazation 1_52
+  - first:
+      213: -1501314560269908628
+    second: water_detilazation 1_53
+  - first:
+      213: 7547074960497852357
+    second: water_detilazation 1_54
+  - first:
+      213: 2618171760199672886
+    second: water_detilazation 1_55
+  - first:
+      213: 9085829491306107518
+    second: water_detilazation 1_56
+  - first:
+      213: -3428795746246368244
+    second: water_detilazation 1_57
+  - first:
+      213: 2033982947375319097
+    second: water_detilazation 1_58
+  - first:
+      213: -180401695283359842
+    second: water_detilazation 1_59
+  - first:
+      213: 8085715984291401663
+    second: water_detilazation 1_60
+  - first:
+      213: -5661586436693987290
+    second: water_detilazation 1_61
+  - first:
+      213: -2851988900509700599
+    second: water_detilazation 1_62
+  - first:
+      213: 4475898423065370097
+    second: water_detilazation 1_63
+  - first:
+      213: -7645786938312496105
+    second: water_detilazation 1_64
+  - first:
+      213: -2240046929168511304
+    second: water_detilazation 1_65
+  - first:
+      213: -6017626861845426367
+    second: water_detilazation 1_66
+  - first:
+      213: 1431992488992828259
+    second: water_detilazation 1_67
+  - first:
+      213: -1045567330607026299
+    second: water_detilazation 1_68
+  - first:
+      213: 8548924963589143849
+    second: water_detilazation 1_69
+  - first:
+      213: -8036318816672468605
+    second: water_detilazation 1_70
+  - first:
+      213: -898569192891113081
+    second: water_detilazation 1_71
+  - first:
+      213: 4398522740974783455
+    second: water_detilazation 1_72
+  - first:
+      213: 2023057462551790900
+    second: water_detilazation 1_73
+  - first:
+      213: -7515129125454467850
+    second: water_detilazation 1_74
+  - first:
+      213: -7031328573865136585
+    second: water_detilazation 1_75
+  - first:
+      213: -1456702207871426659
+    second: water_detilazation 1_76
+  - first:
+      213: -8219674644572943435
+    second: water_detilazation 1_77
+  - first:
+      213: 1542571249504017345
+    second: water_detilazation 1_78
+  - first:
+      213: -4559918884299776176
+    second: water_detilazation 1_79
+  - first:
+      213: -5944452639150356134
+    second: water_detilazation 1_80
+  - first:
+      213: -2642503493778420525
+    second: water_detilazation 1_81
+  - first:
+      213: 1554557994424269332
+    second: water_detilazation 1_82
+  - first:
+      213: 6275110561964854990
+    second: water_detilazation 1_83
+  - first:
+      213: -4003536221502946480
+    second: water_detilazation 1_84
+  - first:
+      213: 5214157796940376146
+    second: water_detilazation 1_85
+  - first:
+      213: -1034074857513664363
+    second: water_detilazation 1_86
+  - first:
+      213: -7371304463204671249
+    second: water_detilazation 1_87
+  - first:
+      213: 1628763491978772392
+    second: water_detilazation 1_88
+  - first:
+      213: -3000602982854914514
+    second: water_detilazation 1_89
+  - first:
+      213: 7259810224114343732
+    second: water_detilazation 1_90
+  - first:
+      213: -7785742903719831513
+    second: water_detilazation 1_91
+  - first:
+      213: -953226465166218286
+    second: water_detilazation 1_92
+  - first:
+      213: 7605391812967583435
+    second: water_detilazation 1_93
+  - first:
+      213: -2637753352530221693
+    second: water_detilazation 1_94
+  - first:
+      213: 2214382930819983422
+    second: water_detilazation 1_95
+  - first:
+      213: 1974168733174578397
+    second: water_detilazation 1_96
+  - first:
+      213: -1430177699575820968
+    second: water_detilazation 1_97
+  - first:
+      213: 7926654860450214687
+    second: water_detilazation 1_98
+  - first:
+      213: 3149330429080841223
+    second: water_detilazation 1_99
+  - first:
+      213: 1204166743248873557
+    second: water_detilazation 1_100
+  - first:
+      213: 3322761814291378224
+    second: water_detilazation 1_101
+  - first:
+      213: -7687765533586636848
+    second: water_detilazation 1_102
+  - first:
+      213: 3727665335976231029
+    second: water_detilazation 1_103
+  - first:
+      213: -684194016270581868
+    second: water_detilazation 1_104
+  - first:
+      213: -8955354499647554014
+    second: water_detilazation 1_105
+  - first:
+      213: -8133285989341716732
+    second: water_detilazation 1_106
+  - first:
+      213: 1025671766558120232
+    second: water_detilazation 1_107
+  - first:
+      213: -4875968375804811008
+    second: water_detilazation 1_108
+  - first:
+      213: -2191770274672214551
+    second: water_detilazation 1_109
+  - first:
+      213: -6215052051084396713
+    second: water_detilazation 1_110
+  - first:
+      213: 7952527631684663863
+    second: water_detilazation 1_111
+  - first:
+      213: 1388625486672602057
+    second: water_detilazation 1_112
+  - first:
+      213: 57255883152338556
+    second: water_detilazation 1_113
+  - first:
+      213: -3307020009108112043
+    second: water_detilazation 1_114
+  - first:
+      213: 7622280369763272171
+    second: water_detilazation 1_115
+  - first:
+      213: -4087448722897339877
+    second: water_detilazation 1_116
+  - first:
+      213: 5591504017978189401
+    second: water_detilazation 1_117
+  - first:
+      213: 3673891535757291869
+    second: water_detilazation 1_118
+  - first:
+      213: 9144412313841763790
+    second: water_detilazation 1_119
+  - first:
+      213: 7743589778635193393
+    second: water_detilazation 1_120
+  - first:
+      213: -8021952785327353103
+    second: water_detilazation 1_121
+  - first:
+      213: 823254893428753295
+    second: water_detilazation 1_122
+  - first:
+      213: 8642473107728316319
+    second: water_detilazation 1_123
+  - first:
+      213: 2120092441556848283
+    second: water_detilazation 1_124
+  - first:
+      213: -1920198827784599230
+    second: water_detilazation 1_125
+  - first:
+      213: 5640607568216216323
+    second: water_detilazation 1_126
+  - first:
+      213: 7248064137647173430
+    second: water_detilazation 1_127
+  - first:
+      213: -7178481217334278898
+    second: water_detilazation 1_128
+  - first:
+      213: -1972489802449603049
+    second: water_detilazation 1_129
+  - first:
+      213: -635891103388803919
+    second: water_detilazation 1_130
+  - first:
+      213: 5536247882056738484
+    second: water_detilazation 1_131
+  - first:
+      213: 8866732632903584340
+    second: water_detilazation 1_132
+  - first:
+      213: 8864794866333285558
+    second: water_detilazation 1_133
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: water_detilazation 1_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 546
+        width: 199
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 862733e2d813e0380800000000000000
+      internalID: -9003204122631769496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_1
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 546
+        width: 115
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301c2c7b45ba499f0800000000000000
+      internalID: -462556481363721981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_2
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 556
+        width: 99
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 345f67ca2dfefe490800000000000000
+      internalID: -7714683948546722493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_3
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 552
+        width: 67
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ad9a3ccc1574fd0800000000000000
+      internalID: -2357825940007298423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_4
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 554
+        width: 41
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7abc5f6d7c1bbf80800000000000000
+      internalID: -8089840980576126340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_5
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 560
+        width: 31
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37949c55617c65b80800000000000000
+      internalID: -8406312755697989261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_6
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 551
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa1a78df5a8781140800000000000000
+      internalID: 4690631666224832943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_7
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 520
+        width: 208
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2deb123a12b9c650800000000000000
+      internalID: 6253725383160229163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_8
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 522
+        width: 121
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e540181014ca600800000000000000
+      internalID: 480830734937120299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_9
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 524
+        width: 45
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d792e07de9eb4dce0800000000000000
+      internalID: -1381269596273759875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_10
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 528
+        width: 64
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f47a3e7b5ac3280800000000000000
+      internalID: -9062186140959289597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_11
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 526
+        width: 38
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1fc885f68ce3520800000000000000
+      internalID: 2683802808511951323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_12
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 525
+        width: 71
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebb94f8fa78a08910800000000000000
+      internalID: 1837653894083419070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_13
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 531
+        width: 35
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49862597ab1b83e50800000000000000
+      internalID: 6789371852718499988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_14
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 522
+        width: 54
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26be7afecf8f2ac90800000000000000
+      internalID: -7159886692329460894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_15
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 514
+        width: 60
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 861125eaa370a2710800000000000000
+      internalID: 1669154560508301672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_16
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 514
+        width: 72
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89c1c9d108e783da0800000000000000
+      internalID: -5964878617734538088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_17
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 519
+        width: 29
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c7da49b544aa7350800000000000000
+      internalID: 6015300871675107273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_18
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 520
+        width: 49
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463c4d5f7e9b28320800000000000000
+      internalID: 2558811944212808548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_19
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 490
+        width: 96
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3078f0236e1de5fc0800000000000000
+      internalID: -3504132673435105533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_20
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 488
+        width: 133
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6053f2e3518888840800000000000000
+      internalID: 5226576992382432518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_21
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 495
+        width: 74
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b1b7edb20292f50800000000000000
+      internalID: 6857047280436583200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_22
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 491
+        width: 126
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f481afb8345a2df0800000000000000
+      internalID: -204258230382000905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_23
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 492
+        width: 112
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e866a3395f725620800000000000000
+      internalID: 2761409542626896103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_24
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 488
+        width: 81
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95b4dce3593e11e0800000000000000
+      internalID: -2225278133256014436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_25
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 490
+        width: 53
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab761f474d686550800000000000000
+      internalID: 6154289043838761895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_26
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 496
+        width: 33
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9fec28f582189a60800000000000000
+      internalID: 7680909531084025757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_27
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 482
+        width: 74
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9be602bae65a3f60800000000000000
+      internalID: 8014814052868352924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_28
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 482
+        width: 76
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e755f6b07fc0390800000000000000
+      internalID: -7850628421929042330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_29
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 487
+        width: 30
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c8a96db96900530800000000000000
+      internalID: 3819218080074730548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_30
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 450
+        width: 214
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a3a1d0715d70530800000000000000
+      internalID: 3821257103827941943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_31
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 466
+        width: 29
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bec350728104f190800000000000000
+      internalID: -7929711384150683980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_32
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 450
+        width: 123
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d409fb74b536c30800000000000000
+      internalID: 4351422028684741893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_33
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 457
+        width: 115
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c9aee0081787160800000000000000
+      internalID: 7023488413704297598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_34
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 456
+        width: 80
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2419d569a60aeef50800000000000000
+      internalID: 6912638857709982018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_35
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 467
+        width: 36
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea32782dca76c3fc0800000000000000
+      internalID: -3513819617291721810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_36
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 462
+        width: 30
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ed5ee17f2b24220800000000000000
+      internalID: 2468732320197500555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_37
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 465
+        width: 34
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b6cdd8056b42bb0800000000000000
+      internalID: -4961640432361772210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_38
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 455
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a03f3774ebd157ca0800000000000000
+      internalID: -6019872623831026934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_39
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 458
+        width: 41
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd3edabca07419dd0800000000000000
+      internalID: -2481123808012016673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_40
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 418
+        width: 212
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da77df92e390975e0800000000000000
+      internalID: -1911486404244965459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_41
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 434
+        width: 27
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba824da4e91dbc120800000000000000
+      internalID: 2435270501314341035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_42
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 418
+        width: 118
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eec23738ab47a480800000000000000
+      internalID: -8888052153739718944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_43
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 428
+        width: 104
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b139320050a1c30800000000000000
+      internalID: 4330779489825135486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_44
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 424
+        width: 67
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2d81e52ef1395c80800000000000000
+      internalID: -8333574667845399254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_45
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 435
+        width: 22
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5065369f9d0b50410800000000000000
+      internalID: 1442753705880540677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_46
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 426
+        width: 46
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b59c11e6fa6dd80800000000000000
+      internalID: -8226194782065960102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_47
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 432
+        width: 25
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c42cdb84b4479f50800000000000000
+      internalID: 6888049697317725379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_48
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 423
+        width: 20
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15773dd8601d4dea0800000000000000
+      internalID: -5848820189967976623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_49
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 387
+        width: 190
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a500ac959287eb560800000000000000
+      internalID: 7331429362401149018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_50
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 386
+        width: 107
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 576fe51005b6b59a0800000000000000
+      internalID: -6243278467054504331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_51
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 396
+        width: 90
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f245bfcaac9fc7680800000000000000
+      internalID: -8755848926634224593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_52
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 392
+        width: 59
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af335f81a9b9c4f90800000000000000
+      internalID: -6968023437303008262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_53
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 394
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c658dfa9c524a2be0800000000000000
+      internalID: -1501314560269908628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_54
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 400
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf38b1c0b89cb860800000000000000
+      internalID: 7547074960497852357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_55
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 391
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63429af185d955420800000000000000
+      internalID: 2618171760199672886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_56
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 359
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e72911798c9571e70800000000000000
+      internalID: 9085829491306107518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_57
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 350
+        width: 230
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c046d917f687a60d0800000000000000
+      internalID: -3428795746246368244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_58
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 356
+        width: 35
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9380281d6b82a3c10800000000000000
+      internalID: 2033982947375319097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_59
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 345
+        width: 172
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9fc1cb2d951f7df0800000000000000
+      internalID: -180401695283359842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_60
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 348
+        width: 151
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf036609db363070800000000000000
+      internalID: 8085715984291401663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_61
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 341
+        width: 62
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6207fa7d1210e61b0800000000000000
+      internalID: -5661586436693987290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_62
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 346
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e23c99433bb68d0800000000000000
+      internalID: -2851988900509700599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_63
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 342
+        width: 28
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdda85c6e59d1e30800000000000000
+      internalID: 4475898423065370097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_64
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 298
+        width: 241
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71cef89e945b4e590800000000000000
+      internalID: -7645786938312496105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_65
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 297
+        width: 187
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bec4baaf21c9e0e0800000000000000
+      internalID: -2240046929168511304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_66
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 311
+        width: 126
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14fcadc70481d7ca0800000000000000
+      internalID: -6017626861845426367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_67
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 300
+        width: 137
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36be17be4957fd310800000000000000
+      internalID: 1431992488992828259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_68
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 293
+        width: 76
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f2a6e6d066d71f0800000000000000
+      internalID: -1045567330607026299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_69
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 294
+        width: 39
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d3332d5f1e3a670800000000000000
+      internalID: 8548924963589143849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_70
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 262
+        width: 30
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 381337e4d92497090800000000000000
+      internalID: -8036318816672468605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_71
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 256
+        width: 158
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 781ad937414a783f0800000000000000
+      internalID: -898569192891113081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_72
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 268
+        width: 199
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb8748e021ba0d30800000000000000
+      internalID: 4398522740974783455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_73
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 249
+        width: 195
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4354a972b08531c10800000000000000
+      internalID: 2023057462551790900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_74
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 263
+        width: 46
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fc281490e5e4b790800000000000000
+      internalID: -7515129125454467850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_75
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 265
+        width: 87
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ee6b76ae3bb6e90800000000000000
+      internalID: -7031328573865136585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_76
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 261
+        width: 61
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9fdb445f01c8cbe0800000000000000
+      internalID: -1456702207871426659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_77
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 254
+        width: 59
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bbc1f0e579dded80800000000000000
+      internalID: -8219674644572943435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_78
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 255
+        width: 46
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cbda67e060586510800000000000000
+      internalID: 1542571249504017345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_79
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 260
+        width: 39
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f57b82fe9e7b0c0800000000000000
+      internalID: -4559918884299776176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_80
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 254
+        width: 56
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a594f4bd1df018da0800000000000000
+      internalID: -5944452639150356134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_81
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 253
+        width: 68
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dccb9fa211f35bd0800000000000000
+      internalID: -2642503493778420525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_82
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 245
+        width: 81
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41af6607246e29510800000000000000
+      internalID: 1554557994424269332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_83
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 250
+        width: 37
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece87342fcba51750800000000000000
+      internalID: 6275110561964854990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_84
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 246
+        width: 44
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05348e7a4059078c0800000000000000
+      internalID: -4003536221502946480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_85
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 215
+        width: 25
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 258e679f3e86c5840800000000000000
+      internalID: 5214157796940376146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_86
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 204
+        width: 244
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5904cb6556a36a1f0800000000000000
+      internalID: -1034074857513664363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_87
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 201
+        width: 206
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe02f6345add3b990800000000000000
+      internalID: -7371304463204671249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_88
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 215
+        width: 131
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aff48234c78a9610800000000000000
+      internalID: 1628763491978772392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_89
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 213
+        width: 66
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e84f62c77bb56d0800000000000000
+      internalID: -3000602982854914514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_90
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 202
+        width: 27
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f95194fe600c460800000000000000
+      internalID: 7259810224114343732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_91
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 206
+        width: 56
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728d247641c73f390800000000000000
+      internalID: -7785742903719831513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_92
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 205
+        width: 66
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db2441949575c2f0800000000000000
+      internalID: -953226465166218286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_93
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 198
+        width: 75
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcec89d0f87cb8960800000000000000
+      internalID: 7605391812967583435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_94
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 198
+        width: 40
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38527512d41d46bd0800000000000000
+      internalID: -2637753352530221693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_95
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 167
+        width: 20
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e38a6341b811bbe10800000000000000
+      internalID: 2214382930819983422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_96
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 152
+        width: 228
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddcbd83d008a56b10800000000000000
+      internalID: 1974168733174578397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_97
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 164
+        width: 38
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d091ba5fcf62ce0800000000000000
+      internalID: -1430177699575820968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_98
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 153
+        width: 198
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13324e2992210e60800000000000000
+      internalID: 7926654860450214687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_99
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 152
+        width: 163
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c21b1e65ba4bb20800000000000000
+      internalID: 3149330429080841223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_100
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 149
+        width: 58
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55820b5e54f06b010800000000000000
+      internalID: 1204166743248873557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_101
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 154
+        width: 22
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030f11ee342dc1e20800000000000000
+      internalID: 3322761814291378224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_102
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 150
+        width: 30
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dfb31e8af19f4590800000000000000
+      internalID: -7687765533586636848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_103
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 107
+        width: 226
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57086608fd35bb330800000000000000
+      internalID: 3727665335976231029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_104
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 115
+        width: 28
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f7ebeca214186f0800000000000000
+      internalID: -684194016270581868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_105
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 105
+        width: 165
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ebfc2b78038b380800000000000000
+      internalID: -8955354499647554014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_106
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 108
+        width: 142
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f10a41c73c02f80800000000000000
+      internalID: -8133285989341716732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_107
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 101
+        width: 48
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82918d5990beb3e00800000000000000
+      internalID: 1025671766558120232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_108
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 103
+        width: 20
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 009ad10a894155cb0800000000000000
+      internalID: -4875968375804811008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_109
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 86
+        width: 53
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9edf6e43c844591e0800000000000000
+      internalID: -2191770274672214551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_110
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 81
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7573d8a9613bfb9a0800000000000000
+      internalID: -6215052051084396713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_111
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 86
+        width: 40
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73afa092fbd0d5e60800000000000000
+      internalID: 7952527631684663863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_112
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 85
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c3ac2bd583654310800000000000000
+      internalID: 1388625486672602057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_113
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 72
+        width: 62
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ea8902ce96bc000800000000000000
+      internalID: 57255883152338556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_114
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 66
+        width: 31
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d7004b2da1b12d0800000000000000
+      internalID: -3307020009108112043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_115
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 70
+        width: 49
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be54c2a9c97c7c960800000000000000
+      internalID: 7622280369763272171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_116
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 69
+        width: 31
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1a7412fa077647c0800000000000000
+      internalID: -4087448722897339877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_117
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 55
+        width: 68
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95662cf7743099d40800000000000000
+      internalID: 5591504017978189401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_118
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 49
+        width: 34
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d51b02cf2e84cf230800000000000000
+      internalID: 3673891535757291869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_119
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 54
+        width: 54
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec50f3edc8a77ee70800000000000000
+      internalID: 9144412313841763790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_120
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 53
+        width: 34
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c75e950e1c67b60800000000000000
+      internalID: 7743589778635193393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_121
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 39
+        width: 70
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f29b91a17c4ca090800000000000000
+      internalID: -8021952785327353103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_122
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 33
+        width: 34
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f834c6ab6f9cc6b00800000000000000
+      internalID: 823254893428753295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_123
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 38
+        width: 53
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f97330f608b30f770800000000000000
+      internalID: 8642473107728316319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_124
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 37
+        width: 31
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e8cf5c7d41c6d10800000000000000
+      internalID: 2120092441556848283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_125
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 22
+        width: 62
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24907cbf6551a55e0800000000000000
+      internalID: -1920198827784599230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_126
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 17
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30358e4b2b6774e40800000000000000
+      internalID: 5640607568216216323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_127
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 22
+        width: 43
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f25b96eeb469460800000000000000
+      internalID: 7248064137647173430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_128
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 21
+        width: 20
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e050af5bd59e06c90800000000000000
+      internalID: -7178481217334278898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_129
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 6
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71639e1b9fe40a4e0800000000000000
+      internalID: -1972489802449603049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_130
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bcddaa196cdc27f0800000000000000
+      internalID: -635891103388803919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_131
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 6
+        width: 33
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b6208ecd14b4dc40800000000000000
+      internalID: 5536247882056738484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_132
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 5
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a05960a56fc0b70800000000000000
+      internalID: 8866732632903584340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_detilazation 1_133
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc708696f3160b70800000000000000
+      internalID: 8864794866333285558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      water_detilazation 1_0: -9003204122631769496
+      water_detilazation 1_1: -462556481363721981
+      water_detilazation 1_10: -9062186140959289597
+      water_detilazation 1_100: 1204166743248873557
+      water_detilazation 1_101: 3322761814291378224
+      water_detilazation 1_102: -7687765533586636848
+      water_detilazation 1_103: 3727665335976231029
+      water_detilazation 1_104: -684194016270581868
+      water_detilazation 1_105: -8955354499647554014
+      water_detilazation 1_106: -8133285989341716732
+      water_detilazation 1_107: 1025671766558120232
+      water_detilazation 1_108: -4875968375804811008
+      water_detilazation 1_109: -2191770274672214551
+      water_detilazation 1_11: 2683802808511951323
+      water_detilazation 1_110: -6215052051084396713
+      water_detilazation 1_111: 7952527631684663863
+      water_detilazation 1_112: 1388625486672602057
+      water_detilazation 1_113: 57255883152338556
+      water_detilazation 1_114: -3307020009108112043
+      water_detilazation 1_115: 7622280369763272171
+      water_detilazation 1_116: -4087448722897339877
+      water_detilazation 1_117: 5591504017978189401
+      water_detilazation 1_118: 3673891535757291869
+      water_detilazation 1_119: 9144412313841763790
+      water_detilazation 1_12: 1837653894083419070
+      water_detilazation 1_120: 7743589778635193393
+      water_detilazation 1_121: -8021952785327353103
+      water_detilazation 1_122: 823254893428753295
+      water_detilazation 1_123: 8642473107728316319
+      water_detilazation 1_124: 2120092441556848283
+      water_detilazation 1_125: -1920198827784599230
+      water_detilazation 1_126: 5640607568216216323
+      water_detilazation 1_127: 7248064137647173430
+      water_detilazation 1_128: -7178481217334278898
+      water_detilazation 1_129: -1972489802449603049
+      water_detilazation 1_13: 6789371852718499988
+      water_detilazation 1_130: -635891103388803919
+      water_detilazation 1_131: 5536247882056738484
+      water_detilazation 1_132: 8866732632903584340
+      water_detilazation 1_133: 8864794866333285558
+      water_detilazation 1_14: -7159886692329460894
+      water_detilazation 1_15: 1669154560508301672
+      water_detilazation 1_16: -5964878617734538088
+      water_detilazation 1_17: 6015300871675107273
+      water_detilazation 1_18: 2558811944212808548
+      water_detilazation 1_19: -3504132673435105533
+      water_detilazation 1_2: -7714683948546722493
+      water_detilazation 1_20: 5226576992382432518
+      water_detilazation 1_21: 6857047280436583200
+      water_detilazation 1_22: -204258230382000905
+      water_detilazation 1_23: 2761409542626896103
+      water_detilazation 1_24: -2225278133256014436
+      water_detilazation 1_25: 6154289043838761895
+      water_detilazation 1_26: 7680909531084025757
+      water_detilazation 1_27: 8014814052868352924
+      water_detilazation 1_28: -7850628421929042330
+      water_detilazation 1_29: 3819218080074730548
+      water_detilazation 1_3: -2357825940007298423
+      water_detilazation 1_30: 3821257103827941943
+      water_detilazation 1_31: -7929711384150683980
+      water_detilazation 1_32: 4351422028684741893
+      water_detilazation 1_33: 7023488413704297598
+      water_detilazation 1_34: 6912638857709982018
+      water_detilazation 1_35: -3513819617291721810
+      water_detilazation 1_36: 2468732320197500555
+      water_detilazation 1_37: -4961640432361772210
+      water_detilazation 1_38: -6019872623831026934
+      water_detilazation 1_39: -2481123808012016673
+      water_detilazation 1_4: -8089840980576126340
+      water_detilazation 1_40: -1911486404244965459
+      water_detilazation 1_41: 2435270501314341035
+      water_detilazation 1_42: -8888052153739718944
+      water_detilazation 1_43: 4330779489825135486
+      water_detilazation 1_44: -8333574667845399254
+      water_detilazation 1_45: 1442753705880540677
+      water_detilazation 1_46: -8226194782065960102
+      water_detilazation 1_47: 6888049697317725379
+      water_detilazation 1_48: -5848820189967976623
+      water_detilazation 1_49: 7331429362401149018
+      water_detilazation 1_5: -8406312755697989261
+      water_detilazation 1_50: -6243278467054504331
+      water_detilazation 1_51: -8755848926634224593
+      water_detilazation 1_52: -6968023437303008262
+      water_detilazation 1_53: -1501314560269908628
+      water_detilazation 1_54: 7547074960497852357
+      water_detilazation 1_55: 2618171760199672886
+      water_detilazation 1_56: 9085829491306107518
+      water_detilazation 1_57: -3428795746246368244
+      water_detilazation 1_58: 2033982947375319097
+      water_detilazation 1_59: -180401695283359842
+      water_detilazation 1_6: 4690631666224832943
+      water_detilazation 1_60: 8085715984291401663
+      water_detilazation 1_61: -5661586436693987290
+      water_detilazation 1_62: -2851988900509700599
+      water_detilazation 1_63: 4475898423065370097
+      water_detilazation 1_64: -7645786938312496105
+      water_detilazation 1_65: -2240046929168511304
+      water_detilazation 1_66: -6017626861845426367
+      water_detilazation 1_67: 1431992488992828259
+      water_detilazation 1_68: -1045567330607026299
+      water_detilazation 1_69: 8548924963589143849
+      water_detilazation 1_7: 6253725383160229163
+      water_detilazation 1_70: -8036318816672468605
+      water_detilazation 1_71: -898569192891113081
+      water_detilazation 1_72: 4398522740974783455
+      water_detilazation 1_73: 2023057462551790900
+      water_detilazation 1_74: -7515129125454467850
+      water_detilazation 1_75: -7031328573865136585
+      water_detilazation 1_76: -1456702207871426659
+      water_detilazation 1_77: -8219674644572943435
+      water_detilazation 1_78: 1542571249504017345
+      water_detilazation 1_79: -4559918884299776176
+      water_detilazation 1_8: 480830734937120299
+      water_detilazation 1_80: -5944452639150356134
+      water_detilazation 1_81: -2642503493778420525
+      water_detilazation 1_82: 1554557994424269332
+      water_detilazation 1_83: 6275110561964854990
+      water_detilazation 1_84: -4003536221502946480
+      water_detilazation 1_85: 5214157796940376146
+      water_detilazation 1_86: -1034074857513664363
+      water_detilazation 1_87: -7371304463204671249
+      water_detilazation 1_88: 1628763491978772392
+      water_detilazation 1_89: -3000602982854914514
+      water_detilazation 1_9: -1381269596273759875
+      water_detilazation 1_90: 7259810224114343732
+      water_detilazation 1_91: -7785742903719831513
+      water_detilazation 1_92: -953226465166218286
+      water_detilazation 1_93: 7605391812967583435
+      water_detilazation 1_94: -2637753352530221693
+      water_detilazation 1_95: 2214382930819983422
+      water_detilazation 1_96: 1974168733174578397
+      water_detilazation 1_97: -1430177699575820968
+      water_detilazation 1_98: 7926654860450214687
+      water_detilazation 1_99: 3149330429080841223
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
