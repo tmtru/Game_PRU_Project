@@ -13,6 +13,9 @@ public class OpenPotionChest : MonoBehaviour
 			puzzleCanvas.SetActive(true); // mở câu đố
 			mixButton.SetActive(true); // mở câu đố
 			closeButton.SetActive(true); // mở câu đố
+			puzzleCanvas.transform.SetAsLastSibling();
+			mixButton.transform.SetAsLastSibling();
+			closeButton.transform.SetAsLastSibling();
 			Time.timeScale = 0f; // tạm dừng game
 		}
 	}
