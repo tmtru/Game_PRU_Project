@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private Key invisibilityKey = Key.LeftShift;
+    public static PlayerController Instance;
+
 
     public bool FacingLeft { get { return facingLeft; } set { facingLeft = value; } }
 
@@ -20,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
