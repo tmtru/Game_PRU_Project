@@ -7,12 +7,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private Key invisibilityKey = Key.LeftShift;
 
+    public bool FacingLeft { get { return facingLeft; } set { facingLeft = value; } }
+
     private PlayerControls playerControls;
     private Vector2 movement;
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
+    private bool facingLeft = false;
     private bool isInvisible = false;
 
     private void Awake()
@@ -77,7 +80,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // ✅ Gọi hàm này từ nơi khác để dịch chuyển đến vị trí bất kỳ
     public void TeleportTo(Vector2 targetPosition)
     {
         rb.position = targetPosition;

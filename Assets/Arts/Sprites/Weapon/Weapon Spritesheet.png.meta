@@ -1484,62 +1484,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Weapon Spritesheet_0: 6395111616935304586
-      Weapon Spritesheet_1: -6576632796305642518
-      Weapon Spritesheet_10: 3668121467037184578
-      Weapon Spritesheet_11: -8107316821336725440
-      Weapon Spritesheet_12: 4131547063308544166
-      Weapon Spritesheet_13: 1495556715617383726
-      Weapon Spritesheet_14: 4438419106822603313
-      Weapon Spritesheet_15: -3165350892026816488
-      Weapon Spritesheet_16: -2500024982590645519
-      Weapon Spritesheet_17: 5940706822186979048
-      Weapon Spritesheet_18: -810856861298203064
-      Weapon Spritesheet_19: 6344278756735520964
-      Weapon Spritesheet_2: -7535535750862548775
-      Weapon Spritesheet_20: 3822810111263236312
-      Weapon Spritesheet_21: -151345100611188543
-      Weapon Spritesheet_22: 1429252130271365562
-      Weapon Spritesheet_23: -2654854958539154550
-      Weapon Spritesheet_24: -5308117801511314462
-      Weapon Spritesheet_25: 3654842694551318656
-      Weapon Spritesheet_26: -7408727509745263603
-      Weapon Spritesheet_27: 8564695757520312922
-      Weapon Spritesheet_28: 4297939200558819365
-      Weapon Spritesheet_29: 2892907276128439838
-      Weapon Spritesheet_3: -4392774042402165869
-      Weapon Spritesheet_30: 1487849581803162953
-      Weapon Spritesheet_31: -8083699917059148131
-      Weapon Spritesheet_32: 995242935101276328
-      Weapon Spritesheet_33: 6675340092189092239
-      Weapon Spritesheet_34: 3012449727530033251
-      Weapon Spritesheet_35: 2757427885517367510
-      Weapon Spritesheet_36: 6119646125501616938
-      Weapon Spritesheet_37: 3994528724006527966
-      Weapon Spritesheet_38: 6877587296596097442
-      Weapon Spritesheet_39: 4335726850147707424
-      Weapon Spritesheet_4: -407841735004898732
-      Weapon Spritesheet_40: 7052145831674365908
-      Weapon Spritesheet_41: -6467954689165149913
-      Weapon Spritesheet_42: -5566338041802626694
-      Weapon Spritesheet_43: -1431207651602583457
-      Weapon Spritesheet_44: -3535321093143783712
-      Weapon Spritesheet_45: -9118682892867925376
-      Weapon Spritesheet_46: -896540609905811200
-      Weapon Spritesheet_47: -689035703656316912
-      Weapon Spritesheet_48: -6136210235419902640
-      Weapon Spritesheet_49: -6100428141661739926
-      Weapon Spritesheet_5: -6981071659911544014
-      Weapon Spritesheet_50: -1039120919451194662
-      Weapon Spritesheet_51: 3699605860403294762
-      Weapon Spritesheet_52: -2029840126692821773
-      Weapon Spritesheet_53: 1250461535097278724
-      Weapon Spritesheet_54: -5392894649350905997
-      Weapon Spritesheet_6: 4031983181540684488
-      Weapon Spritesheet_7: 8623921751152189529
-      Weapon Spritesheet_8: -9202591462194349915
-      Weapon Spritesheet_9: 3224635944093432508
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
