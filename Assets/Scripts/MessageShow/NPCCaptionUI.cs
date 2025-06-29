@@ -23,8 +23,8 @@ public class NPCCaptionUI : MonoBehaviour
         if (isShowing)
         {
             // Luôn xoay UI về phía camera
-            transform.LookAt(playerCamera);
-            transform.rotation = Quaternion.LookRotation(transform.position - playerCamera.position);
+            //transform.LookAt(playerCamera);
+            //transform.rotation = Quaternion.LookRotation(transform.position - playerCamera.position);
 
             // Đếm ngược thời gian hiển thị
             if (duration > 0)

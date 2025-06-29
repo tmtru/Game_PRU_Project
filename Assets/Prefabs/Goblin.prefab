@@ -544,6 +544,9 @@ MonoBehaviour:
   attackDuration: 0.5
   attackDamage: 10
   knockbackForce: 5
+  hurtAnimationDuration: 0.6
+  deathAnimationDuration: 2
+  despawnDelay: 3
   enemyHealth: {fileID: 0}
 --- !u!114 &5336748116701987212
 MonoBehaviour:
@@ -580,7 +583,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

@@ -1329,7 +1329,7 @@ MonoBehaviour:
   fadeDuration: 2
   scene1: Night
   scene2: SampleScene
-  countdown: 5
+  countdown: 60
 --- !u!4 &203393677
 Transform:
   m_ObjectHideFlags: 0
@@ -6105,7 +6105,7 @@ Transform:
   m_GameObject: {fileID: 767824712}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.597588, y: -8.3211, z: -10}
+  m_LocalPosition: {x: 44.786987, y: -8.27968, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
