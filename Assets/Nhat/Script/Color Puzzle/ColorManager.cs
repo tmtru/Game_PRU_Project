@@ -12,10 +12,10 @@ public class ColorManager : MonoBehaviour
 	public GameObject keypadPanel;
 
 	[SerializeField]
-	private List<int> targetColorIndexes = new List<int> { 1, 0, 1, 1, 2, 0, 0, 1, 2 }; // green 1, yellow 2, red 0
+	private List<int> targetColorIndexes = new List<int> { 1, 0, 1, 1, 2, 0, 0, 1, 2 };
 	public bool isChestOpen = false;
 
-	public GameObject itemPrefab;         // Prefab vật phẩm
+	public GameObject itemPrefab;
 	public Transform spawnPoint;
 	public AudioSource chestOpening;
 	private void Awake()

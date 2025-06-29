@@ -485,7 +485,7 @@ MonoBehaviour:
   keypadPanel: {fileID: 813091888930823212}
   targetColorIndexes: 010000000000000002000000000000000200000001000000010000000000000002000000
   isChestOpen: 0
-  itemPrefab: {fileID: 4296040709586396028, guid: db4a20b7f001d354599015f41a4d9276, type: 3}
+  itemPrefab: {fileID: 1736889909135739585, guid: 422dc531d20980243b645f2f993e5b77, type: 3}
   spawnPoint: {fileID: 4257181458473710456}
   chestOpening: {fileID: 982248908263326185}
 --- !u!1 &1309898525739380477
@@ -954,7 +954,7 @@ Transform:
   m_GameObject: {fileID: 2016484780461577041}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.82, y: -2.41, z: 0}
+  m_LocalPosition: {x: -4.78, y: -2.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

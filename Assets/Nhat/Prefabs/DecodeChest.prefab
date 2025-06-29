@@ -316,7 +316,7 @@ MonoBehaviour:
   closeButton: {fileID: 6631214528747006965}
   chestAnimator: {fileID: 2697483534306281276}
   isSolved: 0
-  itemPrefab: {fileID: 4296040709586396028, guid: db4a20b7f001d354599015f41a4d9276, type: 3}
+  itemPrefab: {fileID: 2638723579914604650, guid: 1128c5bdf045189489f23424bab75a05, type: 3}
   spawnPoint: {fileID: 8890071347059633443}
   chestOpening: {fileID: 5422370974945935927}
 --- !u!1 &1211741806911289831
@@ -593,7 +593,7 @@ Transform:
   m_GameObject: {fileID: 2520018890265398438}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.81, y: -2.42, z: 0}
+  m_LocalPosition: {x: -15.48, y: -7.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -683,7 +683,7 @@ Transform:
   m_GameObject: {fileID: 2921634770643081668}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.79, y: -1.98, z: 0}
+  m_LocalPosition: {x: -15.51, y: -7.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

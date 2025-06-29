@@ -25,6 +25,7 @@ public class SoundPuzzleController : MonoBehaviour
 	[Header("Âm thanh")]
 	public AudioSource trackSource;        // AudioSource phát track gốc (nền)
 	public AudioSource chestOpening;
+	public AudioSource WrongSound;
 	public AudioSource[] noteSources;      // Mỗi nút kèm 1 clip phát “bíp”
 
 	[Header("Beat‑map (thiết lập trong Inspector)")]
@@ -127,7 +128,7 @@ public class SoundPuzzleController : MonoBehaviour
 	{
 		Debug.Log("❌ Sai nốt hoặc trật nhịp. Reset!");
 		trackSource.Stop();
-
+		WrongSound.Play();
 		if (shakeCo != null)
 		{
 			StopCoroutine(shakeCo);

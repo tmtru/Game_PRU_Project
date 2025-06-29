@@ -18,6 +18,7 @@ public class NumberPadController : MonoBehaviour
 	public GameObject itemPrefab;         // Prefab vật phẩm
 	public Transform spawnPoint;
 	public AudioSource chestOpening;
+	public AudioSource WrongSound;
 	public void OnNumberButtonClick(string number)
     {
         if (isChestOpen)
@@ -65,8 +66,9 @@ public class NumberPadController : MonoBehaviour
         else
         {
             Debug.Log("❌ Sai mã. Reset.");
+			WrongSound.Play();
 
-            if (shakeCoroutine != null)
+			if (shakeCoroutine != null)
             {
                 StopCoroutine(shakeCoroutine);
                 inputField.transform.localPosition = Vector3.zero;

@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 803421000518750561}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.81, y: -1.87, z: 0}
+  m_LocalPosition: {x: -1.77, y: -1.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -141,7 +141,7 @@ MonoBehaviour:
   closeButton: {fileID: 8205693405754466739}
   boxCollider: {fileID: 6576580369956863323}
   puzzleManager: {fileID: 9133149802963073287}
-  itemPrefab: {fileID: 4296040709586396028, guid: db4a20b7f001d354599015f41a4d9276, type: 3}
+  itemPrefab: {fileID: 6908408812518449792, guid: 410c89d2ed53c004899d1383ac08108d, type: 3}
   spawnPoint: {fileID: 8681416501067872301}
   chestOpening: {fileID: 7870044927038557600}
   isChestOpen: 0
