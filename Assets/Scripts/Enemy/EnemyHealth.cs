@@ -47,6 +47,12 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
+        Flash flash = GetComponent<Flash>();
+        if (flash != null)
+        {
+            StartCoroutine(flash.FlashRoutine());
+        }
+
         // Trigger events
         OnDamageTaken?.Invoke();
         OnHealthChanged?.Invoke(currentHealth, maxHealth);

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +12,7 @@ public class Sword : MonoBehaviour, IWeapon
     private Animator myAnimator;
     private PlayerController playerController;
     private ActiveWeapon activeWeapon;
+    private DamageSource damageSource;
 
     private GameObject slashAnimation;
 
@@ -30,7 +31,6 @@ public class Sword : MonoBehaviour, IWeapon
 
     public void Attack()
     {
-        // isAttacking = true;
         myAnimator.SetTrigger("Attack");
         weaponCollider.gameObject.SetActive(true);
         slashAnimation = Instantiate(slashAnimationPrefab, slashAnimationSpawnPoint.position, Quaternion.identity);
@@ -94,5 +94,6 @@ public class Sword : MonoBehaviour, IWeapon
             weaponCollider.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
+
 
 }
