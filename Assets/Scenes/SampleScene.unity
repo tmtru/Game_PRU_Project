@@ -2424,7 +2424,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.972649, y: 16.873089, z: -10}
+  m_LocalPosition: {x: 29.68231, y: 16.87097, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -66377,7 +66377,6 @@ MonoBehaviour:
   keypadPanel: {fileID: 0}
   chestAnimator: {fileID: 0}
   closeButton: {fileID: 0}
-  boxCollider: {fileID: 0}
 --- !u!1 &1491928332
 GameObject:
   m_ObjectHideFlags: 0
