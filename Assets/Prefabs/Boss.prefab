@@ -326,6 +326,7 @@ MonoBehaviour:
   hideDelay: 3
   offset: {x: -0.05, y: 0.2, z: 0}
   faceCamera: 1
+  enemyHealth: {fileID: 1500669988174942657}
 --- !u!1 &5714312674446161658
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,19 +540,12 @@ MonoBehaviour:
   rangeWalk: 5
   speedWalk: 1
   speedRun: 2.5
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  wallCheckDistance: 1
-  pathfindingCheckInterval: 0.5
   animator: {fileID: 0}
   attackCooldown: 1
   attackDuration: 0.5
   attackDamage: 10
   knockbackForce: 5
   hurtAnimationDuration: 0.6
-  deathAnimationDuration: 2
-  despawnDelay: 3
   enemyHealth: {fileID: 0}
 --- !u!114 &1500669988174942657
 MonoBehaviour:
@@ -562,7 +556,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8245815873294655766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e95dcf31fca7ba448980fdd66ce7ee8, type: 3}
+  m_Script: {fileID: 11500000, guid: 226a75311731066479665232365f9561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100

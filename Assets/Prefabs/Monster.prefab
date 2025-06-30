@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4853238519387288759}
   - component: {fileID: 943934804724676500}
+  - component: {fileID: 8013412710281001847}
   - component: {fileID: 3792055152299617278}
   - component: {fileID: 2334892509772080786}
   - component: {fileID: 6740750820203489468}
@@ -17,7 +18,7 @@ GameObject:
   - component: {fileID: 7472393351558029304}
   m_Layer: 0
   m_Name: Monster
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,6 +94,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8013412710281001847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25169138829497981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 226a75311731066479665232365f9561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  showDamageNumbers: 1
+  damageNumberPrefab: {fileID: 0}
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  deathDelay: 2
+  destroyOnDeath: 1
+  deathEffect: {fileID: 0}
 --- !u!114 &3792055152299617278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,8 +144,6 @@ MonoBehaviour:
   attackDamage: 10
   knockbackForce: 5
   hurtAnimationDuration: 0.6
-  deathAnimationDuration: 2
-  despawnDelay: 3
   enemyHealth: {fileID: 0}
 --- !u!95 &2334892509772080786
 Animator:
@@ -157,10 +176,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 25169138829497981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e95dcf31fca7ba448980fdd66ce7ee8, type: 3}
+  m_Script: {fileID: 11500000, guid: 226a75311731066479665232365f9561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 100
   currentHealth: 0
   showDamageNumbers: 1
   damageNumberPrefab: {fileID: 0}
@@ -225,7 +244,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -567,6 +586,7 @@ MonoBehaviour:
   hideDelay: 3
   offset: {x: -0.05, y: 0.2, z: 0}
   faceCamera: 1
+  enemyHealth: {fileID: 8013412710281001847}
 --- !u!1 &8666991553880281355
 GameObject:
   m_ObjectHideFlags: 0
