@@ -20,6 +20,7 @@ public class EnemyHealthBar : MonoBehaviour
     public Vector3 offset = new Vector3(0, 2f, 0); // Offset từ enemy
     public bool faceCamera = true;
 
+    [SerializeField]
     private EnemyHealth enemyHealth;
     private Camera mainCamera;
     private float maxHealth;
@@ -35,10 +36,9 @@ public class EnemyHealthBar : MonoBehaviour
             mainCamera = FindObjectOfType<Camera>();
 
         // Tìm EnemyHealth component
-        enemyHealth = GetComponentInParent<EnemyHealth>();
         if (enemyHealth == null)
         {
-            Debug.LogError("EnemyHealthBar: Không tìm thấy EnemyHealth component!");
+            Debug.LogError("EnemyHealthBar: EnemyHealth chưa được gán!");
             return;
         }
 

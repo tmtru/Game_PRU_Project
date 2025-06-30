@@ -87,4 +87,9 @@ public class PlayerController : MonoBehaviour
     {
         rb.position = targetPosition;
     }
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		Debug.Log("Va chạm với: " + collision.gameObject.name);
+	}
+
 }

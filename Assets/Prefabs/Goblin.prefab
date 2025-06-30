@@ -113,6 +113,7 @@ MonoBehaviour:
   hideDelay: 3
   offset: {x: -0.05, y: 0.2, z: 0}
   faceCamera: 1
+  enemyHealth: {fileID: 2658514553552554576}
 --- !u!1 &5138549941443336011
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,8 +414,9 @@ GameObject:
   - component: {fileID: 4860474630069881664}
   - component: {fileID: 6846112046167828790}
   - component: {fileID: 725192672373909110}
-  - component: {fileID: 5336748116701987212}
+  - component: {fileID: 2658514553552554576}
   - component: {fileID: 8975220823459213166}
+  - component: {fileID: 7684914428677287086}
   - component: {fileID: 7474749988162029049}
   - component: {fileID: 363973952062217970}
   - component: {fileID: 2556322365509840738}
@@ -549,16 +551,16 @@ MonoBehaviour:
   knockbackForce: 5
   hurtAnimationDuration: 0.6
   enemyHealth: {fileID: 0}
---- !u!114 &5336748116701987212
+--- !u!114 &2658514553552554576
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8868852144327709862}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e95dcf31fca7ba448980fdd66ce7ee8, type: 3}
+  m_Script: {fileID: 11500000, guid: 226a75311731066479665232365f9561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
@@ -596,6 +598,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7684914428677287086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8868852144327709862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30bd06ba148af2b4f9db0399edbe45f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  health: 0
+  enemyName: 
+  baseAttack: 0
+  moveSpeed: 0
+  target: {fileID: 0}
+  chaseRadius: 10
+  attackRadius: 1
+  spawnCenter: {fileID: 0}
+  rangeWalk: 5
+  speedWalk: 1
+  speedRun: 3
+  animator: {fileID: 0}
+  attackCooldown: 1.5
+  attackDuration: 0.8
+  attackDamage: 10
+  knockbackForce: 5
+  hurtAnimationDuration: 0.6
+  enemyHealth: {fileID: 0}
 --- !u!61 &7474749988162029049
 BoxCollider2D:
   m_ObjectHideFlags: 0
