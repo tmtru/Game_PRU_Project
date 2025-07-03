@@ -1,11 +1,12 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CountdownDisplay : MonoBehaviour
 {
     public ChangeScene changeScene;
-    public Text countdownText;
-    public Text warningText;
+    public TMP_Text countdownText;
+    public TMP_Text warningText;
 
     void Update()
     {
