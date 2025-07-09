@@ -1815,6 +1815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f70b2587f5300344a717cb4c10aeac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chestID: SoundChest
   noteButtons:
   - {fileID: 8593415844210559627}
   - {fileID: 4567726323446204996}
@@ -2745,6 +2746,7 @@ GameObject:
   - component: {fileID: 184677870514320654}
   - component: {fileID: 1277061305161166943}
   - component: {fileID: 2938927269528777493}
+  - component: {fileID: 7825311674315721120}
   m_Layer: 0
   m_Name: SoundChest
   m_TagString: Untagged
@@ -2851,6 +2853,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7825311674315721120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5784468278541348778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b87ac6fbe7b634bb7bc75ebddf759a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestID: SoundChest
 --- !u!1 &7334862957099449888
 GameObject:
   m_ObjectHideFlags: 0

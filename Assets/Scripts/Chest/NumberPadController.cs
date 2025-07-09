@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class NumberPadController : MonoBehaviour
 {
-    public TMP_InputField inputField;
+	[SerializeField] private string chestID = "NumberChest";
+	public TMP_InputField inputField;
     public string correctCode = "3715";
     public int requiredLength = 4;
     public GameObject keypadPanel;
@@ -51,7 +52,9 @@ public class NumberPadController : MonoBehaviour
         {
 
             Debug.Log("✅ Mã đúng! Mở rương!");
-            chestAnimator.SetTrigger("ChestOpen");
+			PlayerPrefs.SetInt(chestID, 1);
+			PlayerPrefs.Save();
+			chestAnimator.SetTrigger("ChestOpen");
             isChestOpen = true;
 			chestOpening.Play();
 			Instantiate(itemPrefab, spawnPoint.position, Quaternion.identity);

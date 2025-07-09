@@ -13,6 +13,7 @@ using TMPro;
 /// </summary>
 public class SoundPuzzleController : MonoBehaviour
 {
+	[SerializeField] private string chestID = "SoundChest";
 	// ───────────────── UI & Scene ─────────────────
 	[Header("UI References")]
 	public Button[] noteButtons;           // Các nút bấm âm thanh
@@ -113,7 +114,8 @@ public class SoundPuzzleController : MonoBehaviour
 	{
 		Debug.Log("✅ Puzzle Âm Thanh: WIN!");
 		isSolved = true;
-
+		PlayerPrefs.SetInt(chestID, 1);
+		PlayerPrefs.Save();
 		puzzlePanel.SetActive(false);
 		closeButton.SetActive(false);
 		Time.timeScale = 1f;

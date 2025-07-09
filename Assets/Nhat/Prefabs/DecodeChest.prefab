@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb56301e9395c0f42b09a3e6c2513d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chestID: DecodeChest
   inputField: {fileID: 7254538051421684066}
   correctCode: HELPME
   boxCollider: {fileID: 8156362520825089750}
@@ -541,6 +542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7638229714140700717}
+  - component: {fileID: 3540755440551129}
   m_Layer: 0
   m_Name: DecodeChest
   m_TagString: Untagged
@@ -567,6 +569,19 @@ Transform:
   - {fileID: 2314909241957990696}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3540755440551129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022546504577647486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 475ec37ec5a7b9d429981962fd978079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestID: DecodeChest
 --- !u!1 &2520018890265398438
 GameObject:
   m_ObjectHideFlags: 0

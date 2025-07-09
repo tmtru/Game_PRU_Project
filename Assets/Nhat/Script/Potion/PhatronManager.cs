@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PhatronManager : MonoBehaviour
 {
+	[SerializeField] private string chestID = "PotionChest";
 	public GameObject closeButton;
 	public GameObject mixButton;
 	public GameObject keypadPanel;
@@ -67,7 +68,8 @@ public class PhatronManager : MonoBehaviour
 
 	void ThanhCong()
 	{
-		
+		PlayerPrefs.SetInt(chestID, 1);
+		PlayerPrefs.Save();
 		isChestOpen = true;
 		if (hieuUngThanhCong) hieuUngThanhCong.SetActive(true);
 		if (amThanhThanhCong) amThanhThanhCong.Play();

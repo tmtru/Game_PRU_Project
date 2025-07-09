@@ -471,6 +471,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c5f80c63b148745a0542ae73e8ae50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chestID: ColorChest1
+  chestObject: {fileID: 6263920849536490695}
   cells:
   - {fileID: 3077285825547254703}
   - {fileID: 738291407284805486}
@@ -2586,6 +2588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3155852724373797868}
+  - component: {fileID: 2467602084234684749}
   m_Layer: 0
   m_Name: ColorChest
   m_TagString: Untagged
@@ -2613,6 +2616,19 @@ Transform:
   - {fileID: 3609379806017727675}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2467602084234684749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8725443389974646646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eacb68fe9f6da1148b920db67df2324a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestID: ColorChest1
 --- !u!1 &9157044329361099144
 GameObject:
   m_ObjectHideFlags: 0
