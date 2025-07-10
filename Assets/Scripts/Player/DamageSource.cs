@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class DamageSource : MonoBehaviour
 {
-    [SerializeField] private int damageAmount;
+    private int damageAmount;
+
+    private void Start()
+    {
+        MonoBehaviour currenActiveWeapon = ActiveWeapon.Instance.CurrentActiveWeapon;
+        damageAmount = (currenActiveWeapon as IWeapon).GetWeaponInfo().weaponDamage;
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
-        {
-            Goblin goblin = other.GetComponent<Goblin>();
-            if (goblin != null)
-            {
-                goblin.TakeDamage(damageAmount, transform.position);
-            }
-        }
+        EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+        enemyHealth?.TakeDamage(damageAmount);
     }
 }

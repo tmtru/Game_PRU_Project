@@ -420,6 +420,7 @@ GameObject:
   - component: {fileID: 7474749988162029049}
   - component: {fileID: 363973952062217970}
   - component: {fileID: 2556322365509840738}
+  - component: {fileID: 2939626130348094880}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Enemy
@@ -558,7 +559,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8868852144327709862}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 226a75311731066479665232365f9561, type: 3}
   m_Name: 
@@ -702,3 +703,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whiteFlashMat: {fileID: 2100000, guid: ac1d58c5c465304489ffe59a0a9aa672, type: 2}
   restoreDefaultMatTime: 0.2
+--- !u!114 &2939626130348094880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8868852144327709862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816e6ed71cfb6fb4d97ab49d215380e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyVFX: {fileID: 3320378885487569110, guid: 0799b57cedda429459ba681b31c104f5, type: 3}
