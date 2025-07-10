@@ -1,44 +1,46 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class ItemPickup : MonoBehaviour
 {
 	public string itemName;
 	public Sprite itemIcon;
+	public bool isConsumable = true; // ✅ Gán trong Inspector (mặc định là dùng 1 lần)
 
 	private bool isCollected = false;
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		Debug.Log($"[ItemPickup] Triggered by {other.name}");
+		if (isCollected || !other.CompareTag("Player")) return;
 
-		if (isCollected) return;
+		isCollected = true;
+		Debug.Log($"[ItemPickup] Player picked up: {itemName}");
 
-		if (other.CompareTag("Player"))
+		// ✅ Ưu tiên dùng InventoryManager (Singleton)
+		if (InventoryManager.Instance != null)
 		{
-			Debug.Log("[ItemPickup] Player confirmed");
-			isCollected = true;
-
-			// Tìm inventory từ cha nếu player có nhiều phần tử con
+			InventoryManager.Instance.AddItem(itemName, itemIcon, isConsumable);
+		}
+		else
+		{
+			// 🔁 Fallback về PlayerInventory (trường hợp không dùng InventoryManager)
 			var inventory = other.GetComponentInParent<PlayerInventory>();
 			if (inventory != null)
 			{
 				inventory.AddItem(itemName, itemIcon);
-				Debug.Log("[ItemPickup] Added item, scheduling destroy");
-
-				// Cách mới: dùng Invoke để đảm bảo không bị lỗi Unity coroutine
-				Invoke(nameof(DestroySelf), 0.05f);
 			}
 			else
 			{
-				Debug.LogWarning("[ItemPickup] Không tìm thấy PlayerInventory trên " + other.name);
+				Debug.LogWarning("[ItemPickup] Không tìm thấy InventoryManager hoặc PlayerInventory.");
 			}
 		}
+
+		// ✅ Hủy object sau 1 frame để tránh lỗi reference
+		Invoke(nameof(DestroySelf), 0.05f);
 	}
 
 	private void DestroySelf()
 	{
-		Debug.Log("[ItemPickup] Destroying item: " + gameObject.name);
+		Debug.Log("[ItemPickup] Destroying object: " + gameObject.name);
 		Destroy(gameObject);
 	}
 }

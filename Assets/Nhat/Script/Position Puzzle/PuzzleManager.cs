@@ -5,8 +5,7 @@ using UnityEngine;
 public class PuzzleManager : MonoBehaviour
 {
 	public RectTransform[] pieces;  // puzzles
-	public int[] correctOrder = { 1, 2, 3, 4 };  // Win order
-
+	public int[] correctOrder = { 1, 4,2,3,9,8,5,7,6};  // Win order
 	public bool CheckPuzzleSolved()
 	{
 		if (pieces.Length != correctOrder.Length)
@@ -31,29 +30,16 @@ public class PuzzleManager : MonoBehaviour
 				Debug.LogError($"Không thể parse name '{pieces[i].name}' thành số nguyên.");
 				return false;
 			}
+
 			if (pieceNumber != correctOrder[i])
 			{
-				//Debug.LogError($"piece {pieceNumber} - wrongOrder: {correctOrder[i]}");
+				Debug.LogError($"❌ Sai tại vị trí {i}: hiện là Image{pieceNumber}, đúng phải là Image{correctOrder[i]}");
+				// 1 3 4
 				return false;
 			}
 		}
+		Debug.LogError($"Win");
 		return true;
 	}
-
-	public void ShufflePieces()
-	{
-		for (int i = 0; i < pieces.Length; i++)
-		{
-			int randomIndex = Random.Range(i, pieces.Length);
-			var temp = pieces[i];
-			pieces[i] = pieces[randomIndex];
-			pieces[randomIndex] = temp;
-		}
-
-		// Cập nhật vị trí con (nếu dùng Grid Layout Group)
-		for (int i = 0; i < pieces.Length; i++)
-		{
-			pieces[i].SetSiblingIndex(i);
-		}
-	}
+	
 }

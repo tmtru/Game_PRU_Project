@@ -18,7 +18,9 @@ public class DecodePuzzleController : MonoBehaviour
 	private string buffer = string.Empty; // ký tự người chơi gõ
 	private Coroutine shakeCoroutine;
 	public bool isSolved = false;
-
+	public GameObject itemPrefab;         // Prefab vật phẩm
+	public Transform spawnPoint;
+	public AudioSource chestOpening;
 	//------------------------------ Lifecycle ------------------------------
 	void OnEnable()
 	{
@@ -97,7 +99,8 @@ public class DecodePuzzleController : MonoBehaviour
 		Time.timeScale = 1f;
 		if (boxCollider != null)
 			boxCollider.isTrigger = false;
-
+		chestOpening.Play();
+		Instantiate(itemPrefab, spawnPoint.position, Quaternion.identity);
 		chestAnimator.SetTrigger("PlayAnim");
 	}
 
