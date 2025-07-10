@@ -33,7 +33,7 @@ public class EnemyHealthBar : MonoBehaviour
         // Tìm camera chính
         mainCamera = Camera.main;
         if (mainCamera == null)
-            mainCamera = FindObjectOfType<Camera>();
+            mainCamera = FindAnyObjectByType<Camera>();
 
         // Tìm EnemyHealth component
         if (enemyHealth == null)
