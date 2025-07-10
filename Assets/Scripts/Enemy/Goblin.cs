@@ -260,26 +260,25 @@ public class Goblin : Enemy
         float distanceToPlayer = Vector3.Distance(target.position, transform.position);
         if (distanceToPlayer > attackRadius) return;
 
-        // Tìm PlayerHealth component
-        //PlayerHealth playerHealth = target.GetComponent<PlayerHealth>();
-        //if (playerHealth != null)
-        //{
-        // Gây damage
-        //playerHealth.TakeDamage(attackDamage);
+        // Lấy PlayerHealth
+        PlayerHealth playerHealth = target.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
+        {
+            // Gây sát thương
+            playerHealth.TakeDamage(attackDamage);
+            Debug.Log($"Goblin deals {attackDamage} damage to player!");
 
-        Debug.Log($"Goblin deals {attackDamage} damage to player!");
+            // Tính toán hướng knockback (đẩy theo hướng ngang)
+            Vector3 knockbackDirection = (target.position - transform.position).normalized;
+            knockbackDirection.y = 0;
 
-        // Tính toán hướng knockback
-        Vector3 knockbackDirection = (target.position - transform.position).normalized;
-        knockbackDirection.y = 0; // Chỉ knockback theo mặt phẳng ngang
-
-        // Áp dụng knockback
-        ApplyKnockback(target, knockbackDirection);
-        //}
-        //else
-        //{
-        //    Debug.LogWarning("Player không có PlayerHealth component!");
-        //}
+            // Áp dụng knockback
+            ApplyKnockback(target, knockbackDirection);
+        }
+        else
+        {
+            Debug.LogWarning("Player không có PlayerHealth component!");
+        }
     }
 
     void ApplyKnockback(Transform targetTransform, Vector3 direction)

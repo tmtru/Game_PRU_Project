@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private Key invisibilityKey = Key.LeftShift;
     public static PlayerController Instance;
+    [SerializeField] private Transform weaponCollider;
 
 
     public bool FacingLeft { get { return facingLeft; } set { facingLeft = value; } }
@@ -91,5 +92,10 @@ public class PlayerController : MonoBehaviour
 	{
 		Debug.Log("Va chạm với: " + collision.gameObject.name);
 	}
+
+    public Transform GetWeaponCollider()
+    {
+        return weaponCollider;
+    }
 
 }

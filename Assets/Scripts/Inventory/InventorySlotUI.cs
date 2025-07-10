@@ -1,59 +1,78 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Một slot hiển thị item trong inventory.
+/// </summary>
 public class InventorySlotUI : MonoBehaviour
 {
 	[Header("UI Elements")]
-	public Image itemImage;         // Image con để hiển thị icon vật phẩm (gán trong "Item")
-	public GameObject activeFrame;  // Khung viền để hiển thị khi đang chọn (gán trong "Active")
+	[SerializeField] private Image itemImage;         // Hình ảnh vật phẩm
+	[SerializeField] private GameObject activeFrame;  // Viền hiển thị khi được chọn
 
 	private string itemName;
+	private Sprite itemIcon;
 	private InventoryUI inventoryUI;
 
 	/// <summary>
-	/// Thiết lập dữ liệu cho slot item.
+	/// Thiết lập dữ liệu cho slot (gọi khi tạo mới).
 	/// </summary>
-	/// <param name="itemName">Tên vật phẩm</param>
-	/// <param name="icon">Sprite hiển thị</param>
-	/// <param name="ui">Tham chiếu đến InventoryUI</param>
-	public void Setup(string itemName, Sprite icon, InventoryUI ui)
+	public void Setup(string name, Sprite icon, InventoryUI ui)
 	{
-		this.itemName = itemName;
-		this.inventoryUI = ui;
+		itemName = name;
+		itemIcon = icon;
+		inventoryUI = ui;
 
 		if (itemImage != null)
 		{
 			itemImage.sprite = icon;
 			itemImage.enabled = true;
 		}
+		else
+		{
+			Debug.LogWarning("[InventorySlotUI] itemImage chưa được gán trong Inspector.");
+		}
 
 		SetActive(false);
 	}
 
 	/// <summary>
-	/// Hàm gọi khi click vào slot.
+	/// Gọi từ Button khi click vào slot này.
 	/// </summary>
 	public void OnClickSlot()
 	{
 		if (inventoryUI != null)
 		{
-			inventoryUI.OnSlotClicked(this, itemName);
+			inventoryUI.OnSlotClicked(this);
 		}
 		else
 		{
-			Debug.LogWarning("[InventorySlotUI] InventoryUI chưa được gán!");
+			Debug.LogWarning("[InventorySlotUI] InventoryUI chưa được gán.");
 		}
 	}
 
 	/// <summary>
-	/// Bật/tắt viền active của slot.
+	/// Hiện/ẩn khung active viền.
 	/// </summary>
-	/// <param name="isActive">Có chọn hay không</param>
 	public void SetActive(bool isActive)
 	{
 		if (activeFrame != null)
 		{
 			activeFrame.SetActive(isActive);
 		}
+		else
+		{
+			Debug.LogWarning("[InventorySlotUI] activeFrame chưa được gán trong Inspector.");
+		}
 	}
+
+	/// <summary>
+	/// Trả về tên item của slot này.
+	/// </summary>
+	public string GetItemName() => itemName;
+
+	/// <summary>
+	/// Trả về icon của item.
+	/// </summary>
+	public Sprite GetItemIcon() => itemIcon;
 }
