@@ -1582,6 +1582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ba9ef481efb974cab267d60b5ce0f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chestID: PotionChest
   closeButton: {fileID: 7674061426673487529}
   mixButton: {fileID: 5410656763043802071}
   keypadPanel: {fileID: 839823356624898799}
@@ -1956,6 +1957,7 @@ GameObject:
   - component: {fileID: 3280508487167982993}
   - component: {fileID: 4523346137197946986}
   - component: {fileID: 1110015829060846667}
+  - component: {fileID: 5632607598826997686}
   m_Layer: 0
   m_Name: PotionChest
   m_TagString: Untagged
@@ -2061,6 +2063,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5632607598826997686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6750581283644819020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e5425c030cff340ac5081b53aef156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestID: PotionChest
 --- !u!1 &6821238681494099577
 GameObject:
   m_ObjectHideFlags: 0

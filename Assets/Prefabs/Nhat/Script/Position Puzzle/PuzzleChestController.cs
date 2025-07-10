@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PuzzleChestController : MonoBehaviour
 {
+	[SerializeField] private string chestID = "PuzzleChest";
 	public GameObject keypadPanel;
 	public Animator chestAnimator;
 	public GameObject closeButton;
@@ -42,6 +43,8 @@ public class PuzzleChestController : MonoBehaviour
 		keypadPanel.SetActive(false);
 		closeButton.SetActive(false);
 		chestOpening.Play();
+		PlayerPrefs.SetInt(chestID, 1);
+		PlayerPrefs.Save();
 		Instantiate(itemPrefab, spawnPoint.position, Quaternion.identity);
 		Time.timeScale = 1f;
 		if (boxCollider != null)
@@ -56,7 +59,7 @@ public class PuzzleChestController : MonoBehaviour
 	}
 	IEnumerator DelaySolve()
 	{                 
-		yield return new WaitForSecondsRealtime(1f);
+		yield return new WaitForSecondsRealtime(3f);
 		Solve();
 	}
 }

@@ -809,6 +809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2672751119883398485}
+  - component: {fileID: 5467482102432635867}
   m_Layer: 0
   m_Name: NumberChest
   m_TagString: Untagged
@@ -836,6 +837,19 @@ Transform:
   - {fileID: 4352137549873726459}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5467482102432635867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918274216318854367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97cf2eb2760c374fbe12e63eed84440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestID: NumberChest
 --- !u!1 &2472843281854351310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,6 +2479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa5180e37f3df34fa0765be8942018e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chestID: NumberChest
   inputField: {fileID: 1647277023499929179}
   correctCode: 666
   requiredLength: 3

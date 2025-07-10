@@ -5,7 +5,18 @@ public class PlayerInventory : MonoBehaviour
 {
 	public List<InventoryItem> items = new List<InventoryItem>();
 	public InventoryUI inventoryUI;
+	public static PlayerInventory Instance;
+	private void Awake()
+	{
+		if (Instance != null && Instance != this)
+		{
+			Destroy(gameObject); // Nếu có rồi thì hủy bản trùng
+			return;
+		}
 
+		Instance = this;
+		DontDestroyOnLoad(gameObject); // Không bị hủy khi chuyển scene
+	}
 	public void AddItem(string itemName, Sprite icon)
 	{
 		Debug.Log($"[PlayerInventory] Thêm item: {itemName}");

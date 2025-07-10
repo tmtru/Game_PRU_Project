@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class DecodePuzzleController : MonoBehaviour
 {
+	[SerializeField] private string chestID = "DecodeChest";
 	[Header("UI References")]
 	public TMP_InputField inputField;   // ô hiển thị, không cần nhận phím trực tiếp
 
@@ -101,6 +102,9 @@ public class DecodePuzzleController : MonoBehaviour
 			boxCollider.isTrigger = false;
 		chestOpening.Play();
 		Instantiate(itemPrefab, spawnPoint.position, Quaternion.identity);
+
+		PlayerPrefs.SetInt(chestID, 1);
+		PlayerPrefs.Save();
 		chestAnimator.SetTrigger("PlayAnim");
 	}
 

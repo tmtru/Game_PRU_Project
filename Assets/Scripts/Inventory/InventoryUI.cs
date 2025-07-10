@@ -10,15 +10,20 @@ public class InventoryUI : MonoBehaviour
 
 	private InventorySlotUI currentSelectedSlot;
 
+	/// <summary>
+	/// Làm mới giao diện theo danh sách vật phẩm
+	/// </summary>
 	public void Refresh(List<InventoryItem> items)
 	{
-		// Xóa tất cả slot cũ
+		// Xoá tất cả các slot cũ
 		foreach (Transform child in slotContainer)
 		{
 			Destroy(child.gameObject);
 		}
 
-		// Tạo lại slot từ danh sách item
+		currentSelectedSlot = null;
+
+		// Tạo lại slot mới từ danh sách item
 		foreach (var item in items)
 		{
 			GameObject go = Instantiate(slotPrefab, slotContainer);
@@ -27,39 +32,40 @@ public class InventoryUI : MonoBehaviour
 			if (slot != null)
 			{
 				slot.Setup(item.itemName, item.icon, this);
-
-				Button btn = go.GetComponent<Button>();
-				if (btn != null)
-				{
-					btn.onClick.RemoveAllListeners(); // đảm bảo không bị gán nhiều lần
-					btn.onClick.AddListener(() => OnSlotClicked(slot, item.itemName));
-				}
-				else
-				{
-					Debug.LogWarning("[InventoryUI] slotPrefab không có Button component!");
-				}
 			}
 			else
 			{
-				Debug.LogWarning("[InventoryUI] Prefab không có InventorySlotUI!");
+				Debug.LogWarning("[InventoryUI] Prefab không có InventorySlotUI component!");
 			}
 		}
-
-		// Reset slot được chọn
-		currentSelectedSlot = null;
 	}
 
-	public void OnSlotClicked(InventorySlotUI clickedSlot, string itemName)
+	/// <summary>
+	/// Được gọi bởi InventorySlotUI khi click vào slot
+	/// </summary>
+	public void OnSlotClicked(InventorySlotUI clickedSlot)
 	{
-		if (currentSelectedSlot != null)
-			currentSelectedSlot.SetActive(false);
+		// Nếu slot đang được chọn → bỏ chọn
+		if (currentSelectedSlot == clickedSlot)
+		{
+			clickedSlot.SetActive(false);
+			currentSelectedSlot = null;
 
-		clickedSlot.SetActive(true);
-		currentSelectedSlot = clickedSlot;
+			InventoryManager.Instance?.ClearSelectedItem();
+			Debug.Log("[InventoryUI] Bỏ chọn item");
+		}
+		else
+		{
+			// Tắt active của slot trước đó (nếu có)
+			if (currentSelectedSlot != null)
+				currentSelectedSlot.SetActive(false);
 
-		Debug.Log("Đã chọn item: " + itemName);
+			// Đánh dấu slot hiện tại
+			clickedSlot.SetActive(true);
+			currentSelectedSlot = clickedSlot;
 
-		// Nếu muốn dùng item khi click:
-		// FindObjectOfType<PlayerInventory>()?.UseItem(itemName);
+			InventoryManager.Instance?.SelectItem(clickedSlot.GetItemName(), clickedSlot.GetItemIcon());
+			Debug.Log("[InventoryUI] Đã chọn item: " + clickedSlot.GetItemName());
+		}
 	}
 }

@@ -4846,6 +4846,7 @@ GameObject:
   - component: {fileID: 1239074831636397335}
   - component: {fileID: 8035989219485201464}
   - component: {fileID: 6909913725445736386}
+  - component: {fileID: 4660373041859249875}
   m_Layer: 0
   m_Name: HeartDrop
   m_TagString: Untagged
@@ -4933,7 +4934,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3323360155008632249}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -4982,7 +4983,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -5013,6 +5014,21 @@ MonoBehaviour:
   jumpPower: 1
   duration: 1
   glowEffect: {fileID: 8770079545594319733}
+--- !u!114 &4660373041859249875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3323360155008632249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7e2fe88d899b924195db0576d570bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Heart
+  itemIcon: {fileID: 21300000, guid: aa065166647436143abb94c1d7bf4ba9, type: 3}
+  isConsumable: 1
 --- !u!1 &6681842500505896579
 GameObject:
   m_ObjectHideFlags: 0

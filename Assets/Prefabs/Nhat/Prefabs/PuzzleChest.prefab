@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a44c3542425e346a7f7b91f17fba66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chestID: PuzzleChest
   keypadPanel: {fileID: 8804085448219056532}
   chestAnimator: {fileID: 3891318715479141456}
   closeButton: {fileID: 8205693405754466739}
@@ -1900,6 +1901,7 @@ GameObject:
   - component: {fileID: 7150275282768158407}
   - component: {fileID: 1622702097014631050}
   - component: {fileID: 5771887753936354288}
+  - component: {fileID: 6697368356971799690}
   m_Layer: 0
   m_Name: PuzzleChest
   m_TagString: Untagged
@@ -2004,6 +2006,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6697368356971799690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8152793703992461366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a900bbfb53717b4ebf4842a249388b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestID: PuzzleChest
 --- !u!1 &8205693405754466739
 GameObject:
   m_ObjectHideFlags: 0
