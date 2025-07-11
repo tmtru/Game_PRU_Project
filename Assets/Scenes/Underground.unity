@@ -1088,6 +1088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   invisibilityKey: 51
+  weaponCollider: {fileID: 0}
 --- !u!95 &338680338
 Animator:
   serializedVersion: 7
@@ -4484,6 +4485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa5180e37f3df34fa0765be8942018e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chestID: NumberChest
   inputField: {fileID: 0}
   correctCode: 3715
   requiredLength: 4
