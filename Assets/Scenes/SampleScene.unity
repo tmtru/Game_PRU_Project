@@ -3747,7 +3747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &407609840
 Transform:
   m_ObjectHideFlags: 0
@@ -3777,9 +3777,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   fadeDuration: 0
-  countdown: 15
+  countdown: 5
   scene1: SampleScene
   scene2: Night
+  resetDayOnGameStart: 0
+  saveDayCountPermanently: 1
+  dayCount: 2
+  hasCompletedCycle: 0
+  currentSceneName: 
 --- !u!114 &407609842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118987,8 +118992,16 @@ MonoBehaviour:
   spawnableObjects:
   - prefab: {fileID: 25169138829497981, guid: f1a203a6a91b91f4a9c6184dbd391241, type: 3}
     spawnChance: 1
-    maxCount: 10
+    useStaticMaxCount: 0
+    staticMaxCount: -1
+    useDayBasedMaxCount: 1
+    baseMaxCount: 5
+    maxCountMultiplier: 1.2
+    absoluteMaxCount: 100
     currentCount: 0
+    scaleWithDays: 0
+    minDayToSpawn: 1
+    dayScalingMultiplier: 1.1
   spawnZones:
   - zoneName: Monster
     center: {x: 0, y: 0, z: 0}
@@ -118999,6 +119012,50 @@ MonoBehaviour:
   totalObjectsToSpawn: 20
   spawnDelay: 0.1
   spawnOnAwake: 1
+  dayScaling:
+    enableDayScaling: 1
+    difficultyMultiplierCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0.1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 10
+        value: 2
+        inSlope: 0.1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    scaleSpawnCount: 1
+    baseSpawnCount: 20
+    maxSpawnCount: 100
+    spawnCountMultiplier: 1.2
+    scaleSpawnSpeed: 1
+    baseSpawnDelay: 0.5
+    minSpawnDelay: 0.1
+    speedMultiplier: 0.9
+    scaleEnemyStrength: 1
+    baseHealthMultiplier: 1
+    baseDamageMultiplier: 1
+    strengthIncreasePerDay: 0.15
+  autoFindDayCounter: 1
+  dayCounterReference: {fileID: 0}
+  currentDay: 0
+  actualSpawnCount: 0
+  actualSpawnDelay: 0.1
+  difficultyMultiplier: 1
   useRaycastForHeight: 0
   groundLayerMask:
     serializedVersion: 2
@@ -119029,8 +119086,12 @@ MonoBehaviour:
   OnObjectSpawned:
     m_PersistentCalls:
       m_Calls: []
+  OnDayChanged:
+    m_PersistentCalls:
+      m_Calls: []
   showDebugInfo: 1
   showGizmos: 1
+  showMaxCountInfo: 1
 --- !u!1 &2202199936171157916
 GameObject:
   m_ObjectHideFlags: 0
