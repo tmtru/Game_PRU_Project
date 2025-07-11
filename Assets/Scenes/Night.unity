@@ -1416,6 +1416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa5180e37f3df34fa0765be8942018e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chestID: NumberChest
   inputField: {fileID: 0}
   correctCode: 3715
   requiredLength: 4
@@ -2664,6 +2665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa5180e37f3df34fa0765be8942018e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chestID: NumberChest
   inputField: {fileID: 1541897333}
   correctCode: 391
   requiredLength: 3
