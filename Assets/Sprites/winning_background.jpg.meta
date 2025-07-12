@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2e4f3c24787a78047931fcbbee86a4db
+guid: 25b5862ba9ac321439924fd92dabb298
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5155197566706125249
-    second: xSymbol_0
+      213: 5487311604661055306
+    second: winning_background_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: xSymbol_0
+      name: winning_background_0
       rect:
         serializedVersion: 2
-        x: 46
-        y: 44
-        width: 379
-        height: 389
+        x: 0
+        y: 0
+        width: 2500
+        height: 1875
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f36f581602f0578b0800000000000000
-      internalID: -5155197566706125249
+      spriteID: a4f63b7d4d8d62c40800000000000000
+      internalID: 5487311604661055306
       vertices: []
       indices: 
       edges: []
