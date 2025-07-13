@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e2fe88d899b924195db0576d570bcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: KeyU
+  itemName: Key1
   itemIcon: {fileID: 21300000, guid: f44aebcd5e96d434c93a1f0736bd6a2a, type: 3}
   isConsumable: 0
 --- !u!1 &9207583762154108922

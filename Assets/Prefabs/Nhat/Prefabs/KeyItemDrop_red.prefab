@@ -350,8 +350,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e2fe88d899b924195db0576d570bcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: KeyU_Red
-  itemIcon: {fileID: 21300000, guid: f44aebcd5e96d434c93a1f0736bd6a2a, type: 3}
+  itemName: Key3
+  itemIcon: {fileID: 21300000, guid: 9f9b47bece9c6f7449d48cdf2071f44b, type: 3}
   isConsumable: 0
 --- !u!1 &9207583762154108922
 GameObject:

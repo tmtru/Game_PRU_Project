@@ -139,7 +139,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -153,7 +153,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -177,7 +177,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -205,12 +205,12 @@ TextureImporter:
       name: MiniMerchant_0
       rect:
         serializedVersion: 2
-        x: 10
+        x: 0
         y: 192
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -227,12 +227,12 @@ TextureImporter:
       name: MiniMerchant_1
       rect:
         serializedVersion: 2
-        x: 42
+        x: 32
         y: 192
-        width: 12
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -249,12 +249,12 @@ TextureImporter:
       name: MiniMerchant_2
       rect:
         serializedVersion: 2
-        x: 74
+        x: 64
         y: 192
-        width: 12
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -271,12 +271,12 @@ TextureImporter:
       name: MiniMerchant_3
       rect:
         serializedVersion: 2
-        x: 106
+        x: 96
         y: 192
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -293,10 +293,10 @@ TextureImporter:
       name: MiniMerchant_4
       rect:
         serializedVersion: 2
-        x: 10
+        x: 0
         y: 160
-        width: 13
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: MiniMerchant_5
       rect:
         serializedVersion: 2
-        x: 42
+        x: 32
         y: 160
-        width: 16
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: MiniMerchant_6
       rect:
         serializedVersion: 2
-        x: 74
+        x: 64
         y: 160
-        width: 16
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,10 +359,10 @@ TextureImporter:
       name: MiniMerchant_7
       rect:
         serializedVersion: 2
-        x: 106
+        x: 96
         y: 160
-        width: 16
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,10 +381,10 @@ TextureImporter:
       name: MiniMerchant_8
       rect:
         serializedVersion: 2
-        x: 138
+        x: 128
         y: 160
-        width: 15
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +403,10 @@ TextureImporter:
       name: MiniMerchant_9
       rect:
         serializedVersion: 2
-        x: 148
-        y: 168
-        width: 6
-        height: 6
+        x: 160
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +425,10 @@ TextureImporter:
       name: MiniMerchant_10
       rect:
         serializedVersion: 2
-        x: 170
+        x: 192
         y: 160
-        width: 16
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +447,10 @@ TextureImporter:
       name: MiniMerchant_11
       rect:
         serializedVersion: 2
-        x: 202
+        x: 224
         y: 160
-        width: 16
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,10 +469,10 @@ TextureImporter:
       name: MiniMerchant_12
       rect:
         serializedVersion: 2
-        x: 234
+        x: 256
         y: 160
-        width: 16
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +491,10 @@ TextureImporter:
       name: MiniMerchant_13
       rect:
         serializedVersion: 2
-        x: 266
-        y: 160
-        width: 13
-        height: 15
+        x: 0
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,10 +513,10 @@ TextureImporter:
       name: MiniMerchant_14
       rect:
         serializedVersion: 2
-        x: 10
+        x: 32
         y: 128
-        width: 17
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,10 +535,10 @@ TextureImporter:
       name: MiniMerchant_15
       rect:
         serializedVersion: 2
-        x: 42
+        x: 64
         y: 128
-        width: 15
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -557,10 +557,10 @@ TextureImporter:
       name: MiniMerchant_16
       rect:
         serializedVersion: 2
-        x: 74
+        x: 96
         y: 128
-        width: 12
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -579,10 +579,10 @@ TextureImporter:
       name: MiniMerchant_17
       rect:
         serializedVersion: 2
-        x: 106
+        x: 128
         y: 128
-        width: 12
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +601,10 @@ TextureImporter:
       name: MiniMerchant_18
       rect:
         serializedVersion: 2
-        x: 133
+        x: 160
         y: 128
-        width: 17
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -623,10 +623,10 @@ TextureImporter:
       name: MiniMerchant_19
       rect:
         serializedVersion: 2
-        x: 167
+        x: 192
         y: 128
-        width: 15
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -645,10 +645,10 @@ TextureImporter:
       name: MiniMerchant_20
       rect:
         serializedVersion: 2
-        x: 202
-        y: 128
-        width: 12
-        height: 15
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -667,10 +667,10 @@ TextureImporter:
       name: MiniMerchant_21
       rect:
         serializedVersion: 2
-        x: 11
-        y: 97
-        width: 11
-        height: 15
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -689,10 +689,10 @@ TextureImporter:
       name: MiniMerchant_22
       rect:
         serializedVersion: 2
-        x: 43
+        x: 64
         y: 96
-        width: 10
-        height: 14
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -711,10 +711,10 @@ TextureImporter:
       name: MiniMerchant_23
       rect:
         serializedVersion: 2
-        x: 74
+        x: 96
         y: 96
-        width: 12
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -733,10 +733,10 @@ TextureImporter:
       name: MiniMerchant_24
       rect:
         serializedVersion: 2
-        x: 105
-        y: 97
-        width: 14
-        height: 15
+        x: 128
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -755,10 +755,10 @@ TextureImporter:
       name: MiniMerchant_25
       rect:
         serializedVersion: 2
-        x: 137
+        x: 160
         y: 96
-        width: 14
-        height: 14
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,10 +777,10 @@ TextureImporter:
       name: MiniMerchant_26
       rect:
         serializedVersion: 2
-        x: 170
-        y: 96
-        width: 12
-        height: 15
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -799,10 +799,10 @@ TextureImporter:
       name: MiniMerchant_27
       rect:
         serializedVersion: 2
-        x: 9
-        y: 65
-        width: 14
-        height: 15
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -821,10 +821,10 @@ TextureImporter:
       name: MiniMerchant_28
       rect:
         serializedVersion: 2
-        x: 41
-        y: 65
-        width: 14
-        height: 15
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -843,10 +843,10 @@ TextureImporter:
       name: MiniMerchant_29
       rect:
         serializedVersion: 2
-        x: 73
-        y: 64
-        width: 14
-        height: 13
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -865,10 +865,10 @@ TextureImporter:
       name: MiniMerchant_30
       rect:
         serializedVersion: 2
-        x: 7
+        x: 32
         y: 32
-        width: 15
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -887,10 +887,10 @@ TextureImporter:
       name: MiniMerchant_31
       rect:
         serializedVersion: 2
-        x: 41
-        y: 32
-        width: 13
-        height: 15
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -909,10 +909,10 @@ TextureImporter:
       name: MiniMerchant_32
       rect:
         serializedVersion: 2
-        x: 9
+        x: 32
         y: 0
-        width: 13
-        height: 14
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -931,10 +931,10 @@ TextureImporter:
       name: MiniMerchant_33
       rect:
         serializedVersion: 2
-        x: 41
-        y: 1
-        width: 12
-        height: 11
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -953,10 +953,10 @@ TextureImporter:
       name: MiniMerchant_34
       rect:
         serializedVersion: 2
-        x: 71
+        x: 96
         y: 0
-        width: 47
-        height: 7
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -975,7 +975,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bdb11be76ba6a9b4c8986dd6b10aed6c
     internalID: 0
     vertices: []
     indices: 
@@ -983,7 +983,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       MiniMerchant_0: 4196239000010113515
       MiniMerchant_1: 8314813314877677765
