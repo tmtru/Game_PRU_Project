@@ -5151,7 +5151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &407609840
 Transform:
   m_ObjectHideFlags: 0
@@ -6577,7 +6577,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.8676295, y: 24.66654, z: -10}
+  m_LocalPosition: {x: -6.858035, y: 24.66655, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -70896,7 +70896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.0700073, y: 8.399994}
+  m_AnchoredPosition: {x: 1.0700073, y: 8.400024}
   m_SizeDelta: {x: 644.37, y: 363.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &777998963
@@ -71774,6 +71774,7 @@ MonoBehaviour:
   requiredExtraItem: Potion
   winSceneName: WinningScene
   loseSceneName: LosingScene
+  ritualHintSound: {fileID: 0}
 --- !u!70 &852044559
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -72206,7 +72207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.0700073, y: 8.399994}
+  m_AnchoredPosition: {x: 1.0700073, y: 8.400024}
   m_SizeDelta: {x: 644.37, y: 363.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &895226095
@@ -109497,6 +109498,7 @@ GameObject:
   - component: {fileID: 1588782554}
   - component: {fileID: 1588782553}
   - component: {fileID: 1588782555}
+  - component: {fileID: 1588782556}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -109601,6 +109603,18 @@ MonoBehaviour:
     MaxWindowSize: 0
     Padding: 0
   m_LegacyMaxWindowSize: -2
+--- !u!114 &1588782556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588782551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05fea995249e0fd46a6da79e6546b17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1607402701
 GameObject:
   m_ObjectHideFlags: 0
@@ -130859,7 +130873,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.0700073, y: 8.399994}
+  m_AnchoredPosition: {x: 1.0700073, y: 8.400024}
   m_SizeDelta: {x: 644.37, y: 363.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2929207824383282599
@@ -143900,7 +143914,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0025024414, y: -0.0014953613}
+  m_AnchoredPosition: {x: 0.0025024414, y: -0.0014648438}
   m_SizeDelta: {x: 0.005127, y: 0.0029907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &7642598651508947942

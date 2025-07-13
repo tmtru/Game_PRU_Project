@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     public static PlayerController Instance;
     [SerializeField] private Transform weaponCollider;
 
-
     public bool FacingLeft { get { return facingLeft; } set { facingLeft = value; } }
 
     private PlayerControls playerControls;
@@ -23,7 +22,16 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        // Prevent duplicate PlayerController
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
+        DontDestroyOnLoad(gameObject); // Optional, remove if you want to respawn Player each scene
+
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -32,12 +40,18 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        playerControls.Enable();
+        if (playerControls != null)
+        {
+            playerControls.Enable();
+        }
     }
 
     private void OnDisable()
     {
-        playerControls.Disable();
+        if (playerControls != null)
+        {
+            playerControls.Disable();
+        }
     }
 
     private void Update()
@@ -88,14 +102,14 @@ public class PlayerController : MonoBehaviour
     {
         rb.position = targetPosition;
     }
-	void OnCollisionEnter2D(Collision2D collision)
-	{
-		Debug.Log("Va chạm với: " + collision.gameObject.name);
-	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Va chạm với: " + collision.gameObject.name);
+    }
 
     public Transform GetWeaponCollider()
     {
         return weaponCollider;
     }
-
 }

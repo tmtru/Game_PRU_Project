@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      remove_watermark_image_20250713_095234 (1)_0: 5527331482681068453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
