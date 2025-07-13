@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum BossDirection
 {
@@ -22,21 +24,111 @@ public class Boss : Enemy
     public float walkSpeed = 2f;
     public float chaseSpeed = 5f;
 
+    [Header("Attack Settings")]
+    public float attackDuration = 1.2f;
+    public int attackDamage = 25;
+    public float knockbackForce = 8f;
+    private bool isAttacking = false;
+    private float lastAttackTime = 0f;
+
+    [Header("Hurt Settings")]
+    public float hurtAnimationDuration = 0.8f;
+    public float hurtKnockbackForce = 5f;
+    public float hurtInvulnerabilityTime = 1f;
+    private bool isHurt = false;
+    private bool isInvulnerable = false;
+    private float hurtTimer = 0f;
+
+    [Header("Death Settings")]
+    public float deathAnimationDuration = 2f; // Thời gian animation death
+    public float deathFadeTime = 1f; // Thời gian fade out
+    private bool isDead = false;
+    private float deathTimer = 0f;
+
+    [Header("Debug Keys")]
+    public KeyCode debugStateKey = KeyCode.B;
+    public KeyCode testHurtKey = KeyCode.H;
+    public KeyCode testDeathKey = KeyCode.K;
+    public KeyCode healKey = KeyCode.R;
+
+    private float originalMoveSpeed;
     private Transform player;
     private Vector2 startPosition;
     private Vector2 patrolTarget;
-    private float lastAttackTime;
     private float patrolTimer;
     private bool isPatrolling = true;
     private BossDirection currentDirection;
+    private Vector2 lastKnockbackDirection;
 
     // Animation và Visual
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private Color originalColor;
 
+    [Header("Boss Settings")]
+    public bool isBoss = false;
+    public GameObject fireworksPrefab;
+    public AudioClip victorySound;
+    public float sceneTransitionDelay = 3f;
+    public string nextSceneName = "Win";
+
+    private bool bossDeathTriggered = false;
+
+    // Method trigger hiệu ứng khi boss chết
+    void TriggerBossDeathEffects()
+    {
+        if (bossDeathTriggered) return;
+        bossDeathTriggered = true;
+
+        // Phát âm thanh victory
+        if (victorySound != null)
+        {
+            AudioSource.PlayClipAtPoint(victorySound, transform.position);
+        }
+
+        // Spawn pháo hoa
+        StartCoroutine(SpawnFireworks());
+
+        // Lên lịch chuyển scene
+        StartCoroutine(TransitionToNextScene());
+    }
+
+    // Coroutine spawn pháo hoa
+    IEnumerator SpawnFireworks()
+    {
+        int fireworkCount = 5;
+        for (int i = 0; i < fireworkCount; i++)
+        {
+            if (fireworksPrefab != null)
+            {
+                // Spawn pháo hoa ở vị trí ngẫu nhiên xung quanh boss
+                Vector3 spawnPos = transform.position + new Vector3(
+                    Random.Range(-5f, 5f),
+                    Random.Range(-2f, 4f),
+                    0f
+                );
+
+                Instantiate(fireworksPrefab, spawnPos, Quaternion.identity);
+            }
+
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    // Coroutine chuyển scene
+    IEnumerator TransitionToNextScene()
+    {
+        yield return new WaitForSeconds(sceneTransitionDelay);
+
+        // Fade out màn hình (optional)
+        //FadeManager.Instance.FadeOut();
+
+        // Chuyển scene
+        SceneManager.LoadScene(nextSceneName);
+    }
     void Start()
     {
-        // Khởi tạo các giá trị cơ bản
+        originalMoveSpeed = moveSpeed;
         health = maxHealth;
         currentState = EnemyState.Idle;
         startPosition = transform.position;
@@ -50,18 +142,50 @@ public class Boss : Enemy
 
         // Lấy components
         animator = GetComponent<Animator>();
-        animator.speed = 0.5f;
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (animator != null)
+        {
+            animator.speed = 0.5f;
+        }
 
-        // Thiết lập patrol target đầu tiên
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            originalColor = spriteRenderer.color;
+        }
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.isKinematic = false;
+            rb.linearDamping = 5f;
+            rb.freezeRotation = true;
+        }
+
         SetNewPatrolTarget();
     }
 
     void Update()
     {
-        if (health <= 0)
+        // Test Keys
+        HandleTestKeys();
+
+        // Kiểm tra trạng thái chết
+        if (health <= 0 && !isDead)
         {
-            currentState = EnemyState.Death;
+            TriggerDeath();
+        }
+
+        // Xử lý death state
+        if (isDead)
+        {
+            HandleDeathState();
+            return;
+        }
+
+        // Xử lý hurt state
+        if (isHurt)
+        {
+            HandleHurtState();
             return;
         }
 
@@ -100,9 +224,57 @@ public class Boss : Enemy
         UpdateAnimation();
     }
 
+    void HandleTestKeys()
+    {
+        // Debug state info
+        if (Input.GetKeyDown(debugStateKey))
+        {
+            float distanceToPlayer = player != null ? Vector2.Distance(transform.position, player.position) : float.MaxValue;
+            Debug.Log($"=== BOSS DEBUG INFO ===");
+            Debug.Log($"State: {currentState}");
+            Debug.Log($"Health: {health}/{maxHealth}");
+            Debug.Log($"IsAttacking: {isAttacking}");
+            Debug.Log($"IsHurt: {isHurt}");
+            Debug.Log($"IsDead: {isDead}");
+            Debug.Log($"IsInvulnerable: {isInvulnerable}");
+            Debug.Log($"Distance to Player: {distanceToPlayer:F2}");
+            Debug.Log($"Current Direction: {currentDirection}");
+            Debug.Log($"Move Speed: {moveSpeed}");
+        }
+
+        // Test hurt
+        if (Input.GetKeyDown(testHurtKey) && !isDead)
+        {
+            Debug.Log("Testing Hurt State...");
+            TriggerHurt();
+        }
+
+        // Test death
+        if (Input.GetKeyDown(testDeathKey) && !isDead)
+        {
+            Debug.Log("Testing Death State...");
+            health = 0;
+            TriggerDeath();
+        }
+
+        // Heal boss
+        if (Input.GetKeyDown(healKey) && !isDead)
+        {
+            health = maxHealth;
+            isDead = false;
+            isHurt = false;
+            isInvulnerable = false;
+            currentState = EnemyState.Idle;
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.color = originalColor;
+            }
+            Debug.Log("Boss healed to full health!");
+        }
+    }
+
     void HandleIdleState(float distanceToPlayer)
     {
-        // Nếu phát hiện player trong tầm
         if (distanceToPlayer <= detectionRange)
         {
             currentState = EnemyState.Chase;
@@ -110,7 +282,6 @@ public class Boss : Enemy
             return;
         }
 
-        // Bắt đầu patrol
         patrolTimer += Time.deltaTime;
         if (patrolTimer >= patrolWaitTime)
         {
@@ -121,7 +292,6 @@ public class Boss : Enemy
 
     void HandleWalkState(float distanceToPlayer)
     {
-        // Nếu phát hiện player
         if (distanceToPlayer <= detectionRange)
         {
             currentState = EnemyState.Chase;
@@ -129,15 +299,12 @@ public class Boss : Enemy
             return;
         }
 
-        // Thiết lập speed cho patrol
         moveSpeed = walkSpeed;
 
-        // Di chuyển đến patrol target
         if (isPatrolling)
         {
             MoveTowards(patrolTarget);
 
-            // Kiểm tra đã đến target chưa
             if (Vector2.Distance(transform.position, patrolTarget) < 0.5f)
             {
                 currentState = EnemyState.Idle;
@@ -150,7 +317,6 @@ public class Boss : Enemy
     {
         if (player == null) return;
 
-        // Nếu player ra khỏi tầm detection
         if (distanceToPlayer > detectionRange * 1.5f)
         {
             currentState = EnemyState.Idle;
@@ -158,31 +324,138 @@ public class Boss : Enemy
             return;
         }
 
-        // Nếu đủ gần để tấn công
-        if (distanceToPlayer <= attackRange && Time.time - lastAttackTime >= attackCooldown)
+        if (distanceToPlayer <= attackRange && Time.time >= lastAttackTime + attackCooldown && !isAttacking)
         {
-            currentState = EnemyState.Attack;
+            StartAttack();
             return;
         }
 
-        // Thiết lập speed cho chase
-        moveSpeed = chaseSpeed;
-
-        // Đuổi theo player
-        MoveTowards(player.position);
+        if (!isAttacking)
+        {
+            moveSpeed = chaseSpeed;
+            MoveTowards(player.position);
+        }
     }
 
     void HandleAttackState(float distanceToPlayer)
     {
-        // Thực hiện tấn công
-        if (Time.time - lastAttackTime >= attackCooldown)
+        if (isAttacking)
         {
-            PerformAttack();
-            lastAttackTime = Time.time;
+            moveSpeed = Mathf.Lerp(moveSpeed, originalMoveSpeed * 0.2f, Time.deltaTime * 5f);
+        }
+        else
+        {
+            moveSpeed = Mathf.Lerp(moveSpeed, originalMoveSpeed, Time.deltaTime * 3f);
         }
 
-        // Quay về chase nếu player còn trong tầm
-        if (distanceToPlayer <= detectionRange)
+        if (!isAttacking)
+        {
+            if (distanceToPlayer <= detectionRange)
+            {
+                currentState = EnemyState.Chase;
+            }
+            else
+            {
+                currentState = EnemyState.Idle;
+                isPatrolling = true;
+            }
+        }
+    }
+
+    void HandleHurtState()
+    {
+        // Cập nhật timer
+        hurtTimer += Time.deltaTime;
+
+        // Dừng di chuyển trong lúc hurt
+        moveSpeed = 0f;
+
+        // Áp dụng knockback nếu có
+        if (hurtTimer < 0.2f) // Chỉ knockback trong 0.2s đầu
+        {
+            ApplyHurtKnockback();
+        }
+
+        // Kết thúc hurt state
+        if (hurtTimer >= hurtAnimationDuration)
+        {
+            EndHurt();
+        }
+    }
+
+    void HandleDeathState()
+    {
+        // Dừng mọi hoạt động
+        moveSpeed = 0f;
+        isAttacking = false;
+        isHurt = false;
+
+        // Dừng Rigidbody2D
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+        if (animator != null && !animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+        {
+            animator.SetBool("isDead", true);
+            if (isBoss)
+            {
+                TriggerBossDeathEffects();
+            }
+        }
+        // Cập nhật timer
+        deathTimer += Time.deltaTime;
+
+        if (deathTimer >= deathAnimationDuration)
+        {
+            OnDeathComplete();
+        }
+    }
+
+    void TriggerHurt()
+    {
+        if (isInvulnerable || isDead) return;
+
+        Debug.Log($"{enemyName} is hurt!");
+
+        isHurt = true;
+        hurtTimer = 0f;
+        currentState = EnemyState.Hurt;
+
+        // Hủy attack nếu đang tấn công
+        if (isAttacking)
+        {
+            CancelInvoke(nameof(EndAttack));
+            CancelInvoke(nameof(DealDamage));
+            isAttacking = false;
+        }
+
+        // Tính toán hướng knockback (từ player hoặc ngược lại)
+        if (player != null)
+        {
+            lastKnockbackDirection = (transform.position - player.position).normalized;
+        }
+        else
+        {
+            lastKnockbackDirection = Vector2.up; // Default direction
+        }
+
+        // Bắt đầu invulnerability
+        StartInvulnerability();
+
+        // Visual feedback
+        StartCoroutine(HurtFlashEffect());
+    }
+
+    void EndHurt()
+    {
+        isHurt = false;
+        hurtTimer = 0f;
+        moveSpeed = originalMoveSpeed;
+
+        // Quyết định state tiếp theo
+        if (player != null && Vector2.Distance(transform.position, player.position) <= detectionRange)
         {
             currentState = EnemyState.Chase;
         }
@@ -191,84 +464,192 @@ public class Boss : Enemy
             currentState = EnemyState.Idle;
             isPatrolling = true;
         }
+
+        Debug.Log($"{enemyName} recovered from hurt!");
     }
 
-    void HandleHurtState()
+    void ApplyHurtKnockback()
     {
-        // Tạm dừng 0.5 giây khi bị hurt
-        if (Time.time - lastAttackTime >= 0.5f)
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
         {
-            if (player != null && Vector2.Distance(transform.position, player.position) <= detectionRange)
+            rb.AddForce(lastKnockbackDirection * hurtKnockbackForce, ForceMode2D.Force);
+        }
+    }
+
+    void StartInvulnerability()
+    {
+        isInvulnerable = true;
+        Invoke(nameof(EndInvulnerability), hurtInvulnerabilityTime);
+    }
+
+    void EndInvulnerability()
+    {
+        isInvulnerable = false;
+        Debug.Log($"{enemyName} is no longer invulnerable");
+    }
+
+    System.Collections.IEnumerator HurtFlashEffect()
+    {
+        if (spriteRenderer == null) yield break;
+
+        float flashTime = 0.1f;
+        int flashCount = Mathf.RoundToInt(hurtAnimationDuration / (flashTime * 2));
+
+        for (int i = 0; i < flashCount; i++)
+        {
+            spriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(flashTime);
+            spriteRenderer.color = originalColor;
+            yield return new WaitForSeconds(flashTime);
+        }
+    }
+
+    void TriggerDeath()
+    {
+        if (isDead) return;
+
+        Debug.Log($"{enemyName} is dying!");
+
+        isDead = true;
+        deathTimer = 0f;
+        currentState = EnemyState.Death;
+
+        // Hủy tất cả invoke
+        CancelInvoke();
+
+        // Dừng tất cả coroutines
+        StopAllCoroutines();
+
+        // Reset states
+        isAttacking = false;
+        isHurt = false;
+        isInvulnerable = false;
+    }
+
+    void OnDeathComplete()
+    {
+        Debug.Log($"{enemyName} death complete!");
+        // Có thể spawn items, effects, etc.
+        // DropLoot();
+        // SpawnDeathEffect();
+
+        // Deactivate hoặc destroy
+        gameObject.SetActive(false);
+        // Hoặc: Destroy(gameObject);
+    }
+
+    void StartAttack()
+    {
+        if (isHurt || isDead) return;
+
+        isAttacking = true;
+        currentState = EnemyState.Attack;
+        lastAttackTime = Time.time;
+
+        Invoke(nameof(EndAttack), attackDuration);
+        Invoke(nameof(DealDamage), attackDuration * 0.4f);
+
+        Debug.Log($"{enemyName} starts attack!");
+    }
+
+    void DealDamage()
+    {
+        if (player == null || isHurt || isDead) return;
+
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        if (distanceToPlayer > attackRange) return;
+
+        PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
+        {
+            playerHealth.TakeDamage(attackDamage);
+            Debug.Log($"{enemyName} deals {attackDamage} damage to player!");
+
+            Vector2 knockbackDirection = (player.position - transform.position).normalized;
+            ApplyKnockback(player, knockbackDirection);
+        }
+        else
+        {
+            PlayerController playerController = player.GetComponent<PlayerController>();
+            if (playerController != null)
             {
-                currentState = EnemyState.Chase;
-            }
-            else
-            {
-                currentState = EnemyState.Idle;
+                Debug.Log($"{enemyName} attacked player for {attackDamage} damage!");
             }
         }
     }
 
-    void HandleDeathState()
+    void ApplyKnockback(Transform targetTransform, Vector2 direction)
     {
-        // Xử lý khi chết
-        moveSpeed = 0f;
-        // Có thể thêm hiệu ứng chết, drop item, etc.
+        Rigidbody2D targetRb = targetTransform.GetComponent<Rigidbody2D>();
+        if (targetRb != null)
+        {
+            targetRb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
+        }
+        else
+        {
+            targetTransform.position += (Vector3)(direction * (knockbackForce * 0.1f));
+        }
+    }
+
+    void EndAttack()
+    {
+        isAttacking = false;
+        Debug.Log($"{enemyName} finished attack!");
     }
 
     void MoveTowards(Vector2 target)
     {
         Vector2 direction = (target - (Vector2)transform.position).normalized;
-        transform.position = Vector2.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
 
-        // Cập nhật hướng di chuyển
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = direction * moveSpeed;
+        }
+
         UpdateDirection(direction);
     }
 
-
     void SetNewPatrolTarget()
     {
-        // Tạo điểm patrol ngẫu nhiên xung quanh vị trí ban đầu
         Vector2 randomDirection = Random.insideUnitCircle.normalized;
         patrolTarget = startPosition + randomDirection * patrolDistance;
-    }
-
-    void PerformAttack()
-    {
-        // Logic tấn công
-        if (player != null)
-        {
-            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-            if (distanceToPlayer <= attackRange)
-            {
-                // Gây damage cho player
-                PlayerController playerController = player.GetComponent<PlayerController>();
-                if (playerController != null)
-                {
-                    //playerController.TakeDamage(baseAttack);
-                }
-                    
-                Debug.Log($"{enemyName} attacked player for {baseAttack} damage!");
-            }
-        }
     }
 
     void UpdateAnimation()
     {
         if (animator == null) return;
 
-        // Cập nhật animation parameters
-        bool isMoving = currentState == EnemyState.Walk || currentState == EnemyState.Chase;
-        animator.SetBool("isWalking", isMoving);
-        animator.SetBool("isAttacking", currentState == EnemyState.Attack);
-        animator.SetBool("isHurt", currentState == EnemyState.Hurt);
-        animator.SetBool("isDead", currentState == EnemyState.Death);
+        bool isMoving = (currentState == EnemyState.Walk || currentState == EnemyState.Chase) && !isAttacking && !isHurt;
 
-        // Cập nhật speed cho animation
-        if (isMoving)
+        animator.SetBool("isWalking", isMoving);
+        animator.SetBool("isAttacking", isAttacking);
+        animator.SetBool("isHurt", isHurt);
+        animator.SetBool("isDead", isDead);
+        animator.SetFloat("health", health);
+        animator.SetFloat("healthPercent", (float)health / maxHealth);
+
+        // Ưu tiên states
+        if (isDead)
         {
-            float animationSpeed = currentState == EnemyState.Chase ?
-                (chaseSpeed / walkSpeed) : 1f;
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isAttacking", false);
+            animator.SetBool("isHurt", false);
+            animator.SetBool("isDead", true);
+        }
+        else if (isHurt)
+        {
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isAttacking", false);
+            animator.SetBool("isHurt", true);
+            animator.SetBool("isDead", false);
+        }
+
+        // Animation speed
+        if (isMoving && !isHurt && !isDead)
+        {
+            float animationSpeed = currentState == EnemyState.Chase ? (chaseSpeed / walkSpeed) : 1f;
             animator.speed = animationSpeed;
         }
         else
@@ -276,59 +657,8 @@ public class Boss : Enemy
             animator.speed = 1f;
         }
 
-        // FIXED: Cập nhật hướng cho animation - chỉ khi đang di chuyển
-        if (isMoving)
-        {
-            float dirX = 0f, dirY = 0f;
-
-            switch (currentDirection)
-            {
-                case BossDirection.Up:
-                    dirX = 0f; dirY = 1f;
-                    break;
-                case BossDirection.Down:
-                    dirX = 0f; dirY = -1f;
-                    break;
-                case BossDirection.Left:
-                    // THAY ĐỔI: Nếu bạn đang dùng flipX, thì dirX nên là 1 cho cả Left và Right
-                    dirX = -1f; dirY = 0f;
-                    break;
-                case BossDirection.Right:
-                    dirX = 1f; dirY = 0f;
-                    break;
-            }
-
-            animator.SetFloat("DirectionX", dirX);
-            animator.SetFloat("DirectionY", dirY);
-        }
-    }
-
-    // HOẶC giải pháp khác - không dùng flipX mà dùng hoàn toàn DirectionX
-    void UpdateAnimationAlternative()
-    {
-        if (animator == null) return;
-
-        // Cập nhật animation parameters
-        bool isMoving = currentState == EnemyState.Walk || currentState == EnemyState.Chase;
-        animator.SetBool("isWalking", isMoving);
-        animator.SetBool("isAttacking", currentState == EnemyState.Attack);
-        animator.SetBool("isHurt", currentState == EnemyState.Hurt);
-        animator.SetBool("isDead", currentState == EnemyState.Death);
-
-        // Cập nhật speed cho animation
-        if (isMoving)
-        {
-            float animationSpeed = currentState == EnemyState.Chase ?
-                (chaseSpeed / walkSpeed) : 1f;
-            animator.speed = animationSpeed;
-        }
-        else
-        {
-            animator.speed = 1f;
-        }
-
-        // Cập nhật hướng cho animation - chỉ khi đang di chuyển
-        if (isMoving)
+        // Direction cho animation
+        if (isMoving && !isHurt && !isDead)
         {
             float dirX = 0f, dirY = 0f;
 
@@ -353,10 +683,8 @@ public class Boss : Enemy
         }
     }
 
-    // VÀ sửa lại UpdateDirection để không dùng flipX
     void UpdateDirection(Vector2 direction)
     {
-        // Xác định hướng chính dựa trên vector di chuyển
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
             currentDirection = direction.x > 0 ? BossDirection.Right : BossDirection.Left;
@@ -365,59 +693,69 @@ public class Boss : Enemy
         {
             currentDirection = direction.y > 0 ? BossDirection.Up : BossDirection.Down;
         }
-
-        // KHÔNG dùng flipX nếu bạn chọn giải pháp alternative
-        // if (spriteRenderer != null)
-        // {
-        //     spriteRenderer.flipX = currentDirection == BossDirection.Left;
-        // }
     }
-    // Animation Events - Thêm vào cuối script
+
+    // Animation Events
     public void OnAttackHit()
     {
-        PerformAttack();
+        DealDamage();
     }
 
     public void OnHurtEnd()
     {
-        // Reset hurt state
-        if (currentState == EnemyState.Hurt)
-        {
-            currentState = EnemyState.Idle;
-        }
+        if (isHurt) EndHurt();
     }
 
     public void OnDeathEnd()
     {
-        // Xử lý khi animation chết kết thúc
-        gameObject.SetActive(false);
-        // Hoặc có thể drop items, spawn effects, etc.
+        OnDeathComplete();
     }
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        currentState = EnemyState.Hurt;
-        lastAttackTime = Time.time; // Sử dụng để tính thời gian hurt
+        if (isInvulnerable || isDead) return;
 
-        Debug.Log($"{enemyName} took {damage} damage! Health: {health}");
+        health -= damage;
+        health = Mathf.Max(0, health);
+
+        Debug.Log($"{enemyName} took {damage} damage! Health: {health}/{maxHealth}");
 
         if (health <= 0)
         {
-            currentState = EnemyState.Death;
+            TriggerDeath();
+        }
+        else
+        {
+            TriggerHurt();
         }
     }
 
-    // Vẽ detection range trong Scene view
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log($"Boss collided with: {collision.gameObject.name}");
+    }
+
     //void OnDrawGizmosSelected()
     //{
+    //    // Detection range
     //    Gizmos.color = Color.yellow;
     //    Gizmos.DrawWireCircle(transform.position, detectionRange);
 
+    //    // Attack range
     //    Gizmos.color = Color.red;
     //    Gizmos.DrawWireCircle(transform.position, attackRange);
 
+    //    // Patrol area
     //    Gizmos.color = Color.blue;
-    //    Gizmos.DrawWireCircle(startPosition, patrolDistance);
+    //    Vector3 startPos = Application.isPlaying ? startPosition : transform.position;
+    //    Gizmos.DrawWireCircle(startPos, patrolDistance);
+
+    //    // Current patrol target
+    //    if (Application.isPlaying && isPatrolling)
+    //    {
+    //        Gizmos.color = Color.green;
+    //        Gizmos.DrawWireSphere(patrolTarget, 0.5f);
+    //        Gizmos.DrawLine(transform.position, patrolTarget);
+    //    }
     //}
 }

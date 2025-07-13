@@ -6082,6 +6082,25 @@ MonoBehaviour:
     strengthIncreasePerDay: 0.15
   autoFindDayCounter: 1
   dayCounterReference: {fileID: 0}
+  bossSettings:
+    enableBossSystem: 1
+    bossPrefab: {fileID: 8245815873294655766, guid: 91fb53e927ca1c04b91a2f01a4e6fe72, type: 3}
+    bossSpawnDay: 5
+    cancelSpawnersWhenBossSpawns: 1
+    clearExistingEnemiesOnBossSpawn: 1
+    useCustomBossZone: 0
+    bossSpawnCenter: {x: 0, y: 0, z: 0}
+    bossSpawnSize: {x: 20, y: 20, z: 20}
+    bossZoneGizmoColor: {r: 1, g: 0, b: 0, a: 1}
+    OnBossSpawned:
+      m_PersistentCalls:
+        m_Calls: []
+    OnBossDefeated:
+      m_PersistentCalls:
+        m_Calls: []
+    OnSpawnersDisabled:
+      m_PersistentCalls:
+        m_Calls: []
   currentDay: 0
   actualSpawnCount: 0
   actualSpawnDelay: 0.1
@@ -83278,7 +83297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e42be22f40ae6479f4a52e1a4fd77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 7
   invisibilityKey: 51
   weaponCollider: {fileID: 1248141010}
 --- !u!50 &1357985378

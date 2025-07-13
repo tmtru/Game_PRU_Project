@@ -413,7 +413,6 @@ GameObject:
   - component: {fileID: 2318737604849624854}
   - component: {fileID: 733360023179408012}
   - component: {fileID: 8397985256923378888}
-  - component: {fileID: 6113955240328682021}
   - component: {fileID: 1500669988174942657}
   - component: {fileID: 2793573337351630227}
   - component: {fileID: 6248446387131496985}
@@ -435,7 +434,7 @@ Transform:
   m_GameObject: {fileID: 8245815873294655766}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4, y: -9.1, z: 0}
+  m_LocalPosition: {x: -5.1422796, y: -9.441633, z: 0}
   m_LocalScale: {x: 9, y: 7, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -519,19 +518,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6113955240328682021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8245815873294655766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c466c32d8235bfd469362facd01c290f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: 0
 --- !u!114 &1500669988174942657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,7 +553,7 @@ MonoBehaviour:
   currentState: 0
   health: 1000
   enemyName: 
-  baseAttack: 3
+  baseAttack: 2
   moveSpeed: 0
   detectionRange: 4
   attackRange: 3
@@ -576,7 +562,24 @@ MonoBehaviour:
   patrolDistance: 5
   patrolWaitTime: 2
   walkSpeed: 2
-  chaseSpeed: 5
+  chaseSpeed: 3
+  attackDuration: 1.2
+  attackDamage: 25
+  knockbackForce: 8
+  hurtAnimationDuration: 0.8
+  hurtKnockbackForce: 5
+  hurtInvulnerabilityTime: 1
+  deathAnimationDuration: 2
+  deathFadeTime: 1
+  debugStateKey: 98
+  testHurtKey: 104
+  testDeathKey: 107
+  healKey: 114
+  isBoss: 1
+  fireworksPrefab: {fileID: 5281293579172652950, guid: 818dc1e417b15c2419fc022d945a46ff, type: 3}
+  victorySound: {fileID: 0}
+  sceneTransitionDelay: 3
+  nextSceneName: Win
 --- !u!50 &6248446387131496985
 Rigidbody2D:
   serializedVersion: 5
@@ -589,8 +592,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
+  m_Mass: 10
+  m_LinearDamping: 5
   m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -602,7 +605,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &2815722992353492753
 CapsuleCollider2D:
