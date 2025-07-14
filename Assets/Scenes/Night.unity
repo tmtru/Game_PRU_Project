@@ -874,7 +874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 574.8, y: -173.69975}
+  m_AnchoredPosition: {x: 574.8, y: -173.69977}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &62562448
@@ -3580,6 +3580,25 @@ MonoBehaviour:
     strengthIncreasePerDay: 0.15
   autoFindDayCounter: 1
   dayCounterReference: {fileID: 0}
+  bossSettings:
+    enableBossSystem: 1
+    bossPrefab: {fileID: 0}
+    bossSpawnDay: 5
+    cancelSpawnersWhenBossSpawns: 1
+    clearExistingEnemiesOnBossSpawn: 0
+    useCustomBossZone: 0
+    bossSpawnCenter: {x: 0, y: 0, z: 0}
+    bossSpawnSize: {x: 20, y: 20, z: 20}
+    bossZoneGizmoColor: {r: 1, g: 0, b: 0, a: 1}
+    OnBossSpawned:
+      m_PersistentCalls:
+        m_Calls: []
+    OnBossDefeated:
+      m_PersistentCalls:
+        m_Calls: []
+    OnSpawnersDisabled:
+      m_PersistentCalls:
+        m_Calls: []
   currentDay: 0
   actualSpawnCount: 0
   actualSpawnDelay: 0.1
@@ -86632,7 +86651,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248141009}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd001fdd9d1e86147b69e507ccf70db1, type: 3}
   m_Name: 
@@ -87221,7 +87240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 459.8, y: -173.69975}
+  m_AnchoredPosition: {x: 459.8, y: -173.69977}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1306074948
@@ -87463,7 +87482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
   fadeDuration: 0
-  countdown: 15
+  countdown: 5
   scene1: SampleScene
   scene2: Night
   resetDayOnGameStart: 0
@@ -88613,37 +88632,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!1 &1410647571
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1410647572}
-  m_Layer: 0
-  m_Name: SlashSpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1410647572
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410647571}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2039801322}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1421250103
 GameObject:
   m_ObjectHideFlags: 0
@@ -117828,7 +117816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 344.8, y: -173.69975}
+  m_AnchoredPosition: {x: 344.8, y: -173.69977}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1876729387
@@ -120428,8 +120416,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1410647572}
+  m_Children: []
   m_Father: {fileID: 1357985380}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2039801323

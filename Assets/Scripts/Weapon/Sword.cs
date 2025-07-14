@@ -6,13 +6,11 @@ public class Sword : MonoBehaviour, IWeapon
 {
     [SerializeField] private GameObject slashAnimationPrefab;
     [SerializeField] private Transform slashAnimationSpawnPoint;
-    [SerializeField] private float swordAttackCD = 0.5f;
+    //[SerializeField] private float swordAttackCD = 0.5f;
     [SerializeField] private WeaponInfo weaponInfo;
 
     private Transform weaponCollider;
     private Animator myAnimator;
-    private DamageSource damageSource;
-
     private GameObject slashAnimation;
 
     private void Awake()
@@ -24,7 +22,15 @@ public class Sword : MonoBehaviour, IWeapon
     {
         weaponCollider = PlayerController.Instance.GetWeaponCollider();
         slashAnimationSpawnPoint = GameObject.Find("SlashSpawnPoint").transform;
+
+        this.transform.parent = PlayerController.Instance.transform;
+        this.transform.localPosition = Vector3.zero;
+        this.transform.localRotation = Quaternion.identity;
+
+        ActiveWeapon.Instance.NewWeapon(this);
     }
+
+
 
     private void Update()
     {
@@ -104,17 +110,29 @@ public class Sword : MonoBehaviour, IWeapon
 
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
 
+
         if (mousePos.x < playerScreenPoint.x)
         {
-            if (ActiveWeapon.Instance != null)
-                ActiveWeapon.Instance.transform.rotation = Quaternion.Euler(0, -180, angle);
+
+            var currentWeapon = ActiveWeapon.Instance.CurrentActiveWeapon;
+            if (currentWeapon != null)
+            {
+                currentWeapon.transform.rotation = Quaternion.Euler(0, -180, angle); 
+            }
+            //if (ActiveWeapon.Instance != null)
+            //    ActiveWeapon.Instance.transform.rotation = Quaternion.Euler(0, -180, angle);
 
             weaponCollider.transform.rotation = Quaternion.Euler(0, -180, 0);
         }
         else
         {
-            if (ActiveWeapon.Instance != null)
-                ActiveWeapon.Instance.transform.rotation = Quaternion.Euler(0, 0, angle);
+            var currentWeapon = ActiveWeapon.Instance.CurrentActiveWeapon;
+            if (currentWeapon != null)
+            {
+                currentWeapon.transform.rotation = Quaternion.Euler(0, 0, angle);
+            }
+            //if (ActiveWeapon.Instance != null)
+            //    ActiveWeapon.Instance.transform.rotation = Quaternion.Euler(0, 0, angle);
 
             weaponCollider.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
