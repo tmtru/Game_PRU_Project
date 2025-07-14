@@ -90,66 +90,98 @@ public class DayScalingSettings
     public float strengthIncreasePerDay = 0.15f; // Tăng 15% mỗi ngày
 }
 
+[System.Serializable]
+public class BossSettings
+{
+    [Header("Boss Configuration")]
+    public bool enableBossSystem = true;
+    public GameObject bossPrefab;
+    public int bossSpawnDay = 5; // Ngày spawn boss
+    public bool cancelSpawnersWhenBossSpawns = true;
+    public bool clearExistingEnemiesOnBossSpawn = false;
+
+    [Header("Boss Spawn Zone")]
+    public bool useCustomBossZone = false;
+    public Vector3 bossSpawnCenter = Vector3.zero;
+    public Vector3 bossSpawnSize = Vector3.one * 20f;
+    public Color bossZoneGizmoColor = Color.red;
+
+    [Header("Boss Events")]
+    public UnityEvent OnBossSpawned;
+    public UnityEvent OnBossDefeated;
+    public UnityEvent OnSpawnersDisabled;
+}
+
 public class RandomSpawner : MonoBehaviour
 {
-    [Header("Spawn Objects")]
-    [SerializeField] private SpawnableObject[] spawnableObjects;
+    [Header("Spawn Objects")] [SerializeField]
+    private SpawnableObject[] spawnableObjects;
 
-    [Header("Spawn Zones")]
-    [SerializeField] private SpawnZone[] spawnZones;
+    [Header("Spawn Zones")] [SerializeField]
+    private SpawnZone[] spawnZones;
+
     [SerializeField] private bool useLocalZones = true;
 
-    [Header("Base Spawn Settings")]
-    [SerializeField] private int totalObjectsToSpawn = 20;
+    [Header("Base Spawn Settings")] [SerializeField]
+    private int totalObjectsToSpawn = 20;
+
     [SerializeField] private float spawnDelay = 0.1f;
     [SerializeField] private bool spawnOnAwake = true;
 
-    [Header("Day Scaling System")]
-    [SerializeField] private DayScalingSettings dayScaling;
+    [Header("Day Scaling System")] [SerializeField]
+    private DayScalingSettings dayScaling;
+
     [SerializeField] private bool autoFindDayCounter = true;
     [SerializeField] private ChangeScene dayCounterReference; // Reference đến script ChangeScene
 
-    [Header("Current Day Info (Runtime)")]
-    [SerializeField] private int currentDay = 0;
+    [Header("Boss System")] [SerializeField]
+    private BossSettings bossSettings;
+
+    [Header("Current Day Info (Runtime)")] [SerializeField]
+    private int currentDay = 0;
+
     [SerializeField] private int actualSpawnCount = 0;
     [SerializeField] private float actualSpawnDelay = 0.1f;
     [SerializeField] private float difficultyMultiplier = 1f;
 
-    [Header("Positioning")]
-    [SerializeField] private bool useRaycastForHeight = true;
+    [Header("Positioning")] [SerializeField]
+    private bool useRaycastForHeight = true;
+
     [SerializeField] private LayerMask groundLayerMask = -1;
     [SerializeField] private float heightOffset = 0.5f;
     [SerializeField] private float raycastDistance = 100f;
 
-    [Header("Collision Detection")]
-    [SerializeField] private bool checkCollisions = true;
+    [Header("Collision Detection")] [SerializeField]
+    private bool checkCollisions = true;
+
     [SerializeField] private float collisionCheckRadius = 1f;
     [SerializeField] private LayerMask collisionLayerMask = -1;
 
-    [Header("Randomization")]
-    [SerializeField] private bool randomizeRotation = true;
+    [Header("Randomization")] [SerializeField]
+    private bool randomizeRotation = true;
+
     [SerializeField] private bool randomizeScale = false;
     [SerializeField] private Vector2 scaleRange = new Vector2(0.8f, 1.2f);
     [SerializeField] private bool uniformScale = true;
 
-    [Header("Wave Spawning")]
-    [SerializeField] private bool enableWaveSpawning = false;
+    [Header("Wave Spawning")] [SerializeField]
+    private bool enableWaveSpawning = false;
+
     [SerializeField] private int objectsPerWave = 5;
     [SerializeField] private float timeBetweenWaves = 2f;
 
-    [Header("Performance")]
-    [SerializeField] private int maxAttemptsPerObject = 50;
+    [Header("Performance")] [SerializeField]
+    private int maxAttemptsPerObject = 50;
+
     [SerializeField] private bool useObjectPooling = false;
     [SerializeField] private Transform spawnParent;
 
-    [Header("Events")]
-    public UnityEvent OnSpawnStarted;
+    [Header("Events")] public UnityEvent OnSpawnStarted;
     public UnityEvent OnSpawnCompleted;
     public UnityEvent<GameObject> OnObjectSpawned;
     public UnityEvent<int> OnDayChanged; // Event khi ngày thay đổi
 
-    [Header("Debug")]
-    [SerializeField] private bool showDebugInfo = true;
+    [Header("Debug")] [SerializeField] private bool showDebugInfo = true;
     [SerializeField] private bool showGizmos = true;
     [SerializeField] private bool showMaxCountInfo = true; // Hiển thị thông tin maxCount
 
@@ -158,6 +190,12 @@ public class RandomSpawner : MonoBehaviour
     private Coroutine currentSpawnCoroutine;
     private int totalSpawned = 0;
     private int previousDay = -1;
+
+    // Boss system variables
+    private bool bossHasSpawned = false;
+    private bool spawnersDisabled = false;
+    private GameObject currentBoss = null;
+    private static List<RandomSpawner> allSpawners = new List<RandomSpawner>();
 
     private void Awake()
     {
@@ -170,6 +208,12 @@ public class RandomSpawner : MonoBehaviour
             dayCounterReference = FindObjectOfType<ChangeScene>();
         }
 
+        // Đăng ký spawner này vào danh sách global
+        if (!allSpawners.Contains(this))
+        {
+            allSpawners.Add(this);
+        }
+
         InitializeObjectPool();
     }
 
@@ -177,7 +221,7 @@ public class RandomSpawner : MonoBehaviour
     {
         UpdateDayScaling();
 
-        if (spawnOnAwake)
+        if (spawnOnAwake && !spawnersDisabled)
             StartSpawning();
     }
 
@@ -195,8 +239,221 @@ public class RandomSpawner : MonoBehaviour
                 OnDayChanged?.Invoke(currentDay);
                 LogDebug($"Day changed to {currentDay}. Difficulty updated.");
                 LogMaxCountInfo(); // Log thông tin maxCount khi ngày thay đổi
+
+                // Kiểm tra boss spawn
+                CheckBossSpawn();
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        // Gỡ bỏ spawner này khỏi danh sách global
+        if (allSpawners.Contains(this))
+        {
+            allSpawners.Remove(this);
+        }
+    }
+
+    private void CheckBossSpawn()
+    {
+        if (!bossSettings.enableBossSystem || bossHasSpawned || spawnersDisabled)
+            return;
+
+        if (currentDay >= bossSettings.bossSpawnDay && bossSettings.bossPrefab != null)
+        {
+            SpawnBoss();
+        }
+    }
+
+    private void SpawnBoss()
+    {
+        if (bossHasSpawned) return;
+
+        LogDebug($"Spawning boss on day {currentDay}!");
+
+        // Disable tất cả spawners nếu được cài đặt
+        if (bossSettings.cancelSpawnersWhenBossSpawns)
+        {
+            DisableAllSpawners();
+        }
+
+        // Clear existing enemies nếu được cài đặt
+        if (bossSettings.clearExistingEnemiesOnBossSpawn)
+        {
+            ClearAllEnemies();
+        }
+
+        // Tìm vị trí spawn boss
+        Vector3 bossSpawnPosition = GetBossSpawnPosition();
+
+        if (bossSpawnPosition != Vector3.zero)
+        {
+            // Spawn boss
+            currentBoss = Instantiate(bossSettings.bossPrefab, bossSpawnPosition, Quaternion.identity, spawnParent);
+
+            if (randomizeRotation)
+            {
+                currentBoss.transform.rotation = Quaternion.Euler(0, Random.Range(0f, 360f), 0);
+            }
+
+            bossHasSpawned = true;
+            bossSettings.OnBossSpawned?.Invoke();
+
+            LogDebug($"Boss spawned at {bossSpawnPosition}");
+
+            // Theo dõi boss để phát hiện khi nó bị defeat
+            StartCoroutine(MonitorBoss());
+        }
+        else
+        {
+            LogDebug("Failed to find valid boss spawn position!");
+        }
+    }
+
+    private Vector3 GetBossSpawnPosition()
+    {
+        Vector3 center, size;
+
+        if (bossSettings.useCustomBossZone)
+        {
+            center = useLocalZones ? transform.position + bossSettings.bossSpawnCenter : bossSettings.bossSpawnCenter;
+            size = bossSettings.bossSpawnSize;
+        }
+        else
+        {
+            // Sử dụng spawn zone đầu tiên hoặc tạo một zone mặc định
+            if (spawnZones.Length > 0)
+            {
+                SpawnZone firstZone = spawnZones[0];
+                center = useLocalZones ? transform.position + firstZone.center : firstZone.center;
+                size = firstZone.size;
+            }
+            else
+            {
+                center = transform.position;
+                size = Vector3.one * 20f;
+            }
+        }
+
+        // Thử tìm vị trí hợp lệ
+        for (int attempt = 0; attempt < maxAttemptsPerObject; attempt++)
+        {
+            Vector3 randomOffset = new Vector3(
+                Random.Range(-size.x / 2f, size.x / 2f),
+                Random.Range(-size.y / 2f, size.y / 2f),
+                Random.Range(-size.z / 2f, size.z / 2f)
+            );
+
+            Vector3 randomPos = center + randomOffset;
+
+            if (useRaycastForHeight)
+            {
+                randomPos = AdjustHeightWithRaycast(randomPos);
+                if (randomPos == Vector3.zero) continue;
+            }
+
+            if (checkCollisions && IsPositionBlocked(randomPos))
+            {
+                continue;
+            }
+
+            return randomPos;
+        }
+
+        return Vector3.zero;
+    }
+
+    private IEnumerator MonitorBoss()
+    {
+        while (currentBoss != null)
+        {
+            yield return new WaitForSeconds(1f);
+        }
+
+        // Boss đã bị destroy
+        LogDebug("Boss has been defeated!");
+        bossSettings.OnBossDefeated?.Invoke();
+
+        // Có thể enable lại spawners sau khi boss bị defeat
+        // EnableAllSpawners();
+    }
+
+    public static void DisableAllSpawners()
+    {
+        foreach (RandomSpawner spawner in allSpawners)
+        {
+            if (spawner != null)
+            {
+                spawner.DisableSpawner();
+            }
+        }
+    }
+
+    public static void EnableAllSpawners()
+    {
+        foreach (RandomSpawner spawner in allSpawners)
+        {
+            if (spawner != null)
+            {
+                spawner.EnableSpawner();
+            }
+        }
+    }
+
+    public void DisableSpawner()
+    {
+        if (spawnersDisabled) return;
+
+        spawnersDisabled = true;
+        StopSpawning();
+        LogDebug("Spawner disabled");
+
+        // Gọi event một lần cho tất cả spawners
+        if (bossSettings.OnSpawnersDisabled != null)
+        {
+            bossSettings.OnSpawnersDisabled.Invoke();
+        }
+    }
+
+    public void EnableSpawner()
+    {
+        if (!spawnersDisabled) return;
+
+        spawnersDisabled = false;
+        LogDebug("Spawner enabled");
+
+        // Có thể tự động restart spawning nếu cần
+        // StartSpawning();
+    }
+
+    private void ClearAllEnemies()
+    {
+        foreach (RandomSpawner spawner in allSpawners)
+        {
+            if (spawner != null)
+            {
+                spawner.ClearAllSpawned();
+            }
+        }
+    }
+
+    // Thêm method để manually trigger boss spawn (để test)
+    public void TriggerBossSpawn()
+    {
+        if (!bossHasSpawned && bossSettings.bossPrefab != null)
+        {
+            SpawnBoss();
+        }
+    }
+
+    // Thêm method để reset boss system
+    public void ResetBossSystem()
+    {
+        bossHasSpawned = false;
+        spawnersDisabled = false;
+        currentBoss = null;
+        EnableAllSpawners();
     }
 
     private void UpdateDayScaling()
@@ -216,7 +473,7 @@ public class RandomSpawner : MonoBehaviour
         if (dayScaling.scaleSpawnCount)
         {
             actualSpawnCount = Mathf.RoundToInt(dayScaling.baseSpawnCount *
-                Mathf.Pow(dayScaling.spawnCountMultiplier, currentDay));
+                                                Mathf.Pow(dayScaling.spawnCountMultiplier, currentDay));
             actualSpawnCount = Mathf.Min(actualSpawnCount, dayScaling.maxSpawnCount);
         }
         else
@@ -228,7 +485,7 @@ public class RandomSpawner : MonoBehaviour
         if (dayScaling.scaleSpawnSpeed)
         {
             actualSpawnDelay = dayScaling.baseSpawnDelay *
-                Mathf.Pow(dayScaling.speedMultiplier, currentDay);
+                               Mathf.Pow(dayScaling.speedMultiplier, currentDay);
             actualSpawnDelay = Mathf.Max(actualSpawnDelay, dayScaling.minSpawnDelay);
         }
         else
@@ -236,7 +493,8 @@ public class RandomSpawner : MonoBehaviour
             actualSpawnDelay = spawnDelay;
         }
 
-        LogDebug($"Day {currentDay}: Spawn Count = {actualSpawnCount}, Spawn Delay = {actualSpawnDelay:F2}s, Difficulty = {difficultyMultiplier:F2}x");
+        LogDebug(
+            $"Day {currentDay}: Spawn Count = {actualSpawnCount}, Spawn Delay = {actualSpawnDelay:F2}s, Difficulty = {difficultyMultiplier:F2}x");
     }
 
     // Hàm mới để log thông tin maxCount
@@ -258,6 +516,12 @@ public class RandomSpawner : MonoBehaviour
 
     public void StartSpawning()
     {
+        if (spawnersDisabled)
+        {
+            LogDebug("Cannot start spawning - spawners are disabled");
+            return;
+        }
+
         if (currentSpawnCoroutine != null)
         {
             StopCoroutine(currentSpawnCoroutine);
@@ -318,6 +582,7 @@ public class RandomSpawner : MonoBehaviour
         UpdateDayScaling();
         LogDebug($"Manually set day to {currentDay}");
         LogMaxCountInfo();
+        CheckBossSpawn();
     }
 
     // Thêm hàm để lấy current day từ dayCounterReference
@@ -327,6 +592,7 @@ public class RandomSpawner : MonoBehaviour
         {
             return dayCounterReference.DayCount;
         }
+
         return currentDay;
     }
 
@@ -336,6 +602,8 @@ public class RandomSpawner : MonoBehaviour
 
         for (int i = 0; i < actualSpawnCount; i++)
         {
+            if (spawnersDisabled) break; // Dừng nếu spawners bị disable
+
             if (SpawnRandomObject())
             {
                 totalSpawned++;
@@ -352,13 +620,15 @@ public class RandomSpawner : MonoBehaviour
         totalSpawned = 0;
         int remainingObjects = actualSpawnCount;
 
-        while (remainingObjects > 0)
+        while (remainingObjects > 0 && !spawnersDisabled)
         {
             int objectsThisWave = Mathf.Min(objectsPerWave, remainingObjects);
             LogDebug($"Starting wave: {objectsThisWave} objects");
 
             for (int i = 0; i < objectsThisWave; i++)
             {
+                if (spawnersDisabled) break; // Dừng nếu spawners bị disable
+
                 if (SpawnRandomObject())
                 {
                     totalSpawned++;
@@ -367,7 +637,7 @@ public class RandomSpawner : MonoBehaviour
                 }
             }
 
-            if (remainingObjects > 0)
+            if (remainingObjects > 0 && !spawnersDisabled)
             {
                 yield return new WaitForSeconds(timeBetweenWaves);
             }
@@ -399,7 +669,8 @@ public class RandomSpawner : MonoBehaviour
             objectToSpawn.currentCount++;
 
             OnObjectSpawned?.Invoke(spawnedObj);
-            LogDebug($"Spawned {objectToSpawn.prefab.name} at {spawnPosition} (Day {currentDay}, Count: {objectToSpawn.currentCount}/{objectToSpawn.GetMaxCount(currentDay)})");
+            LogDebug(
+                $"Spawned {objectToSpawn.prefab.name} at {spawnPosition} (Day {currentDay}, Count: {objectToSpawn.currentCount}/{objectToSpawn.GetMaxCount(currentDay)})");
             return true;
         }
 
@@ -607,6 +878,7 @@ public class RandomSpawner : MonoBehaviour
     {
         if (!showGizmos) return;
 
+        // Vẽ spawn zones thường
         foreach (SpawnZone zone in spawnZones)
         {
             if (!zone.isActive) continue;
@@ -614,6 +886,16 @@ public class RandomSpawner : MonoBehaviour
             Gizmos.color = zone.gizmoColor;
             Vector3 center = useLocalZones ? transform.position + zone.center : zone.center;
             Gizmos.DrawWireCube(center, zone.size);
+        }
+
+        // Vẽ boss spawn zone
+        if (bossSettings.enableBossSystem && bossSettings.useCustomBossZone)
+        {
+            Gizmos.color = bossSettings.bossZoneGizmoColor;
+            Vector3 bossCenter = useLocalZones
+                ? transform.position + bossSettings.bossSpawnCenter
+                : bossSettings.bossSpawnCenter;
+            Gizmos.DrawWireCube(bossCenter, bossSettings.bossSpawnSize);
         }
 
         if (checkCollisions && Application.isPlaying)
@@ -626,18 +908,6 @@ public class RandomSpawner : MonoBehaviour
                     Gizmos.DrawWireSphere(obj.transform.position, collisionCheckRadius);
                 }
             }
-        }
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        if (!showGizmos) return;
-
-        foreach (SpawnZone zone in spawnZones)
-        {
-            Gizmos.color = zone.isActive ? Color.green : Color.gray;
-            Vector3 center = useLocalZones ? transform.position + zone.center : zone.center;
-            Gizmos.DrawCube(center, zone.size);
         }
     }
 }

@@ -147,7 +147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -0.306, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.05, y: 0.2}
+  m_AnchoredPosition: {x: -0.002, y: 0.204}
   m_SizeDelta: {x: 721, y: 405.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3625796447681725345
@@ -319,7 +319,7 @@ MonoBehaviour:
   fillImage: {fileID: 6617021167544225899}
   backgroundImage: {fileID: 8964643732330494752}
   healthBarCanvas: {fileID: 3625796447681725345}
-  fullHealthColor: {r: 0, g: 1, b: 0, a: 1}
+  fullHealthColor: {r: 1, g: 0.6470588, b: 0, a: 1}
   lowHealthColor: {r: 1, g: 0, b: 0, a: 1}
   backgroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.8}
   showOnlyWhenDamaged: 0
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3876183, g: 0.9924528, b: 0.4120561, a: 1}
+  m_Color: {r: 1, g: 0.6470588, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -413,9 +413,11 @@ GameObject:
   - component: {fileID: 2318737604849624854}
   - component: {fileID: 733360023179408012}
   - component: {fileID: 8397985256923378888}
-  - component: {fileID: 2519415039344608417}
   - component: {fileID: 1500669988174942657}
+  - component: {fileID: 2793573337351630227}
   - component: {fileID: 6248446387131496985}
+  - component: {fileID: 2815722992353492753}
+  - component: {fileID: 2973567520886210409}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -432,7 +434,7 @@ Transform:
   m_GameObject: {fileID: 8245815873294655766}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.941116, y: 16.279654, z: 0}
+  m_LocalPosition: {x: -5.1422796, y: -9.441633, z: 0}
   m_LocalScale: {x: 9, y: 7, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -516,37 +518,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2519415039344608417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8245815873294655766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30bd06ba148af2b4f9db0399edbe45f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: 0
-  health: 100
-  enemyName: Green Goblin
-  baseAttack: 1
-  moveSpeed: 4
-  target: {fileID: 0}
-  chaseRadius: 6
-  attackRadius: 0.7
-  spawnCenter: {fileID: 0}
-  rangeWalk: 5
-  speedWalk: 1
-  speedRun: 2.5
-  animator: {fileID: 0}
-  attackCooldown: 1
-  attackDuration: 0.5
-  attackDamage: 10
-  knockbackForce: 5
-  hurtAnimationDuration: 0.6
-  enemyHealth: {fileID: 0}
 --- !u!114 &1500669988174942657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,7 +530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 226a75311731066479665232365f9561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 500
   currentHealth: 0
   showDamageNumbers: 1
   damageNumberPrefab: {fileID: 0}
@@ -567,6 +538,48 @@ MonoBehaviour:
   deathDelay: 2
   destroyOnDeath: 1
   deathEffect: {fileID: 0}
+--- !u!114 &2793573337351630227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8245815873294655766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa9256c76c76ee4da7f0afcc4c8ce0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  health: 1000
+  enemyName: 
+  baseAttack: 2
+  moveSpeed: 0
+  detectionRange: 4
+  attackRange: 3
+  attackCooldown: 2
+  maxHealth: 100
+  patrolDistance: 5
+  patrolWaitTime: 2
+  walkSpeed: 2
+  chaseSpeed: 3
+  attackDuration: 1.2
+  attackDamage: 25
+  knockbackForce: 8
+  hurtAnimationDuration: 0.8
+  hurtKnockbackForce: 5
+  hurtInvulnerabilityTime: 1
+  deathAnimationDuration: 2
+  deathFadeTime: 1
+  debugStateKey: 98
+  testHurtKey: 104
+  testDeathKey: 107
+  healKey: 114
+  isBoss: 1
+  fireworksPrefab: {fileID: 5281293579172652950, guid: 818dc1e417b15c2419fc022d945a46ff, type: 3}
+  victorySound: {fileID: 0}
+  sceneTransitionDelay: 3
+  nextSceneName: Win
 --- !u!50 &6248446387131496985
 Rigidbody2D:
   serializedVersion: 5
@@ -579,8 +592,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
+  m_Mass: 10
+  m_LinearDamping: 5
   m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -592,5 +605,88 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!70 &2815722992353492753
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8245815873294655766}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.20000003, y: 0.32999998}
+  m_Direction: 1
+--- !u!61 &2973567520886210409
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8245815873294655766}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.2, y: 0.33}
+    newSize: {x: 0.36, y: 0.34}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.2, y: 0.33}
+  m_EdgeRadius: 0
