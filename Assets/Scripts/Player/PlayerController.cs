@@ -116,12 +116,12 @@ public class PlayerController : MonoBehaviour
 
 	private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
-		// Nếu GameManager đã set vị trí mới thì dịch player tới đó
-		if (GameManager.Instance != null)
+		if (GameManager.Instance != null && scene.name == GameManager.Instance.targetSceneName)
 		{
-			Debug.Log("Scene loaded. Teleporting player to spawn point: " + GameManager.Instance.playerSpawnPosition);
+			Debug.Log("Scene matched: " + scene.name + " → Teleporting to: " + GameManager.Instance.playerSpawnPosition);
 			TeleportTo(GameManager.Instance.playerSpawnPosition);
 		}
 	}
+
 
 }

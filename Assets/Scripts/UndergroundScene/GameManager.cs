@@ -4,7 +4,14 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager Instance;
 
+	public string targetSceneName; // Tên scene sẽ áp dụng teleport
 	public Vector3 playerSpawnPosition;
+
+	public void SetPlayerSpawn(Vector3 pos, string sceneName)
+	{
+		playerSpawnPosition = pos;
+		targetSceneName = sceneName;
+	}
 
 	private void Awake()
 	{
@@ -17,11 +24,6 @@ public class GameManager : MonoBehaviour
 		{
 			Destroy(gameObject); // Singleton
 		}
-	}
-
-	public void SetPlayerSpawn(Vector3 pos)
-	{
-		playerSpawnPosition = pos;
 	}
 }
 
