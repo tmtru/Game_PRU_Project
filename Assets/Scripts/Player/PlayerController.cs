@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,7 +10,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Key invisibilityKey = Key.LeftShift;
     public static PlayerController Instance;
     [SerializeField] private Transform weaponCollider;
-
 
     public bool FacingLeft { get { return facingLeft; } set { facingLeft = value; } }
 
@@ -20,24 +21,38 @@ public class PlayerController : MonoBehaviour
 
     private bool facingLeft = false;
     private bool isInvisible = false;
+	private void OnEnable()
+	{
+		if (playerControls != null)
+			playerControls.Enable();
 
-    private void Awake()
+		SceneManager.sceneLoaded += OnSceneLoaded; // Gắn hàm callback
+	}
+
+	private void OnDisable()
+	{
+		if (playerControls != null)
+			playerControls.Disable();
+
+		SceneManager.sceneLoaded -= OnSceneLoaded; // Gỡ hàm callback
+	}
+
+	private void Awake()
     {
+        // Prevent duplicate PlayerController
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
+        DontDestroyOnLoad(gameObject); // Optional, remove if you want to respawn Player each scene
+
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    private void OnEnable()
-    {
-        playerControls.Enable();
-    }
-
-    private void OnDisable()
-    {
-        playerControls.Disable();
     }
 
     private void Update()
@@ -88,14 +103,25 @@ public class PlayerController : MonoBehaviour
     {
         rb.position = targetPosition;
     }
-	void OnCollisionEnter2D(Collision2D collision)
-	{
-		Debug.Log("Va chạm với: " + collision.gameObject.name);
-	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Va chạm với: " + collision.gameObject.name);
+    }
 
     public Transform GetWeaponCollider()
     {
         return weaponCollider;
     }
+
+	private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+	{
+		// Nếu GameManager đã set vị trí mới thì dịch player tới đó
+		if (GameManager.Instance != null)
+		{
+			Debug.Log("Scene loaded. Teleporting player to spawn point: " + GameManager.Instance.playerSpawnPosition);
+			TeleportTo(GameManager.Instance.playerSpawnPosition);
+		}
+	}
 
 }

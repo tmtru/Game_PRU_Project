@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 2904045743386294471}
   - component: {fileID: 8785756080146918822}
   - component: {fileID: 7034502891189444527}
+  - component: {fileID: 6141789223609960574}
   m_Layer: 0
   m_Name: PotionItemDrop
   m_TagString: Untagged
@@ -262,7 +263,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3147211008432282354}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -311,11 +312,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.02094841, y: 0}
+  m_Offset: {x: -0.01706396, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -325,7 +326,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.66485214, y: 1}
+  m_Size: {x: 0.7408769, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &7034502891189444527
 MonoBehaviour:
@@ -342,6 +343,21 @@ MonoBehaviour:
   jumpPower: 1
   duration: 1
   glowEffect: {fileID: 785655811006186992}
+--- !u!114 &6141789223609960574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147211008432282354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7e2fe88d899b924195db0576d570bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Potion
+  itemIcon: {fileID: 21300000, guid: ca1c6356ed2efcc42a46f494ff16cd89, type: 3}
+  isConsumable: 0
 --- !u!1 &7134905447869237480
 GameObject:
   m_ObjectHideFlags: 0

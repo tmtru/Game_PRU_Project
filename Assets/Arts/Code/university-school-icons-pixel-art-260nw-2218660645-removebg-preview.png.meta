@@ -1,0 +1,273 @@
+fileFormatVersion: 2
+guid: 131af8c7960bc274598fcae74065d122
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -392430949149440420
+    second: university-school-icons-pixel-art-260nw-2218660645-removebg-preview_0
+  - first:
+      213: -6788545779110941876
+    second: university-school-icons-pixel-art-260nw-2218660645-removebg-preview_1
+  - first:
+      213: 906400915529960013
+    second: university-school-icons-pixel-art-260nw-2218660645-removebg-preview_2
+  - first:
+      213: 8956957994248534662
+    second: university-school-icons-pixel-art-260nw-2218660645-removebg-preview_3
+  - first:
+      213: 6058263523416857146
+    second: university-school-icons-pixel-art-260nw-2218660645-removebg-preview_4
+  - first:
+      213: 727667879025447260
+    second: university-school-icons-pixel-art-260nw-2218660645-removebg-preview_5
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: university-school-icons-pixel-art-260nw-2218660645-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 153
+        width: 106
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c560415812ecd8af0800000000000000
+      internalID: -392430949149440420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: university-school-icons-pixel-art-260nw-2218660645-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 152
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b6d96c49d3ac1a0800000000000000
+      internalID: -6788545779110941876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: university-school-icons-pixel-art-260nw-2218660645-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 153
+        width: 82
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a804294de249c00800000000000000
+      internalID: 906400915529960013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: university-school-icons-pixel-art-260nw-2218660645-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 72
+        width: 122
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68a774bf6d18d4c70800000000000000
+      internalID: 8956957994248534662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: university-school-icons-pixel-art-260nw-2218660645-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 64
+        width: 60
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3ad7f49396431450800000000000000
+      internalID: 6058263523416857146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: university-school-icons-pixel-art-260nw-2218660645-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 61
+        width: 83
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5116c3a412391a00800000000000000
+      internalID: 727667879025447260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      university-school-icons-pixel-art-260nw-2218660645-removebg-preview_0: -392430949149440420
+      university-school-icons-pixel-art-260nw-2218660645-removebg-preview_1: -6788545779110941876
+      university-school-icons-pixel-art-260nw-2218660645-removebg-preview_2: 906400915529960013
+      university-school-icons-pixel-art-260nw-2218660645-removebg-preview_3: 8956957994248534662
+      university-school-icons-pixel-art-260nw-2218660645-removebg-preview_4: 6058263523416857146
+      university-school-icons-pixel-art-260nw-2218660645-removebg-preview_5: 727667879025447260
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -75,6 +75,29 @@ public class Sword : MonoBehaviour, IWeapon
 
     private void MouseFollowWithOffset()
     {
+        if (PlayerController.Instance == null)
+        {
+            Debug.LogWarning("PlayerController.Instance is null");
+            return;
+        }
+
+        if (PlayerController.Instance.gameObject == null)
+        {
+            Debug.LogWarning("PlayerController gameObject is destroyed");
+            return;
+        }
+
+        if (Camera.main == null)
+        {
+            Debug.LogWarning("Camera.main is null");
+            return;
+        }
+
+        if (weaponCollider == null)
+        {
+            Debug.LogWarning("weaponCollider is null");
+            return;
+        }
 
         Vector3 mousePos = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(PlayerController.Instance.transform.position);
@@ -83,15 +106,20 @@ public class Sword : MonoBehaviour, IWeapon
 
         if (mousePos.x < playerScreenPoint.x)
         {
-            ActiveWeapon.Instance.transform.rotation = Quaternion.Euler(0, -180, angle);
+            if (ActiveWeapon.Instance != null)
+                ActiveWeapon.Instance.transform.rotation = Quaternion.Euler(0, -180, angle);
+
             weaponCollider.transform.rotation = Quaternion.Euler(0, -180, 0);
         }
         else
         {
-            ActiveWeapon.Instance.transform.rotation = Quaternion.Euler(0, 0, angle);
+            if (ActiveWeapon.Instance != null)
+                ActiveWeapon.Instance.transform.rotation = Quaternion.Euler(0, 0, angle);
+
             weaponCollider.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
+
 
 
 }
