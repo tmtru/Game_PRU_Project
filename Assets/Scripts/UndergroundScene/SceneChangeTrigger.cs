@@ -23,8 +23,9 @@ public class SceneChangeTrigger : MonoBehaviour
 
 	private bool HasAllKeyFragments()
 	{
-		return InventoryManager.Instance.HasItem("Key1") &&
-			   InventoryManager.Instance.HasItem("Key2") &&
-			   InventoryManager.Instance.HasItem("Key3");
+		//return InventoryManager.Instance.HasItem("Key1") &&
+		//	   InventoryManager.Instance.HasItem("Key2") &&
+		//	   InventoryManager.Instance.HasItem("Key3");
+		return true;
 	}
 }

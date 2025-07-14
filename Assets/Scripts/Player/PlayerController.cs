@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,8 +21,23 @@ public class PlayerController : MonoBehaviour
 
     private bool facingLeft = false;
     private bool isInvisible = false;
+	private void OnEnable()
+	{
+		if (playerControls != null)
+			playerControls.Enable();
 
-    private void Awake()
+		SceneManager.sceneLoaded += OnSceneLoaded; // Gắn hàm callback
+	}
+
+	private void OnDisable()
+	{
+		if (playerControls != null)
+			playerControls.Disable();
+
+		SceneManager.sceneLoaded -= OnSceneLoaded; // Gỡ hàm callback
+	}
+
+	private void Awake()
     {
         // Prevent duplicate PlayerController
         if (Instance != null && Instance != this)
@@ -36,22 +53,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    private void OnEnable()
-    {
-        if (playerControls != null)
-        {
-            playerControls.Enable();
-        }
-    }
-
-    private void OnDisable()
-    {
-        if (playerControls != null)
-        {
-            playerControls.Disable();
-        }
     }
 
     private void Update()
@@ -112,4 +113,15 @@ public class PlayerController : MonoBehaviour
     {
         return weaponCollider;
     }
+
+	private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+	{
+		// Nếu GameManager đã set vị trí mới thì dịch player tới đó
+		if (GameManager.Instance != null)
+		{
+			Debug.Log("Scene loaded. Teleporting player to spawn point: " + GameManager.Instance.playerSpawnPosition);
+			TeleportTo(GameManager.Instance.playerSpawnPosition);
+		}
+	}
+
 }
