@@ -8730,7 +8730,7 @@ MonoBehaviour:
   scaleRange: {x: 0.8, y: 1.2}
   uniformScale: 0
   enableWaveSpawning: 1
-  objectsPerWave: 5
+  objectsPerWave: 20
   timeBetweenWaves: 2
   maxAttemptsPerObject: 50
   useObjectPooling: 0
