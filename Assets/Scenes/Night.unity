@@ -3580,6 +3580,25 @@ MonoBehaviour:
     strengthIncreasePerDay: 0.15
   autoFindDayCounter: 1
   dayCounterReference: {fileID: 0}
+  bossSettings:
+    enableBossSystem: 1
+    bossPrefab: {fileID: 0}
+    bossSpawnDay: 5
+    cancelSpawnersWhenBossSpawns: 1
+    clearExistingEnemiesOnBossSpawn: 0
+    useCustomBossZone: 0
+    bossSpawnCenter: {x: 0, y: 0, z: 0}
+    bossSpawnSize: {x: 20, y: 20, z: 20}
+    bossZoneGizmoColor: {r: 1, g: 0, b: 0, a: 1}
+    OnBossSpawned:
+      m_PersistentCalls:
+        m_Calls: []
+    OnBossDefeated:
+      m_PersistentCalls:
+        m_Calls: []
+    OnSpawnersDisabled:
+      m_PersistentCalls:
+        m_Calls: []
   currentDay: 0
   actualSpawnCount: 0
   actualSpawnDelay: 0.1
