@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthBar : MonoBehaviour
 {
@@ -92,6 +93,8 @@ public class PlayerHealthBar : MonoBehaviour
     void OnPlayerDeath()
     {
         SetHealthBarVisibility(false);
+        SceneManager.LoadScene("LosingScene");
+
     }
 
     void SetHealthBarVisibility(bool visible)
@@ -111,4 +114,5 @@ public class PlayerHealthBar : MonoBehaviour
             playerHealth.OnDeath -= OnPlayerDeath;
         }
     }
+
 }

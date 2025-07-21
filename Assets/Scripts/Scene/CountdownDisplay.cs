@@ -19,7 +19,7 @@ public class CountdownDisplay : MonoBehaviour
 
         if (timeLeft <= 5 && timeLeft > 0 && warningText != null)
         {
-            warningText.text = Mathf.CeilToInt(timeLeft) + " seconds to the night!";
+            warningText.text = Mathf.CeilToInt(timeLeft) + " seconds to the change!";
         }
         else if (warningText != null && timeLeft > 5)
         {
